@@ -10,7 +10,7 @@ from src.features_extractor import *
 from src.latent_features_extractor import *
 
 # Defining parameters for feature extraction
-base_dir= "./"
+base_dir= "./data/"
 features_dir=base_dir + "image_features/"
 image_dir=base_dir + "input_images/"
 

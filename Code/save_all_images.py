@@ -9,6 +9,7 @@ Matplotlib alternative code:
 """
 # Note: PIL is smart so if u ran and deleted these images before, make sure to empty your trash before running the same code again
 from sklearn.datasets import fetch_olivetti_faces
+import numpy as np
 from PIL import Image
 import os
 
@@ -26,8 +27,8 @@ def save_all_images(input_dir, img_data):
     result.save(input_dir + f"{i}.png") 
 
 
-base_dir= "./"
-image_dir=base_dir + "input_images/"
+base_dir= "./data/"
+input_dir=base_dir + "input_images/"
 img_data = fetch_olivetti_faces(data_home=None, shuffle=False, random_state=0, download_if_missing=True)
 # img_data.keys()
 save_all_images(input_dir, img_data)

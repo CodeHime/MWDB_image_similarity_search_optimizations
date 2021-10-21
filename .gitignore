@@ -1,0 +1,4 @@
+*.idea*
+*.vs*
+*__pycache__*
+input_images_all_data/*
