@@ -39,6 +39,15 @@ def manhattan_fn(xb, xq):
   return man
 
 
+def kl_divergence_fn(xb, xq):
+  """
+  Calculate the kl divergence and return divergence matrix
+  :param xb: Data matrix to find similarity in
+  :param xq:  Query matrix to find similarity for
+  """
+  return np.sum(np.where(xb != 0, xb * np.log(xb / xq), 0), axis=1)
+
+
 def euclidean(xb, k, xq):
   """
   Calculate the euclidean distance and return the top k values
@@ -50,6 +59,18 @@ def euclidean(xb, k, xq):
   idx = np.argpartition(eu, k)[:k]
   return eu[idx], idx
 
+def kl_divergence(xb, k, xq):
+  """
+  Calculate the kl divergence and return divergence matrix
+  :param xb: Data matrix to find similarity in
+  :param k: Number of top objects to return
+  :param xq:  Query matrix to find similarity for
+  """
+  kl = kl_divergence_fn(xb, xq)
+  idx = np.argpartition(kl, k)[:k]
+  return kl[idx], idx
+
+
 def cosine(xb, k, xq):
   """
   Calculate the cosine distance and return the top k values
@@ -60,6 +81,7 @@ def cosine(xb, k, xq):
   cos = cosine_fn(xb, xq)
   idx = np.argpartition(em, k)[:k]
   return cos[idx], idx
+
 
 def manhattan(xb, k, xq):
   """
@@ -93,13 +115,13 @@ def top_k_match(xb, k, xq, method="euclidean"):
   :param k: Number of top objects to return
   :param xq:  Query matrix to find similarity for
   """
-  if method=="euclidean":
+  if method == "euclidean":
     return euclidean(xb, k, xq)
-  elif method=="cosine":
+  elif method == "cosine":
     return cosine(xb, k, xq)
-  elif method=="manhattan":
+  elif method == "manhattan":
     return manhattan(xb, k, xq)
-  elif method=="earth_movers":
+  elif method == "earth_movers":
     return earth_movers(xb, k, xq)
 
 

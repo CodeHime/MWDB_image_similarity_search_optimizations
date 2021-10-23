@@ -28,19 +28,20 @@ def initialize_variables():
     input_dir = os.fspath(input("Enter path of images directory:"))
     input_k = input("Enter value of k:")
     input_img = os.fspath(input("Enter input image path:"))
-    selected_feature = input("Enter feature to compare:")
+    selected_feature = input("Enter feature to compare(elbp/hog/cm8x8/all):")
     X = input("Input type label:")
     Y = input("Input subject ID:")
 
     base_dir = base0_dir if input_dir == "" else os.path.normpath(os.path.join(input_dir, os.pardir))
-# input_dir.rstrip("/").rsplit("/", 1)[0]
-    image_path = os.fspath(os.path.join(base_dir, "input_images/") + os.listdir(os.path.join(base_dir, "input_images/"))[0]) \
+    image_path = os.fspath(os.path.join(base_dir, config['Phase1']['image_path_dir']) +
+                           os.listdir(os.path.join(base_dir, config['Phase1']['image_path_dir']))[0]) \
         if input_img == "" else input_img
-    input_dir = os.fspath(os.path.join(base_dir, "input_images/")) if input_dir == "" else input_dir
-    feature = "all" if selected_feature == "" else selected_feature
+    input_dir = os.fspath(os.path.join(base_dir, config['Phase1']['image_path_dir'])) if input_dir == "" else input_dir
+    feature = config['Phase1']['default_feature'] if selected_feature == "" else selected_feature
 
-    features_dir = os.fspath(os.path.join(base_dir, os.path.normpath(os.path.join(input_dir, os.pardir)) + "_image_features/")) \
-        if input_dir == "" else os.fspath(os.path.join(base_dir, "image_features/"))
+    features_dir = os.fspath(os.path.join(base_dir, os.path.normpath(os.path.join(input_dir, os.pardir)) + "_" +
+                                          config['Phase1']['image_feature_dir'])) \
+        if input_dir == "" else os.fspath(os.path.join(base_dir, config['Phase1']['image_feature_dir']))
 
     # Create folders for images if they do not exist
     if not os.path.isdir(features_dir):
