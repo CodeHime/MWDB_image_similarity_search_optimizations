@@ -1,5 +1,9 @@
 from distance_calculator import *
 
+from pca import *
+from svd import *
+from lda import *
+
 def perform_dimensionality_reductions(matrix, k, technique):
   if technique=="pca":
     obj = Pca(k,matrix)
