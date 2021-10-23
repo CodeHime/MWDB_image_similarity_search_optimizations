@@ -1,4 +1,5 @@
 from distance_calculator import *
+from sklearn.cluster import KMeans
 from dimensionality_reducer_fns import *
 import numpy as np
 import pandas as pd
@@ -32,6 +33,9 @@ class Kmeans:
 
         """
         if (len(args)) == 2:
+            # normal object instantiation with data_matrix and k
+            imgs_slc = args[0]
+            k = args[1]
             num_imgs = len(imgs_slc)
             arr_shp = imgs_slc[0][1].shape[0]
             imgs = np.zeros((num_imgs, arr_shp))
@@ -39,21 +43,23 @@ class Kmeans:
                 imgs[i] = imgs_slc[i][1]
             imgs_flat = imgs.reshape(num_imgs, arr_shp)
             kmeans = KMeans(n_clusters=k, random_state=0).fit(imgs_flat)
-            centers = kmeans.cluster_centers_
-            red_mat = np.zeros((num_imgs, k))
-            weight = np.zeros((num_imgs))
+            self.centers = kmeans.cluster_centers_
+            self.new_object_map = np.zeros((num_imgs, k))
+            self.weight = np.zeros((num_imgs))
+            # TODO: # features then truncate to k?
+            # TODO: ask logic for two loops
             for i in range(0, num_imgs):
                 for j in range(0, k):
-                    red_mat[i][j] = cityblock(imgs_flat[i], centers[j])
-                weight[i] = np.sum(red_mat[i][:])
-            return (red_mat, weight, centers)
-            # normal object instantiation with data_matrix and k
-        #     self.U, self.S, self.VT, self.sub_wt_pairs = svd_cust(args[0], k_num=args[1],return_order=True)
-        # elif (len(args)) == 1:
-        #     self.U = pd.read_csv(os.path.join(args[0], "U.csv")).to_numpy()
-        #     self.S = pd.read_csv(os.path.join(args[0], "S.csv")).to_numpy()
-        #     self.VT = pd.read_csv(os.path.join(args[0], "VT.csv")).to_numpy()
-        #     self.sub_wt_pairs = pd.read_csv(os.path.join(args[0], "sub_wt_pairs.csv")).to_numpy()
+                    self.new_object_map[i][j] = manhattan_fn(imgs_flat[i], self.centers[j])
+                self.weight[i] = np.sum(self.new_object_map[i][:])
+            # Since good latent semantics give high discrimination power
+            # INFO: variance or distance maximized? Distance as we have a center not a line or curve
+            temp, self.sub_wt_pairs = get_sorted_matrix_on_weights(self.new_object_map, np.average(self.weight, axis=0), return_order=True)
+        elif (len(args)) == 1:
+            self.centers = pd.read_csv(os.path.join(args[0], "centers.csv")).to_numpy()
+            self.new_object_map = pd.read_csv(os.path.join(args[0], "new_object_map.csv")).to_numpy()
+            self.weight = pd.read_csv(os.path.join(args[0], "weight.csv")).to_numpy()
+            self.sub_wt_pairs = pd.read_csv(os.path.join(args[0], "sub_wt_pairs.csv")).to_numpy()
         else:
             raise Exception("Invalid object instantiation: parameters must be either <data_matrix:2D numpy>,<k:int> "
                             "or <folder:string>.")
@@ -67,20 +73,23 @@ class Kmeans:
         Returns:
             Transforms and returns X in the latent semantic space and the latent semantics
         """
-        return self.U, self.S, self.VT
+        return self.centers
 
     def get_latent_features(self):
         """
-        :return: U and S
+        :return: centers
         """
-        return self.U, self.S
+        return self.centers
 
     def transform(self, data_matrix):
         """
         :param data_matrix: matrix to transform (query_objects, num_features)
         :return: pca transformed matrix
         """
-        return np.dot(data_matrix, np.transpose(self.VT))
+        new_map = np.zeros((len(data_matrix), len(self.centers)))
+        for j in range(len(self.centers)):
+            new_map[j] = manhattan_fn(data_matrix[:len(self.centers)][j], self.centers[j])
+        return new_map
 
     def get_obj_weight_pairs(self):
         """
@@ -91,13 +100,13 @@ class Kmeans:
 
     def save(self, folder):
         """
-        Save SVD to given folder
+        Save Kmeans to given folder
         """
-        pd.DataFrame(self.U).to_csv(os.path.join(folder, "U.csv"), index=False)
-        pd.DataFrame(self.S).to_csv(os.path.join(folder, "S.csv"), index=False)
-        pd.DataFrame(self.VT).to_csv(os.path.join(folder, "VT.csv"), index=False)
+        pd.DataFrame(self.centers).to_csv(os.path.join(folder, "centers.csv"), index=False)
+        pd.DataFrame(self.new_object_map).to_csv(os.path.join(folder, "new_object_map.csv"), index=False)
+        pd.DataFrame(self.weight).to_csv(os.path.join(folder, "weight.csv"), index=False)
         pd.DataFrame(self.sub_wt_pairs).to_csv(os.path.join(folder, "sub_wt_pairs.csv"), index=False)
 
     def get_top_k_matches(self, k, xq):
-        return euclidean(np.dot(self.U, self.S), k, self.transform([xq]))
+        return manhattan(self.new_object_map, k, self.transform([xq]))
 
