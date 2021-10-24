@@ -1,0 +1,21 @@
+#Here imgs_slc is of the following format: imgs_slc = [[X,Y,Z,image,image_name],[feature_vector]], If you just want to give an input with just the matrix, let me know.
+def kmeans_func(imgs_slc,k):
+    num_imgs = len(imgs_slc)
+    arr_shp = imgs_slc[0][1].shape[0]
+    imgs = np.zeros((num_imgs,arr_shp))
+    for i in range(0,num_imgs):
+        imgs[i] = imgs_slc[i][1]
+    imgs_flat = imgs.reshape(num_imgs,arr_shp)
+    print(imgs_flat.shape)
+    kmeans = KMeans(n_clusters=k, random_state=0).fit(imgs_flat)
+    centers = kmeans.cluster_centers_
+    red_mat = np.zeros((num_imgs,k))
+    weight = np.zeros((num_imgs))
+    result_mat = []
+    for i in range(0,num_imgs):
+        for j in range(0,k):
+            red_mat[i][j] = cityblock(imgs_flat[i],centers[j])
+    for i in range(0,num_imgs):
+        result_mat.append((red_mat[i][:],np.sum(red_mat[i][:])))
+    result_mat.sort(key = lambda x:x[1],reverse=True)
+    return (result_mat,centers)
