@@ -34,8 +34,8 @@ class Kmeans:
         """
         if (len(args)) == 2:
             # normal object instantiation with data_matrix and k
-            imgs_slc = args[0]
-            k = args[1]
+            imgs_slc = args[1]
+            k = args[0]
             num_imgs = len(imgs_slc)
             arr_shp = imgs_slc[0][1].shape[0]
             imgs = np.zeros((num_imgs, arr_shp))

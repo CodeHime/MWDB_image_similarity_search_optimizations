@@ -34,8 +34,8 @@ class Lda:
         """
         if (len(args)) == 2:
             # normal object instantiation with data_matrix and k
-            self.data_matrix = args[0]
-            self.k = args[1]
+            self.data_matrix = args[1]
+            self.k = args[0]
             self.lda_ = LDA(n_components=self.k).fit(self.data_matrix)
             self.new_object_map = self.transform(self.data_matrix)
             # Take average as sum of all probabilities will always be 1

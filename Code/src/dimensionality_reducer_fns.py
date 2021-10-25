@@ -49,17 +49,20 @@ def svd_cust(A, k_num=-1, return_order=False):
 
     if return_order:
         if not transpose:
-            return np.array(U).astype(float), np.diag(np.nan_to_num(np.sqrt(k1.astype(float)))), np.array(V).astype(
-                float), k1_order
+            return np.array(U)[:k_num].astype(float), np.diag(np.nan_to_num(np.sqrt(k1.astype(float)[:k_num]))), \
+                   np.array(V).astype(float).transpose()[:k_num].transpose(), k1_order
         else:
-            return np.transpose(np.array(V)).astype(float), np.diag(np.nan_to_num(np.sqrt(k1.astype(float)))), np.transpose(
-                np.array(U).astype(float)), k1_order
+            return np.transpose(np.array(V)).astype(float)[:k_num], \
+                   np.diag(np.nan_to_num(np.sqrt(k1.astype(float)[:k_num]))), \
+                   np.transpose(np.array(U).astype(float)[:k_num]), k1_order
     else:
         if not transpose:
-            return np.array(U).astype(float), np.diag(np.nan_to_num(np.sqrt(k1.astype(float)))), np.array(V).astype(float)
+            return np.array(U)[:k_num].astype(float), np.diag(np.nan_to_num(np.sqrt(k1.astype(float)[:k_num]))), \
+                   np.array(V).astype(float).transpose()[:k_num].transpose()
         else:
-            return np.transpose(np.array(V)).astype(float), np.diag(np.nan_to_num(np.sqrt(k1.astype(float)))), np.transpose(
-                np.array(U).astype(float))
+            return np.transpose(np.array(V)).astype(float)[:k_num], \
+                   np.diag(np.nan_to_num(np.sqrt(k1.astype(float)[:k_num]))), \
+                   np.transpose(np.array(U).astype(float)[:k_num])
 
 
 def get_sorted_matrix_on_weights(weights, V, return_order=False):

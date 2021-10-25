@@ -37,7 +37,14 @@ def initialize_variables():
 
     base_dir = base0_dir if input_dir == "" else os.path.normpath(os.path.join(input_dir, os.pardir))
     input_dir = os.fspath(os.path.join(base_dir, config['Phase1']['image_path_dir'])) if input_dir == "" else input_dir
-    image_path = os.fspath(os.path.join(input_dir, os.listdir(input_dir)[0])) if input_img == "" else input_img
+
+    if input_img == "":
+        for file in os.listdir(input_dir):
+            if file.endswith(".png"):
+                image_path = os.fspath(os.path.join(input_dir, file))
+                break
+    else:
+        image_path = input_img
     feature = config['Phase1']['default_feature'] if selected_feature == "" else selected_feature
 
     features_dir = os.fspath(os.path.join(base_dir, os.path.normpath(os.path.join(input_dir, os.pardir)) + "_" +
