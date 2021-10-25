@@ -5,6 +5,25 @@ from kmeans import *
 from config import *
 
 
+def get_subjects_from_ids(features_dir, indx):
+  sub_id_dict = {}
+  image_files = get_image_file(features_dir, indx)
+  for i in range(len(image_files)):
+    sub_id = re.split("/|\\\\", image_files[indx[i]])[-1].rstrip(".png").split("-")[0]
+    sub_id_dict.update({sub_id: sub_id_dict.get(sub_id_dict[sub_id], []).append(i)})
+  return sub_id_dict
+
+
+def get_type_from_ids(features_dir, indx):
+  type_id_dict = {}
+  image_files = get_image_file(features_dir, indx)
+  for i in range(len(image_files)):
+    type_id = re.split("/|\\\\", image_files[indx[i]])[-1].rstrip(".png").split("-")[0]
+    print(i)
+    type_id_dict.update({type_id: type_id_dict.get(type_id_dict[type_id], []).append(i)})
+  return sub_id_dict
+
+
 def perform_dimensionality_reductions(matrix, k, technique, base_dir):
   if technique == "pca":
     obj = Pca(k, matrix)

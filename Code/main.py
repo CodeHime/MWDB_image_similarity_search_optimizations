@@ -86,7 +86,8 @@ def Phase2_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
         perform_dimensionality_reductions(feature_dict[feature], k_latent, technique, base_dir)
     elif task_num < 5:
         sim_type = input("Enter matrix similarity type(type/subject):")
-        get_similarity_matrix(feature_dict[feature], k, base_dir, technique=technique, sim_type=sim_type, sim_method="euclidean")
+        get_similarity_matrix(feature_dict[feature], k, base_dir, features_dir, technique=technique, sim_type=sim_type,
+                              sim_method="euclidean")
     elif task_num < 8:
         perform_dimensionality_reductions(feature_dict[feature], k_latent, technique, base_dir)
         d, indx = get_top_k_matches_latent_space(in_feature_dict[feature], k, technique, base_dir)
@@ -121,7 +122,7 @@ def Phase2_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
     elif task_num == 8:
         n = input("Enter n(number of top values to find in database): ")
         m = input("Enter m(number of similar subjects to find): ")
-        sub_sub_sim = get_similarity_matrix(feature_dict[feature], k, base_dir, technique="", sim_type="subject")
+        sub_sub_sim = get_similarity_matrix(feature_dict[feature], k, base_dir, features_dir, technique="", sim_type="subject")
         adjacency_matrix = create_adjacency_matrix(sub_sub_sim, n)
         ascos_similarity(adjacency_matrix, n, m)
     elif task_num == 9:
@@ -129,7 +130,7 @@ def Phase2_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
         m = input("Enter m(number of similar subjects to find): ")
         seed_id = input("Enter subject ids(comma separated):").replace(" ", "").split(",")
 
-        sub_sub_sim = get_similarity_matrix(feature_dict[feature], k, base_dir, technique="", sim_type="subject")
+        sub_sub_sim = get_similarity_matrix(feature_dict[feature], k, base_dir, features_dir, technique="", sim_type="subject")
         adjacency_matrix = create_adjacency_matrix(sub_sub_sim, n)
         get_rank_with_seeds(adjacency_matrix, m, seed_id)
     else:
