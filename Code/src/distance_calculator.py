@@ -79,7 +79,7 @@ def cosine(xb, k, xq):
   :param xq:  Query matrix to find similarity for
   """
   cos = cosine_fn(xb, xq)
-  idx = np.argpartition(em, k)[:k]
+  idx = np.argpartition(cos, k)[:k]
   return cos[idx], idx
 
 

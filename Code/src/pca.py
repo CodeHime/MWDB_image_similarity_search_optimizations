@@ -97,4 +97,4 @@ class Pca:
         pd.DataFrame(self.sub_wt_pairs).to_csv(os.path.join(folder, "sub_wt_pairs.csv"), index=False)
 
     def get_top_k_matches(self, k, xq):
-        return euclidean(np.dot(self.u_, np.diag(self.s_)), k, self.transform([xq]))
+        return euclidean(np.dot(self.u_, self.s_), k, self.transform([xq]))

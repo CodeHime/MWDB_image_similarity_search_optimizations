@@ -21,6 +21,7 @@ hog_dict = eval(config['Phase1']['hog_dict'])
 distances = config['Phase1']['distances']
 distance_dict = eval(config['Phase1']['distance_dict'])
 
+
 def initialize_variables():
     """
     Initialize and return the variables
@@ -29,14 +30,14 @@ def initialize_variables():
     input_k = input("Enter value of k:")
     input_img = os.fspath(input("Enter input image path:"))
     selected_feature = input("Enter feature to compare(elbp/hog/cm8x8/all):")
-    X = input("Input type label:")
-    Y = input("Input subject ID:")
+    X = input("Input type label (X):")
+    Y = input("Input subject ID (Y):")
+    technique = input("Enter technique to apply(pca,svd,lda,kmeans):")
+    technique = "pca" if technique == "" else technique
 
     base_dir = base0_dir if input_dir == "" else os.path.normpath(os.path.join(input_dir, os.pardir))
-    image_path = os.fspath(os.path.join(base_dir, config['Phase1']['image_path_dir']) +
-                           os.listdir(os.path.join(base_dir, config['Phase1']['image_path_dir']))[0]) \
-        if input_img == "" else input_img
     input_dir = os.fspath(os.path.join(base_dir, config['Phase1']['image_path_dir'])) if input_dir == "" else input_dir
+    image_path = os.fspath(os.path.join(input_dir, os.listdir(input_dir)[0])) if input_img == "" else input_img
     feature = config['Phase1']['default_feature'] if selected_feature == "" else selected_feature
 
     features_dir = os.fspath(os.path.join(base_dir, os.path.normpath(os.path.join(input_dir, os.pardir)) + "_" +
@@ -52,7 +53,7 @@ def initialize_variables():
         os.makedirs(os.path.join(features_dir, dir))
 
     return input_dir, input_k, selected_feature, base_dir, image_path, feature, features_dir, \
-           sub_features_dir, X, Y
+           sub_features_dir, X, Y, technique
 
 
 def read_all_images(input_dir, pattern={"X": ".*", "Y": ".*"}):

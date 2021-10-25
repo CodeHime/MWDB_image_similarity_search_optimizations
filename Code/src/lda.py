@@ -85,5 +85,5 @@ class Lda:
         pd.DataFrame(self.new_object_map).to_csv(os.path.join(folder, "new_object_map.csv"), index=False)
 
     def get_top_k_matches(self, k, xq):
-        # KL divergence as it is a probability distribution
+        # DESIGN_DECISIONS: KL divergence as it is a probability distribution
         return kl_divergence(self.new_object_map, k, self.transform([xq]))

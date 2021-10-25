@@ -46,15 +46,13 @@ class Kmeans:
             self.centers = kmeans.cluster_centers_
             self.new_object_map = np.zeros((num_imgs, k))
             self.weight = np.zeros((num_imgs))
-            # TODO: # features then truncate to k?
-            # TODO: ask logic for two loops
             for i in range(0, num_imgs):
                 for j in range(0, k):
                     self.new_object_map[i][j] = manhattan_fn(imgs_flat[i], self.centers[j])
                 self.weight[i] = np.sum(self.new_object_map[i][:])
             # Since good latent semantics give high discrimination power
-            # INFO: variance or distance maximized? Distance as we have a center not a line or curve
-            temp, self.sub_wt_pairs = get_sorted_matrix_on_weights(self.new_object_map, np.average(self.weight, axis=0), return_order=True)
+            # DESIGN_DECISION: variance or distance maximized? Distance as we have a center not a line or curve
+            temp, self.sub_wt_pairs = get_sorted_matrix_on_weights(self.new_object_map, np.sum(self.weight, axis=0), return_order=True)
         elif (len(args)) == 1:
             self.centers = pd.read_csv(os.path.join(args[0], "centers.csv")).to_numpy()
             self.new_object_map = pd.read_csv(os.path.join(args[0], "new_object_map.csv")).to_numpy()
