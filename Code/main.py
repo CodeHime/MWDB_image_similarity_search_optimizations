@@ -94,8 +94,8 @@ def Phase2_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
 
         phase2_destination_dir = os.path.join(base_dir,
                                               os.path.basename(input_dir.rstrip("/")) + "_" + feature +\
-                                              "_" + os.path.basename(input_dir.rstrip(".png")) + "_" + technique + "_results_task3/"
-                                              if input_dir != "" else input_dir + "_" + feature + "_results_task3/")
+                                              "_" + os.path.basename(input_dir.rstrip(".png")) + "_" + technique + "_results/"
+                                              if input_dir != "" else input_dir + "_" + feature + "_results/")
         if not os.path.isdir(phase2_destination_dir):
             os.makedirs(phase2_destination_dir)
 
@@ -122,16 +122,16 @@ def Phase2_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
     elif task_num == 8:
         n = input("Enter n(number of top values to find in database): ")
         m = input("Enter m(number of similar subjects to find): ")
-        sub_sub_sim = get_similarity_matrix(feature_dict[feature], k, base_dir, features_dir, technique="", sim_type="subject")
-        adjacency_matrix = create_adjacency_matrix(sub_sub_sim, n)
+        # sub_sub_sim = get_similarity_matrix(feature_dict[feature], k, base_dir, features_dir, technique="", sim_type="subject")
+        adjacency_matrix = create_adjacency_matrix(feature_dict[feature], n)
         ascos_similarity(adjacency_matrix, n, m)
     elif task_num == 9:
         n = input("Enter n(number of top values to find in database): ")
         m = input("Enter m(number of similar subjects to find): ")
         seed_id = input("Enter subject ids(comma separated):").replace(" ", "").split(",")
 
-        sub_sub_sim = get_similarity_matrix(feature_dict[feature], k, base_dir, features_dir, technique="", sim_type="subject")
-        adjacency_matrix = create_adjacency_matrix(sub_sub_sim, n)
+        # sub_sub_sim = get_similarity_matrix(feature_dict[feature], k, base_dir, features_dir, technique="", sim_type="subject")
+        adjacency_matrix = create_adjacency_matrix(feature_dict[feature], n)
         get_rank_with_seeds(adjacency_matrix, m, seed_id)
     else:
         raise ValueError("No such task exists. Enter a valid value from 1 to 9.")
