@@ -2,4 +2,6 @@
 *.vs*
 *__pycache__*
 input_images_all_data/*
-*Code/data/image_features/*
+*image_features*
+*dim_red*
+*similarity*
