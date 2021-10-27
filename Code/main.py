@@ -100,25 +100,36 @@ def Phase2_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
             os.makedirs(phase2_destination_dir)
 
         image_files = get_image_file(features_dir, indx)
+
+        print("=" * 80 + "\n")
+        print("K OUTPUT:")
+        for i in range(len(indx)):
+            result = Image.fromarray((images[indx[i]]).astype(np.uint8))
+            result.save(os.path.join(phase2_destination_dir, image_files[indx[i]].split("/")[-1].split("\\")[-1]))
+            print(re.split("/|\\\\", image_files[indx[i]])[-1].rstrip(".png"), d[i])
+
         if task_num == 5:
             for i in range(len(indx)):
-                result = Image.fromarray((images[indx[i]]).astype(np.uint8))
-                result.save(os.path.join(phase2_destination_dir, image_files[indx[i]].split("/")[-1].split("\\")[-1]))
-                print("=" * 20 + "\n")
-                print("PHASE 1 OUTPUT:")
-                print(os.path.join(phase2_destination_dir, image_files[indx[i]].split("/")[-1].split("\\")[-1]), d[i])
                 plt.imshow(images[i], cmap='gray')
                 plt.show()
         elif task_num == 6:
+            for i in range(len(indx)):
+                result = Image.fromarray((images[indx[i]]).astype(np.uint8))
+                result.save(os.path.join(phase2_destination_dir, image_files[indx[i]].split("/")[-1].split("\\")[-1]))
             type_tag = []
             for i in range(len(indx)):
-                type_tag.append(re.split("/|\\\\", image_files[indx[i]])[-1].rstrip(".png").split("-")[0])
+                type_tag.append(re.split("/|\\\\", image_files[indx[i]])[-1].rstrip(".png").split("-")[1])
             print(type_tag)
+            print(most_frequent(type_tag))
         elif task_num == 7:
+            for i in range(len(indx)):
+                result = Image.fromarray((images[indx[i]]).astype(np.uint8))
+                result.save(os.path.join(phase2_destination_dir, image_files[indx[i]].split("/")[-1].split("\\")[-1]))
             sub_tag = []
             for i in range(len(indx)):
-                sub_tag.append(re.split("/|\\\\", image_files[indx[i]])[-1].rstrip(".png").split("-")[1])
+                sub_tag.append(re.split("/|\\\\", image_files[indx[i]])[-1].rstrip(".png").split("-")[2])
             print(sub_tag)
+            print(most_frequent(sub_tag))
     elif task_num == 8:
         n = input("Enter n(number of top values to find in database): ")
         m = input("Enter m(number of similar subjects to find): ")

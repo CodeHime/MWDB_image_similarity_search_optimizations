@@ -38,13 +38,15 @@ class Pca:
             self.x_covariance_ = np.cov(self.x_)
             self.eigen_values_, self.eigen_vectors_ = eig(self.x_covariance_)
 
-            temp, self.sub_wt_pairs = get_sorted_matrix_on_weights(self.eigen_values_, self.eigen_vectors_, return_order=True)
+            temp, self.sub_wt_pairs = get_sorted_matrix_on_weights(self.eigen_values_,
+                                                                   self.eigen_vectors_.astype(float),
+                                                                   return_order = True)
             self.eigen_vectors_ = self.eigen_vectors_.transpose()[::-1]
             self.eigen_values_ = self.eigen_values_[::-1]
 
-            self.u_, self.s_, self.u_transpose_ = self.eigen_vectors_[:k].transpose(), \
+            self.u_, self.s_, self.u_transpose_ = self.eigen_vectors_[:k].astype(float).transpose(), \
                                                   np.diag(self.eigen_values_[:k].astype(np.float)), \
-                                                  self.eigen_vectors_[:k]
+                                                  self.eigen_vectors_[:k].astype(float)
         elif (len(args)) == 1:
             self.u_ = pd.read_csv(os.path.join(args[0], "U.csv")).to_numpy()
             self.u_transpose_ = self.u_.transpose()
