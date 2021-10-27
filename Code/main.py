@@ -1,7 +1,12 @@
 """
 main.py: main script to run
+Phase 1:
 C:/Users/Krima/Documents/MWDB_proj/Code/data/phase2_sample_images
 C:/Users/Krima/Documents/MWDB_proj/Code/data/input_images/0.png
+
+Phase 2:
+C:/Users/Krima/Documents/MWDB_image_similarity_search_optimizations/Code/data/phase2_data/all
+
 Notes:
 - Give code permission to handle files
 
