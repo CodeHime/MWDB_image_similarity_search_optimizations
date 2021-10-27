@@ -30,7 +30,7 @@ def get_std_dev_img(input_img, output_dim):
 # That means its left tail is longer or fatter than its right one. 
 # Therefore, the frequency over the darker intensities (closer to zero) is wider spread (less concentrated, but not necessarily less frequent than the right tail!). The positive skewness is the opposite.
 # https://stats.stackexchange.com/questions/211377/skewness-and-kurtosis-in-an-image
-# Cite Peraon formula and numpy libraries
+# Cite Pearson formula and numpy libraries
 def get_skew_img(input_img, output_dim, mean_img=np.array([]), std_img=np.array([])):
   # DESIGN_DECISIONS: Pearson failed for std dev 0
   # if mean_img.shape==np.array([]).shape:
@@ -64,7 +64,7 @@ def get_color_moments(input_img, output_dim):
 # https://scikit-image.org/docs/dev/auto_examples/features_detection/plot_local_binary_pattern.html
 # ELBP can be used for border detection
 def get_elbp(input_img, neighbours=8, radius=1):
-  return local_binary_pattern(input_img, neighbours, radius)
+  return local_binary_pattern(input_img, neighbours, radius, method="uniform")
 
 
 # From each region, 9 numbers are extracted for angles:: TODO

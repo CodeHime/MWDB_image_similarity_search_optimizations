@@ -40,7 +40,10 @@ class Lda:
             self.new_object_map = self.transform(self.data_matrix)
             # Take average as sum of all probabilities will always be 1
             print(np.average(self.lda_.components_, axis=0))
-            temp, self.sub_wt_pairs = get_sorted_matrix_on_weights(np.average(self.lda_.components_, axis=0), self.lda_.components_, return_order=True)
+            self.sub_wt_pairs = []
+            for i in range(len(np.average(self.lda_.components_, axis=0))):
+                self.sub_wt_pairs.append(i, sorted(np.average(self.lda_.components_, axis=0)))
+            # temp, self.sub_wt_pairs = get_sorted_matrix_on_weights(np.average(self.lda_.components_, axis=0), self.lda_.components_, return_order=True)
         elif (len(args)) == 1:
             # load object from folder
             self.lda_ = LDA()
