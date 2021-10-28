@@ -33,7 +33,7 @@ class Svd:
         """
         if (len(args)) == 2:
             # normal object instantiation with data_matrix and k
-            self.U, self.S, self.VT, self.sub_wt_pairs = svd_cust(args[1], k_num=args[0],return_order=True)
+            self.U, self.S, self.VT, self.sub_wt_pairs = svd_cust(args[1], k_num=args[0], return_order=True)
         elif (len(args)) == 1:
             self.U = pd.read_csv(os.path.join(args[0], "U.csv")).to_numpy()
             self.S = pd.read_csv(os.path.join(args[0], "S.csv")).to_numpy()
