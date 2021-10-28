@@ -34,25 +34,27 @@ class Kmeans:
         """
         if (len(args)) == 2:
             # normal object instantiation with data_matrix and k
-            imgs_slc = args[1]
+            A1 = args[1]
             k = args[0]
-            num_imgs = len(imgs_slc)
-            arr_shp = imgs_slc[0][1].shape[0]
-            imgs = np.zeros((num_imgs, arr_shp))
-            for i in range(0, num_imgs):
-                imgs[i] = imgs_slc[i][1]
-            imgs_flat = imgs.reshape(num_imgs, arr_shp)
-            kmeans = KMeans(n_clusters=k, random_state=0).fit(imgs_flat)
+            A = np.array(A1)
+            size = A.shape[0]
+            # reducedMatrix = np.zeros((size, k))
+            kmeans = KMeans(n_clusters=k, random_state=0).fit(A)
             self.centers = kmeans.cluster_centers_
-            self.new_object_map = np.zeros((num_imgs, k))
-            self.weight = np.zeros((num_imgs))
-            for i in range(0, num_imgs):
-                for j in range(0, k):
-                    self.new_object_map[i][j] = manhattan_fn(imgs_flat[i], self.centers[j])
-                self.weight[i] = np.sum(self.new_object_map[i][:])
+            # for i in range(0, size):
+            #     for j in range(0, k):
+            #         reducedMatrix[i][j] = cityblock(A[i], centers[j])
+            # DESIGN_DECISION: WHY is it size*k and not k*size? k representative objects with mean features
+            self.new_object_map = np.zeros((size, k))
+            self.weight = np.zeros((size))
+            for i in range(0, size):
+                self.new_object_map[i] = manhattan_fn(A[i], self.centers)
+                # print(np.sum(self.new_object_map[i]))
+                self.weight[i] = np.sum(self.new_object_map[i])
             # Since good latent semantics give high discrimination power
             # DESIGN_DECISION: variance or distance maximized? Distance as we have a center not a line or curve
-            temp, self.sub_wt_pairs = get_sorted_matrix_on_weights(self.new_object_map, np.sum(self.weight, axis=0), return_order=True)
+            temp, self.sub_wt_pairs = get_sorted_matrix_on_weights(self.weight, self.new_object_map,
+                                                                   return_order=True)
         elif (len(args)) == 1:
             self.centers = pd.read_csv(os.path.join(args[0], "centers.csv")).to_numpy()
             self.new_object_map = pd.read_csv(os.path.join(args[0], "new_object_map.csv")).to_numpy()
@@ -85,8 +87,8 @@ class Kmeans:
         :return: pca transformed matrix
         """
         new_map = np.zeros((len(data_matrix), len(self.centers)))
-        for j in range(len(self.centers)):
-            new_map[j] = manhattan_fn(data_matrix[:len(self.centers)][j], self.centers[j])
+        # for j in range(len(self.centers)):
+        new_map = manhattan_fn(data_matrix[:len(self.centers)], self.centers)
         return new_map
 
     def get_obj_weight_pairs(self):
