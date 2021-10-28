@@ -42,7 +42,7 @@ class Lda:
             print(np.average(self.lda_.components_, axis=0))
             self.sub_wt_pairs = []
             for i in range(len(np.average(self.lda_.components_, axis=0))):
-                self.sub_wt_pairs.append(i, sorted(np.average(self.lda_.components_, axis=0)))
+                self.sub_wt_pairs.append([i, sorted(np.average(self.lda_.components_, axis=0))])
             # temp, self.sub_wt_pairs = get_sorted_matrix_on_weights(np.average(self.lda_.components_, axis=0), self.lda_.components_, return_order=True)
         elif (len(args)) == 1:
             # load object from folder
@@ -87,6 +87,7 @@ class Lda:
         pd.DataFrame(self.lda_.components_).to_csv(os.path.join(folder, "components.csv"), index=False)
         pd.DataFrame(self.lda_.exp_dirichlet_component_).to_csv(os.path.join(folder, "exp_dirichlet_components.csv"), index=False)
         pd.DataFrame(self.new_object_map).to_csv(os.path.join(folder, "new_object_map.csv"), index=False)
+        pd.DataFrame(self.sub_wt_pairs).to_csv(os.path.join(folder, "sub_wt_pairs.csv"), index=False)
 
     def get_top_k_matches(self, k, xq):
         # DESIGN_DECISIONS: KL divergence as it is a probability distribution
