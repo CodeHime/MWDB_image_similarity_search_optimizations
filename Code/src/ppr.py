@@ -13,7 +13,8 @@ import os
 
 
 def get_rank_with_seeds(transition_matrix, m, s_list):
-    jump_factor = 0.5
+    jump_factor = 0.05
+    # jump_factor = 0.5
     seeds = np.zeros((transition_matrix.shape[0], 1))
     for seed in s_list:
         seeds[seed - 1] = 1 / transition_matrix.shape[0]
@@ -32,4 +33,4 @@ def get_rank_with_seeds(transition_matrix, m, s_list):
     for i, row in enumerate(t_discount):
         final_ranks.append((i + 1, row))
     final_ranks = sorted(final_ranks, reverse=True, key=lambda x: x[1])
-    return final_ranks
+    return final_ranks[:m]
