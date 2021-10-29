@@ -1,3 +1,4 @@
+# DESIGN_DECISION: Use scipy as it is more accurate to calculate eigenvalues
 # from numpy.linalg import eig
 from scipy.linalg import eig
 import numpy as np

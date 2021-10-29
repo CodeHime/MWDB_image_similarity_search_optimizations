@@ -41,9 +41,6 @@ class Kmeans:
             # reducedMatrix = np.zeros((size, k))
             kmeans = KMeans(n_clusters=k, random_state=0).fit(A)
             self.centers = kmeans.cluster_centers_
-            # for i in range(0, size):
-            #     for j in range(0, k):
-            #         reducedMatrix[i][j] = cityblock(A[i], centers[j])
             # DESIGN_DECISION: WHY is it size*k and not k*size? k representative objects with mean features
             self.new_object_map = np.zeros((size, k))
             self.weight = np.zeros((size))

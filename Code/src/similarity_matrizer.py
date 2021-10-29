@@ -31,6 +31,7 @@ def get_similarity_matrix(xb, k, base_dir, features_dir, technique="pca", sim_ty
     else:
         xy_id_dict = get_subjects_from_ids(features_dir, range(xb.shape[0]))
 
+    # DESIGN_DECISION: Average over type/similarity
     xy_similarity_matrix = []
     xy_id_mapping = {}
     index = 0
