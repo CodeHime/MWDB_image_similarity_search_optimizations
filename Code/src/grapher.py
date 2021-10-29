@@ -3,31 +3,25 @@ import networkx as nx
 import numpy as np
 from scipy.spatial.distance import cityblock
 
-
+"""
 def index_tobe_zero(data, n):
-    index = data.argsort()[::-1]
+    index = data.argsort()
     temp = len(index) - n
     return index[:temp]
-
+"""
 
 def create_adjacency_matrix(dataset, n):
-    dlen = len(dataset[0])
-    sim_mat = np.zeros((dlen, dlen))
-    for i in range(0, dlen):
-        for j in range(0, dlen):
-            sim_mat[i][j] = cityblock(dataset[0][i][0], dataset[0][j][0])
-    for i in range(0, len(sim_mat)):
-        index_zero = index_tobe_zero(sim_mat[i], n)
-        for j in index_zero:
-            sim_mat[i][j] = 0
-        total_sum = np.sum(sim_mat[i])
-        k = 0
-        for x in sim_mat[i]:
-            if x != 0:
-                sim_mat[i][k] = 1 - x / total_sum
-            k = k + 1
-    print(sim_mat)
-    return sim_mat
+    A = np.array(dataset)
+    A2 = np.zeros(A.shape)
+    srows = A.shape[0] - 1
+    scols = A.shape[1] - 1
+    temp = np.argsort(A)
+    for i in range(0, srows + 1):
+        for j in temp[i][n+1:]:
+            A[i][j] = 0
+    for i in range(0, srows + 1):
+        A2[i] = A[i] / np.sum(A[i])
+    return A2
 
 
 def make_graph_with_labels_visual(adjacency_matrix, mylabels):

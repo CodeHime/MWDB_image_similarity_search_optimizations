@@ -10,6 +10,11 @@ C:/Users/Krima/Documents/MWDB_image_similarity_search_optimizations/Code/data/ph
 Notes:
 - Give code permission to handle files
 
+k = 5, 10, 50
+PCA, SVD, LDA, k-means
+X=cc, neg, original, rot, noise
+Y=1, 26, 37
+
 """
 # Import the dataset
 import sys
@@ -138,17 +143,31 @@ def Phase2_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
     elif task_num == 8:
         n = input("Enter n(number of top values to find in database): ")
         m = input("Enter m(number of similar subjects to find): ")
-        # sub_sub_sim = get_similarity_matrix(feature_dict[feature], k, base_dir, features_dir, technique="", sim_type="subject")
-        adjacency_matrix = create_adjacency_matrix(feature_dict[feature], n)
-        ascos_similarity(adjacency_matrix, n, m)
+        sub_sub_sim = get_similarity_matrix(feature_dict[feature], k, base_dir, features_dir, technique="",
+                                            sim_type="subject")
+        adjacency_matrix = create_adjacency_matrix(sub_sub_sim, int(n))
+        m_sim = ascos_similarity(adjacency_matrix, int(n), int(m))
+
+        sub_dict = dict(pd.read_csv(os.path.join(base_dir, config['Phase2']['similarity_dir'], "subjectid_map.csv"),
+                                     header=None).values)
+
+        print([sub_dict[i] for i in m_sim])
+        # get_subjects_from_ids()
     elif task_num == 9:
         n = input("Enter n(number of top values to find in database): ")
         m = input("Enter m(number of similar subjects to find): ")
         seed_id = input("Enter subject ids(comma separated):").replace(" ", "").split(",")
 
-        # sub_sub_sim = get_similarity_matrix(feature_dict[feature], k, base_dir, features_dir, technique="", sim_type="subject")
-        adjacency_matrix = create_adjacency_matrix(feature_dict[feature], n)
-        get_rank_with_seeds(adjacency_matrix, m, seed_id)
+        sub_sub_sim = get_similarity_matrix(feature_dict[feature], k, base_dir, features_dir, technique="", sim_type="subject")
+
+        seed_dict = dict(pd.read_csv(os.path.join(base_dir, config['Phase2']['similarity_dir'], "subjectid_map.csv"), header=None).values)
+        seed_id = [seed_dict[int(i)] for i in seed_id]
+        # print(seed_id)
+        adjacency_matrix = create_adjacency_matrix(sub_sub_sim, int(n))
+        rev_seed_dict = {v: k for k, v in seed_dict.items()}
+
+        seed_ranks = get_rank_with_seeds(adjacency_matrix, int(m), seed_id)
+        print([[rev_seed_dict[i], r] for i, r in seed_ranks])
     else:
         raise ValueError("No such task exists. Enter a valid value from 1 to 9.")
 
