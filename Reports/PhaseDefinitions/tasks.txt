@@ -1,0 +1,24 @@
+++++++++++++
+Task Plan
+++++++++++++
+
+Task 1-5
+=========
+SVM classsifier - Nisarg
+Decision tree classifier - Chinmay, Eshita
+PPR - Harshita
+LSH - Krima (https://www.pinecone.io/learn/locality-sensitive-hashing/)
+VA - Krishna
+
+Deadline:  14th November, 2021
+Meeting: 
+11th November, 2021 :: 5 pm - 6 pm
+14th November, 2021 :: 5 pm - 6 pm
+
+Task 6-8
+=========
+Deadline:  24th November, 2021
+
+Report
+=========
+Deadline:  28th November, 2021

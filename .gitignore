@@ -10,3 +10,6 @@ input_images_all_data/*
 *similarity/*
 *results*
 *results/*
+Code/data/tests_v2.zip
+Code/data/tests_v2/*
+env.yml
