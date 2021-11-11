@@ -80,7 +80,7 @@ def Phase1_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
 
 
 def Phase2_main(input_dir, input_k, selected_feature, base_dir, image_path, feature, features_dir,
-                sub_features_dir, X, Y, technique, task_num=None):
+                sub_features_dir, X, Y, technique):
     images, img_all_names = read_all_images(input_dir, pattern={"X": X, "Y": Y})
     k = min(images.shape[0], 10) if input_k == "" else min(images.shape[0], int(input_k))
     save_all_img_features(images, output_dim, features_dir, sub_features_dir, hog_dict, feature_visualization=False,
@@ -88,8 +88,7 @@ def Phase2_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
     feature_dict = get_feature_dict_file(features_dir)
     in_feature_dict = get_feature_dict_image(image_path, output_dim, sub_features_dir, hog_dict)
 
-    if not task_num:
-        task_num = int(input("Enter task number(1-9):"))
+    task_num = int(input("Enter task number(1-9):"))
     k_latent = input("Enter k for number of latent features:")
     k_latent = min(feature_dict[feature].shape[0], feature_dict[feature].shape[1])*3//4 \
         if k_latent == "" else int(k_latent)
@@ -173,32 +172,6 @@ def Phase2_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
     else:
         raise ValueError("No such task exists. Enter a valid value from 1 to 9.")
 
-
-def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feature, features_dir,
-                sub_features_dir, X, Y, technique):
-    Phase2_main(input_dir, input_k, selected_feature, base_dir, image_path, feature, features_dir,
-                sub_features_dir, X, Y, technique, task_num=1)
-
-    task_num = int(input("Enter task number(1-8):"))
-
-    if task_num == 1:
-        raise NotImplmentedError(f"No implementation found for selected task: {task_num}")
-    elif task_num == 2:
-        raise NotImplmentedError(f"No implementation found for selected task: {task_num}")
-    elif task_num == 3:
-        raise NotImplmentedError(f"No implementation found for selected task: {task_num}")
-    elif task_num == 4:
-        raise NotImplmentedError(f"No implementation found for selected task: {task_num}")
-    elif task_num == 5:
-        raise NotImplmentedError(f"No implementation found for selected task: {task_num}")
-    elif task_num == 6:
-        raise NotImplmentedError(f"No implementation found for selected task: {task_num}")
-    elif task_num == 7:
-        raise NotImplmentedError(f"No implementation found for selected task: {task_num}")
-    elif task_num == 8:
-        raise NotImplmentedError(f"No implementation found for selected task: {task_num}")
-    else:
-        raise NotImplmentedError(f"No implementation found for selected task: {task_num}")
 
 # remove mask for current user
 os.umask(0)
