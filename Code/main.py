@@ -15,6 +15,14 @@ PCA, SVD, LDA, k-means
 X=cc, neg, original, rot, noise
 Y=1, 26, 37
 
+
+IMPORTANT TERMS:
+feature_dict : Dict with all the feature transforms of the image FOLDER
+in_feature_dict : Dict with all the feature transforms of the INPUT image
+
+obj = get_saved_latent_object(technique, base_dir) : the object of the lantent semantics
+obj.get_latent_features: returns your transformed vector space
+obj.transform : returns your input image transformed
 """
 # Import the dataset
 import sys
@@ -97,9 +105,7 @@ def Phase2_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
     if task_num < 3:
         perform_dimensionality_reductions(feature_dict[feature], k_latent, technique, base_dir)
     elif task_num < 5:
-        sim_type = input("Enter matrix similarity type(type/subject):")
-        get_similarity_matrix(feature_dict[feature], k, base_dir, features_dir, technique=technique, sim_type=sim_type,
-                              sim_method="euclidean")
+        pass
     elif task_num < 8:
         perform_dimensionality_reductions(feature_dict[feature], k_latent, technique, base_dir)
         d, indx = get_top_k_matches_latent_space(in_feature_dict[feature], k, technique, base_dir)
@@ -176,8 +182,23 @@ def Phase2_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
 
 def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feature, features_dir,
                 sub_features_dir, X, Y, technique):
-    Phase2_main(input_dir, input_k, selected_feature, base_dir, image_path, feature, features_dir,
-                sub_features_dir, X, Y, technique, task_num=1)
+    # From Phase 1
+    images, img_all_names = read_all_images(input_dir, pattern={"X": X, "Y": Y})
+    k = min(images.shape[0], 10) if input_k == "" else min(images.shape[0], int(input_k))
+    save_all_img_features(images, output_dim, features_dir, sub_features_dir, hog_dict, feature_visualization=False,
+                          img_ids=img_all_names)
+    feature_dict = get_feature_dict_file(features_dir)
+    in_feature_dict = get_feature_dict_image(image_path, output_dim, sub_features_dir, hog_dict)
+
+    # From Phase 2
+    k_latent = input("Enter k for number of latent features:")
+    # DESIGN_DECISION: Take a minimum over 20 latent features or less
+    k_latent = min(feature_dict[feature].shape[0]*3//4, feature_dict[feature].shape[1]*3//4, 20) \
+        if k_latent == "" else int(k_latent)
+
+    if not os.path.isdir(os.path.join(base_dir, config['Phase2'][technique + '_dir'])):
+        perform_dimensionality_reductions(feature_dict[feature], k_latent, technique, base_dir)
+    obj = get_saved_latent_object(technique, base_dir)
 
     task_num = int(input("Enter task number(1-8):"))
 

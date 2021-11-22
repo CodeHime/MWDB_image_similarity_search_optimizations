@@ -1,6 +1,6 @@
 # Top K image search using original images
 # Here I am using a library named faiss for the similarity search
-# Eucleadean and cosine:: TODO :: why this and not other distances
+# Euclidean and cosine:: TODO :: why this and not other distances
 import random
 import os
 import pandas as pd
