@@ -23,6 +23,11 @@ in_feature_dict : Dict with all the feature transforms of the INPUT image
 obj = get_saved_latent_object(technique, base_dir) : the object of the lantent semantics
 obj.get_latent_features: returns your transformed vector space
 obj.transform : returns your input image transformed
+
+get_images_from_ids(features_dir, indx)
+get_subjects_from_ids(features_dir, indx)
+get_type_from_ids(features_dir, indx)
+get_sample_from_ids(features_dir, indx)
 """
 # Import the dataset
 import sys
@@ -233,3 +238,6 @@ print(f"INPUT IMAGE IS {image_path}")
 
 Phase2_main(input_dir, input_k, selected_feature, base_dir, image_path, feature, features_dir,
             sub_features_dir, X, Y, technique)
+
+# Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feature, features_dir,
+#             sub_features_dir, X, Y, technique)
