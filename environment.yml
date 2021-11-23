@@ -21,8 +21,5 @@ dependencies:
     - numpy==1.21.2
     - scikit-learn==1.0
     - threadpoolctl==3.0.0
-<<<<<<< HEAD
     - numpyencoder
     - cvxopt
-=======
->>>>>>> a50422bc97ca29118c0ebb681476e6698b64818a

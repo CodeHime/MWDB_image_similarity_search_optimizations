@@ -13,14 +13,13 @@ config = ConfigParser(interpolation=ExtendedInterpolation())
 config.read(os.fspath('./src/config.conf'))
 # Defining parameters for feature extraction
 base0_dir = os.fspath(config['DEFAULT']['base0_dir'])
-sub_features_dir = eval(config['phase1']['sub_features_dir'])
+sub_features_dir = eval(config['Phase1']['sub_features_dir'])
 
 # defining phase 1 definitions
-output_dim = eval(config['phase1']['output_dim'])
-hog_dict = eval(config['phase1']['hog_dict'])
-distances = config['phase1']['distances']
-distance_dict = eval(config['phase1']['distance_dict'])
-
+output_dim = eval(config['Phase1']['output_dim'])
+hog_dict = eval(config['Phase1']['hog_dict'])
+distances = config['Phase1']['distances']
+distance_dict = eval(config['Phase1']['distance_dict'])
 
 
 def initialize_variables():
@@ -37,11 +36,7 @@ def initialize_variables():
     technique = "pca" if technique == "" else technique
 
     base_dir = base0_dir if input_dir == "" else os.path.normpath(os.path.join(input_dir, os.pardir))
-<<<<<<< HEAD
     input_dir = os.fspath(os.path.join(base_dir, config['Phase1']['image_path_dir'])) if input_dir == "" else input_dir
-=======
-    input_dir = os.fspath(os.path.join(base_dir, config['phase1']['image_path_dir'])) if input_dir == "" else input_dir
->>>>>>> a50422bc97ca29118c0ebb681476e6698b64818a
 
     if input_img == "":
         for file in os.listdir(input_dir):
@@ -50,15 +45,11 @@ def initialize_variables():
                 break
     else:
         image_path = input_img
-<<<<<<< HEAD
     feature = config['Phase1']['default_feature'] if selected_feature == "" else selected_feature
-=======
-    feature = config['phase1']['default_feature'] if selected_feature == "" else selected_feature
->>>>>>> a50422bc97ca29118c0ebb681476e6698b64818a
 
     features_dir = os.fspath(os.path.join(base_dir, os.path.normpath(os.path.join(input_dir, os.pardir)) + "_" +
-                                          config['phase1']['image_feature_dir'])) \
-        if input_dir == "" else os.fspath(os.path.join(base_dir, config['phase1']['image_feature_dir']))
+                                          config['Phase1']['image_feature_dir'])) \
+        if input_dir == "" else os.fspath(os.path.join(base_dir, config['Phase1']['image_feature_dir']))
 
     # Create folders for images if they do not exist
     if not os.path.isdir(features_dir):
