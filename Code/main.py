@@ -15,6 +15,7 @@ PCA, SVD, LDA, k-means
 X=cc, neg, original, rot, noise
 Y=1, 26, 37
 
+<<<<<<< HEAD
 
 IMPORTANT TERMS:
 feature_dict : Dict with all the feature transforms of the image FOLDER
@@ -30,6 +31,8 @@ get_type_from_ids(features_dir, indx)
 get_sample_from_ids(features_dir, indx)
 
 a50422bc97ca29118c0ebb681476e6698b64818a
+=======
+>>>>>>> a50422bc97ca29118c0ebb681476e6698b64818a
 """
 # Import the dataset
 import sys
@@ -112,7 +115,13 @@ def Phase2_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
     if task_num < 3:
         perform_dimensionality_reductions(feature_dict[feature], k_latent, technique, base_dir)
     elif task_num < 5:
+<<<<<<< HEAD
         pass
+=======
+        sim_type = input("Enter matrix similarity type(type/subject):")
+        get_similarity_matrix(feature_dict[feature], k, base_dir, features_dir, technique=technique, sim_type=sim_type,
+                              sim_method="euclidean")
+>>>>>>> a50422bc97ca29118c0ebb681476e6698b64818a
     elif task_num < 8:
         perform_dimensionality_reductions(feature_dict[feature], k_latent, technique, base_dir)
         d, indx = get_top_k_matches_latent_space(in_feature_dict[feature], k, technique, base_dir)
@@ -189,6 +198,7 @@ def Phase2_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
 
 def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feature, features_dir,
                 sub_features_dir, X, Y, technique):
+<<<<<<< HEAD
     # From Phase 1
     images, img_all_names = read_all_images(input_dir, pattern={"X": X, "Y": Y})
     k = min(images.shape[0], 10) if input_k == "" else min(images.shape[0], int(input_k))
@@ -206,6 +216,10 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
     if not os.path.isdir(os.path.join(base_dir, config['Phase2'][technique + '_dir'])):
         perform_dimensionality_reductions(feature_dict[feature], k_latent, technique, base_dir)
     obj = get_saved_latent_object(technique, base_dir)
+=======
+    Phase2_main(input_dir, input_k, selected_feature, base_dir, image_path, feature, features_dir,
+                sub_features_dir, X, Y, technique, task_num=1)
+>>>>>>> a50422bc97ca29118c0ebb681476e6698b64818a
 
     task_num = int(input("Enter task number(1-8):"))
 
@@ -231,6 +245,7 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
 # remove mask for current user
 os.umask(0)
 
+<<<<<<< HEAD
 # input_dir, input_k, selected_feature, base_dir, image_path, feature, features_dir, \
 # sub_features_dir, X, Y, technique = initialize_variables()
 #
@@ -246,3 +261,14 @@ os.umask(0)
 
 from SVM_task1 import *
 svm_task_1()
+=======
+input_dir, input_k, selected_feature, base_dir, image_path, feature, features_dir, \
+sub_features_dir, X, Y, technique = initialize_variables()
+
+print(f"INPUT IMAGE IS {image_path}")
+
+# Phase1_main(input_dir, input_k, selected_feature, base_dir, image_path, feature, features_dir, sub_features_dir)
+
+Phase2_main(input_dir, input_k, selected_feature, base_dir, image_path, feature, features_dir,
+            sub_features_dir, X, Y, technique)
+>>>>>>> a50422bc97ca29118c0ebb681476e6698b64818a

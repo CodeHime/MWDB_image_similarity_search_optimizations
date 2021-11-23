@@ -82,7 +82,11 @@ def get_hog(input_img, hog_dict):
   return np.array(fd), hog_image
 
 
+<<<<<<< HEAD
 def get_feature_vectors(image, name, output_dim, sub_features_dir, hog_dict, feature_visualization_save=False, elbp_dict=eval(config['Phase1']['elbp_dict'])):
+=======
+def get_feature_vectors(image, name, output_dim, sub_features_dir, hog_dict, feature_visualization_save=False, elbp_dict=eval(config['phase1']['elbp_dict'])):
+>>>>>>> a50422bc97ca29118c0ebb681476e6698b64818a
   color_moments = get_color_moments(image, output_dim)
   if feature_visualization_save:
     out = Image.fromarray((color_moments[0]).astype(np.uint8))
@@ -106,7 +110,11 @@ def get_feature_vectors(image, name, output_dim, sub_features_dir, hog_dict, fea
 
 
 # Save all features as images(for visualization) and features (color moments, hog and elbp)
+<<<<<<< HEAD
 def save_all_img_features(images, output_dim, features_dir, sub_features_dir, hog_dict, feature_visualization = False, img_ids=None, elbp_dict=eval(config['Phase1']['elbp_dict'])):
+=======
+def save_all_img_features(images, output_dim, features_dir, sub_features_dir, hog_dict, feature_visualization = False, img_ids=None, elbp_dict=eval(config['phase1']['elbp_dict'])):
+>>>>>>> a50422bc97ca29118c0ebb681476e6698b64818a
   if img_ids!=None:
     pd.DataFrame(enumerate(img_ids),columns=["image_id", "image_idx"]).to_csv(os.path.join(features_dir, "image_ids.csv"),index=False)
   else:
