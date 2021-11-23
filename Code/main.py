@@ -229,15 +229,18 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
 # remove mask for current user
 os.umask(0)
 
-input_dir, input_k, selected_feature, base_dir, image_path, feature, features_dir, \
-sub_features_dir, X, Y, technique = initialize_variables()
-
-print(f"INPUT IMAGE IS {image_path}")
+# input_dir, input_k, selected_feature, base_dir, image_path, feature, features_dir, \
+# sub_features_dir, X, Y, technique = initialize_variables()
+#
+# print(f"INPUT IMAGE IS {image_path}")
 
 # Phase1_main(input_dir, input_k, selected_feature, base_dir, image_path, feature, features_dir, sub_features_dir)
 
-Phase2_main(input_dir, input_k, selected_feature, base_dir, image_path, feature, features_dir,
-            sub_features_dir, X, Y, technique)
+# Phase2_main(input_dir, input_k, selected_feature, base_dir, image_path, feature, features_dir,
+#             sub_features_dir, X, Y, technique)
 
 # Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feature, features_dir,
 #             sub_features_dir, X, Y, technique)
+
+from SVM_task1 import *
+svm_task_1()
