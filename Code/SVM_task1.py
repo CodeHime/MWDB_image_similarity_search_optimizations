@@ -126,7 +126,7 @@ def svm_task_1():
     # print(test_result)
 
     classifier_results = {}
-
+    print(images_assosciation)
     for image_id in images_assosciation:
         ans = -1
         for X in images_assosciation[image_id]:
@@ -136,6 +136,7 @@ def svm_task_1():
                     ans = X[key]
     remaining_images = []
 
+    print(classifier_results)
     for image_id in test_set_features:
         if image_id not in classifier_results:
             remaining_images.append(image_id)
