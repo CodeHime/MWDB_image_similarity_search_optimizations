@@ -245,4 +245,7 @@ os.umask(0)
 #             sub_features_dir, X, Y, technique)
 
 from SVM_task1 import *
-svm_task_1()
+from svm_task2 import *
+from svm_task3 import *
+
+svm_task_3()
