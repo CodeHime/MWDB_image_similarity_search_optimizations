@@ -104,6 +104,6 @@ class SupportVectorMachine(object):
     def predict(self, X):
         return np.sign(self.project(X))
 
-    def training_result(self, X):
+    def predict_result(self, X):
         prediction_values = self.project(X)
         return prediction_values, np.sign(prediction_values)

@@ -28,7 +28,7 @@ def hamming(xb, k, xq):
 class LSH_node:
   def __init__(self, w, vectors, b, plane_norms=np.array([])):
     if plane_norms.size == 0:
-      self.plane_norms = np.random.normal(np.mean(vectors), np.std(vectors), size=(vectors.shape[1], vectors.shape[1]))
+      self.plane_norms = np.random.normal(np.mean(vectors - 0.5), np.std(vectors), size=(vectors.shape[1], vectors.shape[1]))
     else:
       self.plane_norms = plane_norms
 
@@ -40,22 +40,28 @@ class LSH_node:
 
     for i in range(len(vectors)):
       # convert from array to string
-      hash_str = self.transform(vectors[i])
+      hash_str = self.transform(vectors[i], shift=False)
       # create bucket if it doesn't exist
       if hash_str not in self.buckets.keys():
         self.buckets[hash_str] = []
       # add vector position to bucket
       self.buckets[hash_str] = self.buckets[hash_str] + [i]
 
-  def transform(self, xq):
+  def transform(self, xq, shift=True):
     # DESIGN_DECISION: map vector to the random projection plane
     # Formula used: ((np.dot(vectors - 0.5, lsh.plane_norms)*lsh.lsh_family[0].w*vectors.shape[0] + lsh.lsh_family[0].b) / lsh.lsh_family[0].w > 0).astype(int)
     # Explanation:
     # Shift vectors left by 0.5 and calculate dot products of all vectors
-    v_dot = np.dot(xq - 0.5, self.plane_norms)
+    if shift:
+      v_dot = np.dot(xq - 0.5, self.plane_norms)
+    else:
+      v_dot = np.dot(xq, self.plane_norms)
     # a random b would eliminate errors/borderline cases
+    print("v_dot")
+    print(v_dot)
     v_dot = v_dot * self.w * self.vectors.shape[0] + self.b
-    v_dot = v_dot / self.w
+    print(v_dot)
+    v_dot = v_dot / self.w * self.vectors.shape[0]
     # Convert dot product to binary
     v_dot = v_dot > 0
     # Convert boolean to int for bucketing
@@ -130,7 +136,7 @@ class LSH:
   def __init__(self, L, K, vectors, num_obj=5):
     self.L = L
     self.K = K
-    self.vectors = vectors
+    self.vectors = vectors - 0.5
     self.num_obj = num_obj
 
     self.lsh_families = []

@@ -215,17 +215,49 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
         obj = get_saved_latent_object(technique, base_dir)
 
     if task_num == 1:
-        raise NotImplmentedError(f"No implementation found for selected task: {task_num}")
+        classifier = input("Enter input classifier (svm - SVM/ dt - decision tree/ ppr - personalized pagerank) :")
+        if classifier == "svm":
+            from svm_task1 import *
+            svm_task_1()
+        if classifier == "dt":
+            raise NotImplmentedError(f"No implementation found for selected task: {task_num} {classifier}")
+        if classifier == "ppr":
+            raise NotImplmentedError(f"No implementation found for selected task: {task_num} {classifier}")
+        else:
+            raise NotImplmentedError(f"No implementation found for selected task: {task_num} {classifier}")
     elif task_num == 2:
-        raise NotImplmentedError(f"No implementation found for selected task: {task_num}")
+        classifier = input("Enter input classifier (svm - SVM/ dt - decision tree/ ppr - personalized pagerank) :")
+        if classifier == "svm":
+            from svm_task2 import *
+            svm_task_2()
+        if classifier == "dt":
+            raise NotImplmentedError(f"No implementation found for selected task: {task_num} {classifier}")
+        if classifier == "ppr":
+            raise NotImplmentedError(f"No implementation found for selected task: {task_num} {classifier}")
+        else:
+            raise NotImplmentedError(f"No implementation found for selected task: {task_num} {classifier}")
     elif task_num == 3:
-        raise NotImplmentedError(f"No implementation found for selected task: {task_num}")
+        classifier = input("Enter input classifier (svm - SVM/ dt - decision tree/ ppr - personalized pagerank) :")
+        if classifier == "svm":
+            from svm_task3 import *
+            svm_task_3()
+        if classifier == "dt":
+            raise NotImplmentedError(f"No implementation found for selected task: {task_num} {classifier}")
+        if classifier == "ppr":
+            raise NotImplmentedError(f"No implementation found for selected task: {task_num} {classifier}")
+        else:
+            raise NotImplmentedError(f"No implementation found for selected task: {task_num} {classifier}")
     elif task_num == 4:
         num_layers = input("Enter number of layers:")
         num_func_per_layer = input("Enter number of functions per layer:")
         k_radius = input("Enter radius of distance to find:")
 
-        lsh = LSH(int(num_layers), int(num_func_per_layer), feature_dict["cm8x8"], num_obj=)
+        subjects = set()
+        for img in img_all_names:
+            subjects.add(get_sub_from_image_path(img))
+        print(np.min(feature_dict["cm8x8"]),np.max(feature_dict["cm8x8"]))
+        lsh = LSH(int(num_layers), int(num_func_per_layer), feature_dict["cm8x8"], num_obj=20)
+        # lsh = LSH(int(num_layers), int(num_func_per_layer), feature_dict["cm8x8"], num_obj=len(list(subjects)))
         set_list, indx = lsh.get_all_candidates(in_feature_dict["cm8x8"], k=int(k_radius))
 
         print("=" * 20 + "\n")
@@ -265,5 +297,3 @@ print(f"INPUT IMAGE IS {image_path}")
 Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feature, features_dir,
             sub_features_dir, X, Y, technique)
 
-# from SVM_task1 import *
-# svm_task_1()
