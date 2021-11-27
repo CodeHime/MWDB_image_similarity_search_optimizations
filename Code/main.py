@@ -218,7 +218,7 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
         classifier = input("Enter input classifier (svm - SVM/ dt - decision tree/ ppr - personalized pagerank) :")
         if classifier == "svm":
             from svm_task1 import *
-            svm_task_1()
+            svm_task_1(base_dir)
         if classifier == "dt":
             raise NotImplmentedError(f"No implementation found for selected task: {task_num} {classifier}")
         if classifier == "ppr":
@@ -229,7 +229,7 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
         classifier = input("Enter input classifier (svm - SVM/ dt - decision tree/ ppr - personalized pagerank) :")
         if classifier == "svm":
             from svm_task2 import *
-            svm_task_2()
+            svm_task_2(base_dir)
         if classifier == "dt":
             raise NotImplmentedError(f"No implementation found for selected task: {task_num} {classifier}")
         if classifier == "ppr":
@@ -240,7 +240,7 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
         classifier = input("Enter input classifier (svm - SVM/ dt - decision tree/ ppr - personalized pagerank) :")
         if classifier == "svm":
             from svm_task3 import *
-            svm_task_3()
+            svm_task_3(base_dir)
         if classifier == "dt":
             raise NotImplmentedError(f"No implementation found for selected task: {task_num} {classifier}")
         if classifier == "ppr":

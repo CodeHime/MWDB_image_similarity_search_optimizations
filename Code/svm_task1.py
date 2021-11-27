@@ -7,8 +7,9 @@ from src.features_extractor import *
 from src.latent_features_extractor import *
 from sklearn.metrics import confusion_matrix
 
-def svm_task_1():
-    base_dir = "/home/nisarg1499/assignments/fall21/mwdb/phase3/MWDB_image_similarity_search_optimizations/Code/data"
+
+def svm_task_1(base_dir):
+    # base_dir = "/home/nisarg1499/assignments/fall21/mwdb/phase3/MWDB_image_similarity_search_optimizations/Code/data"
     training_set_path = base_dir + "/500/"
     test_set_path = base_dir + "/100/"
     type_ids_list = {"cc", "con", "emboss", "jitter", "neg", "noise01", "noise02", "original", "poster", "rot", "smooth", "stipple"}
