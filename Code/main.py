@@ -60,8 +60,12 @@ from src.ascos import *
 # Phase 2 - Task 9
 from src.ppr import *
 
-import re
+# Phase 3 - Tasks 1 to 3
+from src.decision_tree import *
+# Phase 3 - Task 4
+from src.lsh import *
 
+import re
 
 def Phase1_main(input_dir, input_k, selected_feature, base_dir, image_path, feature, features_dir, sub_features_dir):
     images, img_all_names = read_all_images(input_dir, pattern={"X": X, "Y": Y})
@@ -197,17 +201,18 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
     feature_dict = get_feature_dict_file(features_dir)
     in_feature_dict = get_feature_dict_image(image_path, output_dim, sub_features_dir, hog_dict)
 
-    # From Phase 2
-    k_latent = input("Enter k for number of latent features:")
-    # DESIGN_DECISION: Take a minimum over 20 latent features or less
-    k_latent = min(feature_dict[feature].shape[0]*3//4, feature_dict[feature].shape[1]*3//4, 20) \
-        if k_latent == "" else int(k_latent)
-
-    if not os.path.isdir(os.path.join(base_dir, config['Phase2'][technique + '_dir'])):
-        perform_dimensionality_reductions(feature_dict[feature], k_latent, technique, base_dir)
-    obj = get_saved_latent_object(technique, base_dir)
-
     task_num = int(input("Enter task number(1-8):"))
+
+    if task_num <= 3:
+        # From Phase 2
+        k_latent = input("Enter k for number of latent features:")
+        # DESIGN_DECISION: Take a minimum over 20 latent features or less
+        k_latent = min(feature_dict[feature].shape[0]*3//4, feature_dict[feature].shape[1]*3//4, 20) \
+            if k_latent == "" else int(k_latent)
+
+        if not os.path.isdir(os.path.join(base_dir, config['Phase2'][technique + '_dir'])):
+            perform_dimensionality_reductions(feature_dict[feature], k_latent, technique, base_dir)
+        obj = get_saved_latent_object(technique, base_dir)
 
     if task_num == 1:
         raise NotImplmentedError(f"No implementation found for selected task: {task_num}")
@@ -216,7 +221,23 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
     elif task_num == 3:
         raise NotImplmentedError(f"No implementation found for selected task: {task_num}")
     elif task_num == 4:
-        raise NotImplmentedError(f"No implementation found for selected task: {task_num}")
+        num_layers = input("Enter number of layers:")
+        num_func_per_layer = input("Enter number of functions per layer:")
+        k_radius = input("Enter radius of distance to find:")
+
+        lsh = LSH(int(num_layers), int(num_func_per_layer), feature_dict["cm8x8"], num_obj=)
+        set_list, indx = lsh.get_all_candidates(in_feature_dict["cm8x8"], k=int(k_radius))
+
+        print("=" * 20 + "\n")
+        print("PHASE 3 LSH OUTPUT:")
+        print("Number of near neighbours:", len(indx), " from ", len(images),
+              " with data size: ", feature_dict["cm8x8"].shape)
+        image_files = get_image_file(features_dir, indx)
+        for i in range(len(indx)):
+            result = Image.fromarray((images[indx[i]]).astype(np.uint8))
+            print(image_files[indx[i]].split("/")[-1].split("\\")[-1]) #, d[i])
+            plt.imshow(images[i], cmap='gray')
+            plt.show()
     elif task_num == 5:
         raise NotImplmentedError(f"No implementation found for selected task: {task_num}")
     elif task_num == 6:
@@ -231,18 +252,18 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
 # remove mask for current user
 os.umask(0)
 
-# input_dir, input_k, selected_feature, base_dir, image_path, feature, features_dir, \
-# sub_features_dir, X, Y, technique = initialize_variables()
-#
-# print(f"INPUT IMAGE IS {image_path}")
+input_dir, input_k, selected_feature, base_dir, image_path, feature, features_dir, \
+sub_features_dir, X, Y, technique = initialize_variables()
+
+print(f"INPUT IMAGE IS {image_path}")
 
 # Phase1_main(input_dir, input_k, selected_feature, base_dir, image_path, feature, features_dir, sub_features_dir)
 
 # Phase2_main(input_dir, input_k, selected_feature, base_dir, image_path, feature, features_dir,
 #             sub_features_dir, X, Y, technique)
 
-# Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feature, features_dir,
-#             sub_features_dir, X, Y, technique)
+Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feature, features_dir,
+            sub_features_dir, X, Y, technique)
 
-from SVM_task1 import *
-svm_task_1()
+# from SVM_task1 import *
+# svm_task_1()
