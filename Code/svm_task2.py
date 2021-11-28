@@ -8,56 +8,15 @@ from src.latent_features_extractor import *
 from sklearn.metrics import confusion_matrix
 
 
-def svm_task_2(base_dir):
-    base_dir = "/home/nisarg1499/assignments/fall21/mwdb/phase3/MWDB_image_similarity_search_optimizations/Code/data"
-    training_set_path = base_dir + "/500/"
-    test_set_path = base_dir + "/100/"
-    
+def svm_task_2(training_features_dir, test_features_dir, training_set_features = None, test_set_features = None):
     subject_ids_list = []
     for value in range(1, 41):
         subject_ids_list.append(str(value))
 
-    sub_features_dir = eval(config['Phase1']['sub_features_dir'])
-    # TRAINING DATA SETUP
-    training_features_dir = os.fspath(os.path.join(base_dir, os.path.normpath(os.path.join(training_set_path, os.pardir)) + "_" +
-                                              config['Phase1']['image_feature_dir']))
-    # Create folders for images if they do not exist
-    if not os.path.isdir(training_features_dir):
-        os.makedirs(training_features_dir)
-    for dir in sub_features_dir:
-        if not os.path.isdir(os.path.join(training_features_dir, dir)):
-            os.makedirs(os.path.join(training_features_dir, dir))
-
-    # GET TRAINING DATA
-    images, img_all_names = read_all_images(training_set_path, pattern={"X": "", "Y": ""})
-    save_all_img_features(images, output_dim, training_features_dir, sub_features_dir, hog_dict, feature_visualization=False,
-                          img_ids=img_all_names)
-    feature_dict = get_feature_dict_file(training_features_dir)
-    training_set_features = feature_dict["cm8x8"]
     training_ids = get_images_from_ids(training_features_dir, range(training_set_features.shape[0]), reverse_dict=True)
     training_sub_ids = get_subjects_from_ids(training_features_dir, range(training_set_features.shape[0]), reverse_dict=True)
     training_type_ids = get_type_from_ids(training_features_dir, range(training_set_features.shape[0]), reverse_dict=True)
     training_sample_ids = get_sample_from_ids(training_features_dir, range(training_set_features.shape[0]), reverse_dict=True)
-
-
-
-    # TESTING DATA SETUP
-    test_features_dir = os.fspath(os.path.join(base_dir, os.path.normpath(os.path.join(test_set_path, os.pardir)) + "_" +
-                                              config['Phase1']['image_feature_dir']))
-    # Create folders for images if they do not exist
-    if not os.path.isdir(test_features_dir):
-        os.makedirs(test_features_dir)
-    for dir in sub_features_dir:
-        if not os.path.isdir(os.path.join(test_features_dir, dir)):
-            # print(os.path.join(test_features_dir, dir))
-            os.makedirs(os.path.join(test_features_dir, dir))
-
-    # GET TESTING DATA
-    images, img_all_names = read_all_images(test_set_path, pattern={"X": "", "Y": ""})
-    save_all_img_features(images, output_dim, test_features_dir, sub_features_dir, hog_dict, feature_visualization=False,
-                          img_ids=img_all_names)
-    feature_dict = get_feature_dict_file(test_features_dir)
-    test_set_features = feature_dict["cm8x8"]
 
     test_ids = get_images_from_ids(test_features_dir, range(test_set_features.shape[0]), reverse_dict=True)
     test_sub_ids = get_subjects_from_ids(test_features_dir, range(test_set_features.shape[0]), reverse_dict=True)

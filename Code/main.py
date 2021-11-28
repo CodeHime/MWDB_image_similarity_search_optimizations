@@ -224,7 +224,26 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
     if task_num == 1:
         classifier = input("Enter input classifier (svm - SVM/ dt - decision tree/ ppr - personalized pagerank) :")
         if classifier == "svm":
-            svm_task_1(base_dir)
+            # TESTING DATA SETUP
+            test_set_path = input("Enter test path directory:")
+            test_features_dir = os.fspath(test_set_path.rstrip("/").rstrip("\\")
+                                          + "_" + config['Phase1']['image_feature_dir'])
+            # Create folders for images if they do not exist
+            if not os.path.isdir(test_features_dir):
+                os.makedirs(test_features_dir)
+            for dir in sub_features_dir:
+                if not os.path.isdir(os.path.join(test_features_dir, dir)):
+                    os.makedirs(os.path.join(test_features_dir, dir))
+
+            # GET TESTING DATA
+            images, img_all_names = read_all_images(test_set_path, pattern={"X": "", "Y": ""})
+            save_all_img_features(images, output_dim, test_features_dir, sub_features_dir, hog_dict,
+                                  feature_visualization=False,
+                                  img_ids=img_all_names)
+            feature_dict = get_feature_dict_file(test_features_dir)
+
+            svm_task_1(features_dir, test_features_dir, training_set_features = feature_dict["cm8x8"],
+                       test_set_features = feature_dict["cm8x8"])
         elif classifier == "dt":
             # TODO: REMOVE HARD CODE SELECTION
             # Define labels
@@ -248,7 +267,26 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
     elif task_num == 2:
         classifier = input("Enter input classifier (svm - SVM/ dt - decision tree/ ppr - personalized pagerank) :")
         if classifier == "svm":
-            svm_task_2(base_dir)
+            # TESTING DATA SETUP
+            test_set_path = input("Enter test path directory:")
+            test_features_dir = os.fspath(test_set_path.rstrip("/").rstrip("\\")
+                                          + "_" + config['Phase1']['image_feature_dir'])
+            # Create folders for images if they do not exist
+            if not os.path.isdir(test_features_dir):
+                os.makedirs(test_features_dir)
+            for dir in sub_features_dir:
+                if not os.path.isdir(os.path.join(test_features_dir, dir)):
+                    os.makedirs(os.path.join(test_features_dir, dir))
+
+            # GET TESTING DATA
+            images, img_all_names = read_all_images(test_set_path, pattern={"X": "", "Y": ""})
+            save_all_img_features(images, output_dim, test_features_dir, sub_features_dir, hog_dict,
+                                  feature_visualization=False,
+                                  img_ids=img_all_names)
+            feature_dict = get_feature_dict_file(test_features_dir)
+
+            svm_task_2(features_dir, test_features_dir, training_set_features = feature_dict["cm8x8"],
+                       test_set_features = feature_dict["cm8x8"])
         elif classifier == "dt":
             # Define labels
             labels_dict = get_subjects_from_ids(features_dir, range(len(images)), reverse_dict=True)
@@ -271,13 +309,33 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
     elif task_num == 3:
         classifier = input("Enter input classifier (svm - SVM/ dt - decision tree/ ppr - personalized pagerank) :")
         if classifier == "svm":
-            svm_task_3(base_dir)
+            # TESTING DATA SETUP
+            test_set_path = input("Enter test path directory:")
+            test_features_dir = os.fspath(test_set_path.rstrip("/").rstrip("\\")
+                                          + "_" + config['Phase1']['image_feature_dir'])
+            # Create folders for images if they do not exist
+            if not os.path.isdir(test_features_dir):
+                os.makedirs(test_features_dir)
+            for dir in sub_features_dir:
+                if not os.path.isdir(os.path.join(test_features_dir, dir)):
+                    os.makedirs(os.path.join(test_features_dir, dir))
+
+            # GET TESTING DATA
+            images, img_all_names = read_all_images(test_set_path, pattern={"X": "", "Y": ""})
+            save_all_img_features(images, output_dim, test_features_dir, sub_features_dir, hog_dict,
+                                  feature_visualization=False,
+                                  img_ids=img_all_names)
+            feature_dict = get_feature_dict_file(test_features_dir)
+
+            svm_task_3(features_dir, test_features_dir, training_set_features = feature_dict["cm8x8"],
+                       test_set_features = feature_dict["cm8x8"])
         elif classifier == "dt":
             # Define labels
             labels_dict = get_sample_from_ids(features_dir, range(len(images)), reverse_dict=True)
             indx_df = pd.DataFrame.from_dict(labels_dict, orient='index', columns=["label"])
 
             # Define vectors
+            # TODO:
             # vectors_df = pd.DataFrame(obj.get_vector_space())
             vectors_df = pd.DataFrame(feature_dict["hog"])
 
