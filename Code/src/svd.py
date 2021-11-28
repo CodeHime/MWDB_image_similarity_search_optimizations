@@ -60,6 +60,13 @@ class Svd:
         """
         return self.U, self.S
 
+    def get_vector_space(self):
+        """
+        :return: vector space of PCA
+        """
+        # TODO
+        return np.dot(self.U, self.S)
+
     def transform(self, data_matrix):
         """
         :param data_matrix: matrix to transform (query_objects, num_features)

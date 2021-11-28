@@ -36,6 +36,10 @@ def initialize_variables():
     technique = "pca" if technique == "" else technique
 
     base_dir = base0_dir if input_dir == "" else os.path.normpath(os.path.join(input_dir, os.pardir))
+    features_dir = os.fspath(os.path.join(base_dir, os.path.normpath(os.path.join(input_dir, os.pardir)) + "_" +
+                                          config['Phase1']['image_feature_dir'])) \
+        if input_dir == "" else os.fspath(os.path.join(base_dir, config['Phase1']['image_feature_dir']))
+
     input_dir = os.fspath(os.path.join(base_dir, config['Phase1']['image_path_dir'])) if input_dir == "" else input_dir
 
     if input_img == "":
@@ -46,10 +50,6 @@ def initialize_variables():
     else:
         image_path = input_img
     feature = config['Phase1']['default_feature'] if selected_feature == "" else selected_feature
-
-    features_dir = os.fspath(os.path.join(base_dir, os.path.normpath(os.path.join(input_dir, os.pardir)) + "_" +
-                                          config['Phase1']['image_feature_dir'])) \
-        if input_dir == "" else os.fspath(os.path.join(base_dir, config['Phase1']['image_feature_dir']))
 
     # Create folders for images if they do not exist
     if not os.path.isdir(features_dir):

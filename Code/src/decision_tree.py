@@ -1,4 +1,5 @@
 from decision_tree_funcs import *
+from sklearn.metrics import confusion_matrix
 
 class DecisionTree:
     def __init__(self, vectors_df, counter=0, min_support=0.8, min_samples=2, max_depth=5):
@@ -61,3 +62,20 @@ class DecisionTree:
             else:
                 parse_tree = parse_tree[cur_branch_comparison][1]
         return parse_tree
+
+    def get_prediction_summary(self, xq_df, labels):
+        act_val = xq_df.iloc[:, -1]
+        pred_val = []
+        print(self.print_tree)
+        print("xq_df", xq_df)
+        for i in xq_df.index:
+            pred_val.append(self.query_tree(xq_df.iloc[i, :]))
+        conf_mat = confusion_matrix(act_val, pred_val, labels=labels)
+        print("*"*10 + "  CONFUSION MATRIX " + "*"*10)
+        print(conf_mat)
+        # Calculate false +ves
+        sum_col = conf_mat.sum(axis=0) - conf_mat.diagonal()
+        # Calculate misses
+        sum_row = conf_mat.sum(axis=1) - conf_mat.diagonal()
+        print(f"False +ves: {sum(sum_col)} \nMisses: {sum(sum_row)}")
+        print("*"*40)

@@ -61,6 +61,9 @@ from src.ascos import *
 from src.ppr import *
 
 # Phase 3 - Tasks 1 to 3
+from svm_task1 import *
+from svm_task2 import *
+from svm_task3 import *
 from src.decision_tree import *
 # Phase 3 - Task 4
 from src.lsh import *
@@ -213,37 +216,75 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
         if not os.path.isdir(os.path.join(base_dir, config['Phase2'][technique + '_dir'])):
             perform_dimensionality_reductions(feature_dict[feature], k_latent, technique, base_dir)
         obj = get_saved_latent_object(technique, base_dir)
+    else:
+        obj = None
 
     if task_num == 1:
         classifier = input("Enter input classifier (svm - SVM/ dt - decision tree/ ppr - personalized pagerank) :")
         if classifier == "svm":
-            from svm_task1 import *
             svm_task_1(base_dir)
-        if classifier == "dt":
-            raise NotImplmentedError(f"No implementation found for selected task: {task_num} {classifier}")
-        if classifier == "ppr":
+        elif classifier == "dt":
+            # Define labels
+            labels_dict = get_type_from_ids(features_dir, range(len(images)), reverse_dict=True)
+            indx_df = pd.DataFrame.from_dict(labels_dict, orient='index', columns=["label"])
+
+            # Define vectors
+            # vectors_df = pd.DataFrame(obj.get_vector_space())
+            vectors_df = pd.DataFrame(feature_dict["hog"])
+
+            # Join vectors to their labels corresponding to indexes
+            vectors_df = vectors_df.join(indx_df)
+            # Create decision tree
+            dt_obj = DecisionTree(vectors_df)
+            # TRAINING DATA SUMMARY
+            dt_obj.get_prediction_summary(vectors_df, labels=list(set(labels_dict.values())))
+        elif classifier == "ppr":
             raise NotImplmentedError(f"No implementation found for selected task: {task_num} {classifier}")
         else:
             raise NotImplmentedError(f"No implementation found for selected task: {task_num} {classifier}")
     elif task_num == 2:
         classifier = input("Enter input classifier (svm - SVM/ dt - decision tree/ ppr - personalized pagerank) :")
         if classifier == "svm":
-            from svm_task2 import *
             svm_task_2(base_dir)
-        if classifier == "dt":
-            raise NotImplmentedError(f"No implementation found for selected task: {task_num} {classifier}")
-        if classifier == "ppr":
+        elif classifier == "dt":
+            # Define labels
+            labels_dict = get_subjects_from_ids(features_dir, range(len(images)), reverse_dict=True)
+            indx_df = pd.DataFrame.from_dict(labels_dict, orient='index', columns=["label"])
+
+            # Define vectors
+            # vectors_df = pd.DataFrame(obj.get_vector_space())
+            vectors_df = pd.DataFrame(feature_dict["hog"])
+
+            # Join vectors to their labels corresponding to indexes
+            vectors_df = vectors_df.join(indx_df)
+            # Create decision tree
+            dt_obj = DecisionTree(vectors_df)
+            # TRAINING DATA SUMMARY
+            dt_obj.get_prediction_summary(vectors_df, labels=list(set(labels_dict.values())))
+        elif classifier == "ppr":
             raise NotImplmentedError(f"No implementation found for selected task: {task_num} {classifier}")
         else:
             raise NotImplmentedError(f"No implementation found for selected task: {task_num} {classifier}")
     elif task_num == 3:
         classifier = input("Enter input classifier (svm - SVM/ dt - decision tree/ ppr - personalized pagerank) :")
         if classifier == "svm":
-            from svm_task3 import *
             svm_task_3(base_dir)
-        if classifier == "dt":
-            raise NotImplmentedError(f"No implementation found for selected task: {task_num} {classifier}")
-        if classifier == "ppr":
+        elif classifier == "dt":
+            # Define labels
+            labels_dict = get_sample_from_ids(features_dir, range(len(images)), reverse_dict=True)
+            indx_df = pd.DataFrame.from_dict(labels_dict, orient='index', columns=["label"])
+
+            # Define vectors
+            # vectors_df = pd.DataFrame(obj.get_vector_space())
+            vectors_df = pd.DataFrame(feature_dict["hog"])
+
+            # Join vectors to their labels corresponding to indexes
+            vectors_df = vectors_df.join(indx_df)
+            # Create decision tree
+            dt_obj = DecisionTree(vectors_df)
+            # TRAINING DATA SUMMARY
+            dt_obj.get_prediction_summary(vectors_df, labels=list(set(labels_dict.values())))
+        elif classifier == "ppr":
             raise NotImplmentedError(f"No implementation found for selected task: {task_num} {classifier}")
         else:
             raise NotImplmentedError(f"No implementation found for selected task: {task_num} {classifier}")

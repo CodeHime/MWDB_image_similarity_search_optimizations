@@ -58,10 +58,11 @@ class LSH_node:
       v_dot = np.dot(xq, self.plane_norms)
     # a random b would eliminate errors/borderline cases
     print("v_dot")
-    print(v_dot)
-    v_dot = v_dot * self.w * self.vectors.shape[0] + self.b
-    print(v_dot)
-    v_dot = v_dot / self.w * self.vectors.shape[0]
+    print((v_dot > 0).astype(int).sum())
+    # TODO: TODO:
+    # v_dot = v_dot * self.w * self.vectors.shape[0] + self.b
+    # print(v_dot)
+    # v_dot = v_dot / self.w * self.vectors.shape[0]
     # Convert dot product to binary
     v_dot = v_dot > 0
     # Convert boolean to int for bucketing
