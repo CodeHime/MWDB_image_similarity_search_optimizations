@@ -206,7 +206,7 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
 
     task_num = int(input("Enter task number(1-8):"))
 
-    if task_num <= 3:
+    if task_num <= 3 and technique != "none":
         # From Phase 2
         k_latent = input("Enter k for number of latent features:")
         # DESIGN_DECISION: Take a minimum over 20 latent features or less

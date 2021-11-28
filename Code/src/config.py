@@ -27,12 +27,12 @@ def initialize_variables():
     Initialize and return the variables
     """
     input_dir = os.fspath(input("Enter path of images directory:"))
-    input_k = input("Enter value of k:")
-    input_img = os.fspath(input("Enter input image path:"))
-    selected_feature = input("Enter feature to compare(elbp/hog/cm8x8/all):")
-    X = input("Input type label (X):")
-    Y = input("Input subject ID (Y):")
-    technique = input("Enter technique to apply(pca,svd,lda,kmeans):")
+    input_k = input("Enter value of k (default - 10):")
+    input_img = os.fspath(input("Enter input image path(default - first image in image directory):"))
+    selected_feature = input("Enter feature to compare(elbp/hog/cm8x8/all(default)):")
+    X = input("Input type label (X) (default - *):")
+    Y = input("Input subject ID (Y) (default - *):")
+    technique = input("Enter technique to apply(pca(default),svd,lda,kmeans, none):")
     technique = "pca" if technique == "" else technique
 
     base_dir = base0_dir if input_dir == "" else os.path.normpath(os.path.join(input_dir, os.pardir))
