@@ -1,7 +1,10 @@
+import os
+import sys
 import numpy as np
 import random
 from distance_calculator import *
 # http://mlwiki.org/index.php/Euclidean_LSH
+import json
 
 
 class LSH_node:
@@ -41,7 +44,6 @@ class LSH_node:
     #   print((v_dot > 0).astype(int).sum(), (v_dot < 0).astype(int).sum()
 
     # a random b would eliminate errors/borderline cases)
-    # TODO: set b
     v_dot = v_dot * self.w * self.vectors.shape[0] + self.b
     v_dot = v_dot / self.w * self.vectors.shape[0]
     # Convert dot product to binary
@@ -55,8 +57,9 @@ class LSH_node:
     d, i = hamming(self.buckets.keys(), k, self.transform(xq))
     return d, np.array(list(self.buckets.keys()))[np.array(i)]
 
-  def save(self):
-    raise NotImplementedError()
+  def save(self, lsh_family_dir, bucket_index):
+    with open(os.path.join(lsh_family_dir, bucket_index + '.json'), 'w', encoding='utf-8') as f:
+      json.dump(self.buckets, f, ensure_ascii=False, indent=4)
 
   def get_size(self):
     return sys.getsizeof(self.buckets)
@@ -79,9 +82,6 @@ class LSH_family:
       # self.b = random.uniform(0, self.w)
       cur_node = LSH_node(self.w, vectors, self.b, plane_norms=self.plane_norms)
       self.lsh_family.append(cur_node)
-
-  def save(self):
-    raise NotImplementedError()
 
   def get_bucket(self, xq, k=1):
     set_list = {}
@@ -116,6 +116,11 @@ class LSH_family:
       family_size += hash.get_size()
     return family_size
 
+  def save(self, lsh_fam_dir):
+    for b_i in range(len(self.lsh_family)):
+      self.lsh_family[b_i].save(lsh_fam_dir, str(b_i))
+
+
 class LSH:
   def __init__(self, L, K, vectors, num_obj=5):
     self.L = L
@@ -146,3 +151,11 @@ class LSH:
     for fam in self.lsh_families:
       total_lsh_size+=fam.get_size()
     return total_lsh_size
+
+  def save(self, lsh_dir):
+    if not os.path.isdir(lsh_dir):
+      os.makedirs(lsh_dir)
+    for fam_i in range(len(self.lsh_families)):
+      if not os.path.isdir(os.path.join(lsh_dir, str(fam_i))):
+        os.makedirs(os.path.join(lsh_dir, str(fam_i)))
+      self.lsh_families[fam_i].save(os.path.join(lsh_dir, str(fam_i)))

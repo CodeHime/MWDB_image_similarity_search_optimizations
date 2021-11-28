@@ -357,13 +357,14 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
         subjects = set()
         for img in img_all_names:
             subjects.add(get_sub_from_image_path(img))
-        print(np.min(feature_dict["cm8x8"]),np.max(feature_dict["cm8x8"]))
+        # print(np.min(feature_dict["cm8x8"]),np.max(feature_dict["cm8x8"]))
         lsh = LSH(int(num_layers), int(num_func_per_layer), feature_dict["cm8x8"], num_obj=20)
         # lsh = LSH(int(num_layers), int(num_func_per_layer), feature_dict["cm8x8"], num_obj=len(list(subjects)))
         set_list, indx = lsh.get_all_candidates(in_feature_dict["cm8x8"], k=int(k_radius))
-
+        lsh.save(os.path.join(base_dir, "classifiers/lsh"))
         print("=" * 20 + "\n")
         print("PHASE 3 LSH OUTPUT:")
+        print("Total index structure size: ", lsh.get_size())
         print("Number of near neighbours:", len(indx), " from ", len(images),
               " with data size: ", feature_dict["cm8x8"].shape)
         image_files = get_image_file(features_dir, indx)
