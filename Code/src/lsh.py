@@ -7,7 +7,7 @@ from distance_calculator import *
 class LSH_node:
   def __init__(self, w, vectors, b, plane_norms=np.array([])):
     if plane_norms.size == 0:
-      self.plane_norms = np.random.normal(np.mean(vectors - 0.5), np.std(vectors), size=(vectors.shape[1], vectors.shape[1]))
+      self.plane_norms = np.random.normal(np.mean(vectors - 0.5), np.std(vectors - 0.5), size=(vectors.shape[1], vectors.shape[1]))
     else:
       self.plane_norms = plane_norms
 

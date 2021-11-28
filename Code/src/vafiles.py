@@ -4,7 +4,7 @@ import pandas as pd
 import math
 from scipy.spatial.distance import cityblock,euclidean,minkowski
 from collections import Counter
-
+import os
 
 def va_gen(inpMat,b):
     df = pd.DataFrame(inpMat)
@@ -98,7 +98,7 @@ def va_ssa(vq,vi,n,b):
     dst = np.zeros((n))
     count = 0
     d,dst = InitCandidate(n,dst)
-    ans = np.zeros((n))
+    ans = np.zeros((n)).astype(int)
     modData,numBits,p = va_gen(vi,b)
     for i in range(0,len(vi)):
         li = get_bounds(vq,modData.iloc[i,:],p)

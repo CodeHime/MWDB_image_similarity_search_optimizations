@@ -315,7 +315,8 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
             plt.imshow(images[i], cmap='gray')
             plt.show()
     elif task_num == 5:
-        if technique=="none":
+        # HOG with 100 folder works nicely.
+        if technique == "none":
             # TODO
             # inpMat = feature_dict[selected_feature]
             inpMat = feature_dict["hog"]
@@ -328,10 +329,20 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
         nn_num = int(input("Enter number of nearest neighbours:"))
 
         df, tot, bins = va_gen(inpMat, num_bits)
-        write_va(df, num_bits, base_dir)
+        write_va(df, tot, base_dir)
 
-        nn = va_ssa(xq, inpMat, nn_num, tot)
-        print(nn)
+        nn = va_ssa(xq, inpMat, nn_num, num_bits)
+
+        print("=" * 20 + "\n")
+        print("PHASE 3 VAFILES OUTPUT:")
+        print("Number of near neighbours:", len(nn), " from ", len(images),
+              " with data size: ", feature_dict["cm8x8"].shape)
+        image_files = get_image_file(features_dir, nn)
+        for i in range(len(nn)):
+            result = Image.fromarray((images[nn[i]]).astype(np.uint8))
+            print(image_files[nn[i]].split("/")[-1].split("\\")[-1]) #, d[i])
+            plt.imshow(images[i], cmap='gray')
+            plt.show()
 
     elif task_num == 6:
         raise NotImplmentedError(f"No implementation found for selected task: {task_num}")
