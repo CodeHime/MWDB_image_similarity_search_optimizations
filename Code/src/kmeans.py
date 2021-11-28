@@ -78,6 +78,12 @@ class Kmeans:
         """
         return self.centers
 
+    def get_vector_space(self):
+        """
+        :return: vector space of PCA
+        """
+        return self.new_object_map
+
     def transform(self, data_matrix):
         """
         :param data_matrix: matrix to transform (query_objects, num_features)

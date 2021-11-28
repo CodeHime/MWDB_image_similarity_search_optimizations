@@ -71,6 +71,12 @@ class Lda:
         """
         return self.lda_.components_
 
+    def get_vector_space(self):
+        """
+        :return: vector space of PCA
+        """
+        return self.new_object_map
+
     def get_obj_weight_pairs(self):
         """
         :param data_matrix: matrix to transform (query_objects, num_features)
