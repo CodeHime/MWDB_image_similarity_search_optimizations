@@ -28,12 +28,12 @@ def va_gen(inpMat,b):
     t1 = pd.DataFrame(bins)
     return (df,tot,bins)
 
-def write_va(modData,numBits):
+def write_va(modData,numBits, base_dir):
     temp1 = np.array(modData)
     x = temp1.shape[0]
     y = temp1.shape[1]
     vaFile = ""
-    strings = ["" for i in range(x)] 
+    strings = ["" for i in range(x)]
     for i in range(0,x):
         for j in range(0,y):
             strings[i] = strings[i]+(bin(modData.iloc[i,j])[2:].zfill(numBits[j]))
@@ -41,7 +41,7 @@ def write_va(modData,numBits):
     # print(counter)
     for i in range(0,x):
         vaFile = vaFile+strings[i]
-    text_file = open(r"E:\Phase3\Outputs\va_file.txt", "w")
+    text_file = open(os.path.join(base_dir, "va_file.txt"), "w")
     n = text_file.write(vaFile)
     text_file.close()
     print("Size of Index Structure in bytes : {}".format(len(vaFile)))
@@ -80,7 +80,7 @@ def get_bounds(vq,ri,p):
 def InitCandidate(n,dst):
     for i in range(0,n):
         dst[i] = float('inf')
-    return float('inf'),dst
+    return float('inf'), dst
 
 def Candidate(d,i,n,dst,ans):
     if(d<dst[n]):
@@ -122,7 +122,3 @@ def va_eval(vq,vi,n):
         ans.append(minkowski(vq,vi[i],3))
     vals = np.array(np.argsort(ans)[:n])
     return vals
-
-
-
-    

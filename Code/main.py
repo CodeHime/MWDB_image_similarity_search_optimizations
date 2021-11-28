@@ -67,6 +67,8 @@ from svm_task3 import *
 from src.decision_tree import *
 # Phase 3 - Task 4
 from src.lsh import *
+# Phase 3 - Task 5
+from src.vafiles import *
 
 import re
 
@@ -313,7 +315,24 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
             plt.imshow(images[i], cmap='gray')
             plt.show()
     elif task_num == 5:
-        raise NotImplmentedError(f"No implementation found for selected task: {task_num}")
+        if technique=="none":
+            # TODO
+            # inpMat = feature_dict[selected_feature]
+            inpMat = feature_dict["hog"]
+            xq = in_feature_dict["hog"]
+        else:
+            inpMat = obj.get_vector_space()
+            xq = obj.transform(in_feature_dict)
+
+        num_bits = int(input("Enter number of bits:"))
+        nn_num = int(input("Enter number of nearest neighbours:"))
+
+        df, tot, bins = va_gen(inpMat, num_bits)
+        write_va(df, num_bits, base_dir)
+
+        nn = va_ssa(xq, inpMat, nn_num, tot)
+        print(nn)
+
     elif task_num == 6:
         raise NotImplmentedError(f"No implementation found for selected task: {task_num}")
     elif task_num == 7:
