@@ -78,8 +78,7 @@ class Pca:
         """
         :return: vector space of PCA
         """
-        # TODO:
-        return np.dot(self.u_.T, np.dot(self.u_, self.s_))
+        return np.dot(self.u_, self.s_)
 
     def transform(self, data_matrix):
         """

@@ -209,18 +209,19 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
 
     task_num = int(input("Enter task number(1-8):"))
 
-    if task_num <= 3 and technique != "none":
+    if technique != "none":
         # From Phase 2
         k_latent = input("Enter k for number of latent features:")
         # DESIGN_DECISION: Take a minimum over 20 latent features or less
         k_latent = min(feature_dict[feature].shape[0]*3//4, feature_dict[feature].shape[1]*3//4, 20) \
             if k_latent == "" else int(k_latent)
 
-        if not os.path.isdir(os.path.join(base_dir, config['Phase2'][technique + '_dir'])):
-            perform_dimensionality_reductions(feature_dict[feature], k_latent, technique, base_dir)
+        # if not os.path.isdir(os.path.join(base_dir, config['Phase2'][technique + '_dir'])):
+        perform_dimensionality_reductions(feature_dict[feature], k_latent, technique, base_dir)
         obj = get_saved_latent_object(technique, base_dir)
+        training_data = obj.get_vector_space()
     else:
-        obj = None
+        training_data = feature_dict[feature]
 
     if task_num == 1:
         classifier = input("Enter input classifier (svm - SVM/ dt - decision tree/ ppr - personalized pagerank) :")
@@ -243,7 +244,7 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
                                   img_ids=img_all_names)
             feature_dict_test = get_feature_dict_file(test_features_dir)
 
-            svm_task_1(features_dir, test_features_dir, training_set_features = feature_dict["cm8x8"],
+            svm_task_1(features_dir, test_features_dir, training_set_features=training_data,
                        test_set_features = feature_dict_test["cm8x8"])
         elif classifier == "dt":
             # TODO: REMOVE HARD CODE SELECTION
@@ -253,7 +254,7 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
 
             # Define vectors
             # vectors_df = pd.DataFrame(obj.get_vector_space())
-            vectors_df = pd.DataFrame(feature_dict["hog"])
+            vectors_df = pd.DataFrame(training_data)
 
             # Join vectors to their labels corresponding to indexes
             vectors_df = vectors_df.join(indx_df)
@@ -263,29 +264,6 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
             dt_obj.get_prediction_summary(vectors_df, labels=list(set(labels_dict.values())))
         elif classifier == "ppr":
             raise NotImplmentedError(f"No implementation found for selected task: {task_num} {classifier}")
-        elif classifier == "feed":
-            # TESTING DATA SETUP
-            test_set_path = input("Enter test path directory:")
-            test_features_dir = os.fspath(test_set_path.rstrip("/").rstrip("\\")
-                                          + "_" + config['Phase1']['image_feature_dir'])
-            # Create folders for images if they do not exist
-            if not os.path.isdir(test_features_dir):
-                os.makedirs(test_features_dir)
-            for dir in sub_features_dir:
-                if not os.path.isdir(os.path.join(test_features_dir, dir)):
-                    os.makedirs(os.path.join(test_features_dir, dir))
-
-            # GET TESTING DATA
-            images, img_all_names = read_all_images(test_set_path, pattern={"X": "", "Y": ""})
-            save_all_img_features(images, output_dim, test_features_dir, sub_features_dir, hog_dict,
-                                  feature_visualization=False,
-                                  img_ids=img_all_names)
-            feature_dict = get_feature_dict_file(test_features_dir)
-            index_list = [3, 5, 36, 45, 47, 55, 61, 62, 63, 78, 90]
-            feedback_list = [1, 1, -1, -1, -1, 1, 1, 1, 1, 1, -1]
-
-            svm_task_feedback(features_dir, test_features_dir, training_set_features = feature_dict["cm8x8"],
-                       test_set_features = feature_dict["cm8x8"], index_list = index_list, feedback_list = feedback_list)
         else:
             raise NotImplmentedError(f"No implementation found for selected task: {task_num} {classifier}")
     elif task_num == 2:
@@ -309,7 +287,7 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
                                   img_ids=img_all_names)
             feature_dict_test = get_feature_dict_file(test_features_dir)
 
-            svm_task_2(features_dir, test_features_dir, training_set_features = feature_dict["cm8x8"],
+            svm_task_2(features_dir, test_features_dir, training_set_features= training_data,
                        test_set_features = feature_dict_test["cm8x8"])
         elif classifier == "dt":
             # Define labels
@@ -318,7 +296,7 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
 
             # Define vectors
             # vectors_df = pd.DataFrame(obj.get_vector_space())
-            vectors_df = pd.DataFrame(feature_dict["hog"])
+            vectors_df = pd.DataFrame(training_data)
 
             # Join vectors to their labels corresponding to indexes
             vectors_df = vectors_df.join(indx_df)
@@ -351,7 +329,7 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
                                   img_ids=img_all_names)
             feature_dict_test = get_feature_dict_file(test_features_dir)
 
-            svm_task_3(features_dir, test_features_dir, training_set_features = feature_dict["cm8x8"],
+            svm_task_3(features_dir, test_features_dir, training_set_features= training_data,
                        test_set_features = feature_dict_test["cm8x8"])
         elif classifier == "dt":
             # Define labels
@@ -361,7 +339,7 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
             # Define vectors
             # TODO:
             # vectors_df = pd.DataFrame(obj.get_vector_space())
-            vectors_df = pd.DataFrame(feature_dict["hog"])
+            vectors_df = pd.DataFrame(training_data)
 
             # Join vectors to their labels corresponding to indexes
             vectors_df = vectors_df.join(indx_df)
@@ -387,7 +365,7 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
             if sub_id==in_sub:
                 tot_in_sub.append(img)
         # print(np.min(feature_dict["cm8x8"]),np.max(feature_dict["cm8x8"]))
-        lsh = LSH(int(num_layers), int(num_func_per_layer), feature_dict["cm8x8"], num_obj=20)
+        lsh = LSH(int(num_layers), int(num_func_per_layer), training_data, num_obj=20)
         # lsh = LSH(int(num_layers), int(num_func_per_layer), feature_dict["cm8x8"], num_obj=len(list(subjects)))
         set_list, indx, total_buckets_searched, \
         total_non_unique_candidate_images = lsh.get_all_candidates(in_feature_dict["cm8x8"], k=int(k_radius))
@@ -402,10 +380,9 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
         print("Number of total image matches found: ", total_non_unique_candidate_images)
         print("Number of unique image matches found: ", len(indx))
         print("Number of near neighbours:", len(indx), " from ", len(images),
-              " with data size: ", feature_dict["cm8x8"].shape)
+              " with data size: ", training_data.shape)
         print("Original image: ", get_subjects_from_ids(features_dir, indx))
-        print("False positives: ", len(set(all_candidate_subs)
-                                       - set(in_sub)))
+        print("False positives: ", len(set(all_candidate_subs) - set(in_sub)))
 
         candidate_imgs = get_images_from_ids(features_dir, indx)
         print("Misses: ", len(set(tot_in_sub) - set(candidate_imgs)))
@@ -422,14 +399,8 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
         #     plt.show()
     elif task_num == 5:
         # HOG with 100 folder works nicely.
-        if technique == "none":
-            # TODO
-            # inpMat = feature_dict[selected_feature]
-            inpMat = feature_dict["hog"]
-            xq = in_feature_dict["hog"]
-        else:
-            inpMat = obj.get_vector_space()
-            xq = obj.transform(in_feature_dict)
+        inpMat = training_data
+        xq = in_feature_dict["hog"]
 
         num_bits = int(input("Enter number of bits:"))
         nn_num = int(input("Enter number of nearest neighbours:"))
@@ -442,7 +413,7 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
         print("=" * 20 + "\n")
         print("PHASE 3 VAFILES OUTPUT:")
         print("Number of near neighbours:", len(nn), " from ", len(images),
-              " with data size: ", feature_dict["cm8x8"].shape)
+              " with data size: ", training_data.shape)
         image_files = get_image_file(features_dir, nn)
         for i in range(len(nn)):
             result = Image.fromarray((images[nn[i]]).astype(np.uint8))
@@ -451,11 +422,60 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
             plt.show()
 
     elif task_num == 6:
-        raise NotImplmentedError(f"No implementation found for selected task: {task_num}")
+        relevant = input("Enter relevant image indexes (comma separated): ")
+        irrelevant = input("Enter irrelevant image indexes (comma separated): ")
+
+        index_list = [int(i) for i in relevant.split(",")]
+        feedback_list = [1]*len(relevant.split(","))
+        index_list += [int(i) for i in irrelevant.split(",")]
+        feedback_list += [-1]*len(irrelevant.split(","))
+
+        # Define labels
+        labels_dict = {index_list[i]: feedback_list[i] for i in range(len(index_list))}
+        indx_df = pd.DataFrame.from_dict(labels_dict, orient='index', columns=["label"])
+
+        # Define vectors
+        # vectors_df = pd.DataFrame(obj.get_vector_space())
+        vectors_df = pd.DataFrame(training_data)
+
+        # Join vectors to their labels corresponding to indexes
+        vectors_df = vectors_df.join(indx_df)
+        vectors_df.dropna(inplace=True)
+
+        # Create decision tree
+        dt_obj = DecisionTree(vectors_df, max_depth=3)
+        print(dt_obj.print_tree)
+        # TRAINING DATA SUMMARY
+        dt_obj.get_prediction_summary(vectors_df, labels=list(set(labels_dict.values())))
     elif task_num == 7:
-        raise NotImplmentedError(f"No implementation found for selected task: {task_num}")
-    elif task_num == 8:
-        raise NotImplmentedError(f"No implementation found for selected task: {task_num}")
+        # TESTING DATA SETUP
+        test_set_path = input("Enter test path directory:")
+        relevant = input("Enter relevant image indexes (comma separated): ")
+        irrelevant = input("Enter irrelevant image indexes (comma separated): ")
+
+        index_list = [int(i) for i in relevant.split(",")]
+        feedback_list = [1]*len(relevant.split(","))
+        index_list += [int(i) for i in irrelevant.split(",")]
+        feedback_list += [-1]*len(irrelevant.split(","))
+
+        test_features_dir = os.fspath(test_set_path.rstrip("/").rstrip("\\")
+                                      + "_" + config['Phase1']['image_feature_dir'])
+        # Create folders for images if they do not exist
+        if not os.path.isdir(test_features_dir):
+            os.makedirs(test_features_dir)
+        for dir in sub_features_dir:
+            if not os.path.isdir(os.path.join(test_features_dir, dir)):
+                os.makedirs(os.path.join(test_features_dir, dir))
+
+        # GET TESTING DATA
+        images, img_all_names = read_all_images(test_set_path, pattern={"X": "", "Y": ""})
+        save_all_img_features(images, output_dim, test_features_dir, sub_features_dir, hog_dict,
+                              feature_visualization=False,
+                              img_ids=img_all_names)
+        feature_dict_test = get_feature_dict_file(test_features_dir)
+        # TODO:
+        svm_task_feedback(features_dir, test_features_dir, training_set_features=training_data,
+                          test_set_features=training_data, index_list=index_list, feedback_list=feedback_list)
     else:
         raise NotImplmentedError(f"No implementation found for selected task: {task_num}")
 
@@ -474,4 +494,3 @@ print(f"INPUT IMAGE IS {image_path}")
 
 Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feature, features_dir,
             sub_features_dir, X, Y, technique)
-
