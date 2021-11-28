@@ -379,23 +379,47 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
         k_radius = input("Enter radius of distance to find:")
 
         subjects = set()
+        in_sub = get_sub_from_image_path(image_path)
+        tot_in_sub = []
         for img in img_all_names:
-            subjects.add(get_sub_from_image_path(img))
-        print(np.min(feature_dict["cm8x8"]),np.max(feature_dict["cm8x8"]))
+            sub_id = get_sub_from_image_path(img)
+            subjects.add(sub_id)
+            if sub_id==in_sub:
+                tot_in_sub.append(img)
+        # print(np.min(feature_dict["cm8x8"]),np.max(feature_dict["cm8x8"]))
         lsh = LSH(int(num_layers), int(num_func_per_layer), feature_dict["cm8x8"], num_obj=20)
         # lsh = LSH(int(num_layers), int(num_func_per_layer), feature_dict["cm8x8"], num_obj=len(list(subjects)))
-        set_list, indx = lsh.get_all_candidates(in_feature_dict["cm8x8"], k=int(k_radius))
+        set_list, indx, total_buckets_searched, \
+        total_non_unique_candidate_images = lsh.get_all_candidates(in_feature_dict["cm8x8"], k=int(k_radius))
+        lsh.save(os.path.join(base_dir, "classifiers/lsh"))
 
-        print("=" * 20 + "\n")
+        all_candidate_subs = get_subjects_from_ids(features_dir, indx)
+
+        print("=" * 20)
         print("PHASE 3 LSH OUTPUT:")
+        print("Total index structure size: ", lsh.get_size())
+        print("Number of buckets searched: ", total_buckets_searched)
+        print("Number of total image matches found: ", total_non_unique_candidate_images)
+        print("Number of unique image matches found: ", len(indx))
         print("Number of near neighbours:", len(indx), " from ", len(images),
               " with data size: ", feature_dict["cm8x8"].shape)
-        image_files = get_image_file(features_dir, indx)
-        for i in range(len(indx)):
-            result = Image.fromarray((images[indx[i]]).astype(np.uint8))
-            print(image_files[indx[i]].split("/")[-1].split("\\")[-1]) #, d[i])
-            plt.imshow(images[i], cmap='gray')
-            plt.show()
+        print("Original image: ", get_subjects_from_ids(features_dir, indx))
+        print("False positives: ", len(set(all_candidate_subs)
+                                       - set(in_sub)))
+
+        candidate_imgs = get_images_from_ids(features_dir, indx)
+        print("Misses: ", len(set(tot_in_sub) - set(candidate_imgs)))
+        print("=" * 20)
+
+        for can_i in candidate_imgs:
+            print(can_i.split("/")[-1].split("\\")[-1])
+            image = Image.open(can_i)
+            image.show()
+        # for i in range(len(indx)):
+        #     result = Image.fromarray((images[indx[i]]).astype(np.uint8))
+        #     print(image_files[indx[i]].split("/")[-1].split("\\")[-1]) #, d[i])
+        #     plt.imshow(images[indx[i]], cmap='gray')
+        #     plt.show()
     elif task_num == 5:
         # HOG with 100 folder works nicely.
         if technique == "none":
