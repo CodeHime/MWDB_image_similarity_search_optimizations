@@ -98,6 +98,9 @@ class LSH_family:
     candidate_list = set()
     q_buckets_dict = {}
 
+    total_buckets_searched = 0
+    total_non_unique_candidate_images = 0
+
     for bucket, v in set_list.items():
       new_dict = {}
       for i in list(set(v)):
@@ -105,10 +108,12 @@ class LSH_family:
         new_dict.update({i: v_freq})
         # APPLYING CONJUNCTION TO ALL LSH FAMILY NODES
         if v_freq == self.K:
+          total_buckets_searched+=1
           for hash in self.lsh_family:
+            total_non_unique_candidate_images+=len(hash.buckets[bucket])
             candidate_list.update(hash.buckets[bucket])
       q_buckets_dict.update({bucket: new_dict})
-    return q_buckets_dict, candidate_list
+    return q_buckets_dict, candidate_list, total_buckets_searched, total_non_unique_candidate_images
 
   def get_size(self):
     family_size = 0
@@ -141,10 +146,14 @@ class LSH:
   def get_all_candidates(self, xq, k=1):
     set_list = {}
     candidate_list = set()
+    total_buckets_searched = 0
+    total_non_unique_candidate_images = 0
     for fam_i in range(len(self.lsh_families)):
-      set_list[fam_i], fam_candidate_list = self.lsh_families[fam_i].get_all_candidates(xq, k=k)
+      set_list[fam_i], fam_candidate_list, fam_buckets_searched, fam_non_unique_candidate_images = self.lsh_families[fam_i].get_all_candidates(xq, k=k)
+      total_buckets_searched += fam_buckets_searched
+      total_non_unique_candidate_images += fam_non_unique_candidate_images
       candidate_list.update(fam_candidate_list)
-    return set_list, list(candidate_list)
+    return set_list, list(candidate_list), fam_buckets_searched, fam_non_unique_candidate_images
 
   def get_size(self):
     total_lsh_size = 0
