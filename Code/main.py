@@ -423,10 +423,12 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
         vectors_df.dropna(inplace=True)
 
         # Create decision tree
-        dt_obj = DecisionTree(vectors_df, max_depth=3)
+        dt_obj = DecisionTree(vectors_df, max_depth=3, min_support=1.0, min_samples=1)
         print(dt_obj.print_tree)
         # TRAINING DATA SUMMARY
-        dt_obj.get_prediction_summary(vectors_df, labels=list(set(labels_dict.values())))
+        df_index = vectors_df.index
+        pred_rel_vals = dt_obj.get_prediction_summary(vectors_df, labels=list(set(labels_dict.values())))
+        # for
     elif task_num == 7:
         # TESTING DATA SETUP
         test_set_path = input("Enter test path directory:")

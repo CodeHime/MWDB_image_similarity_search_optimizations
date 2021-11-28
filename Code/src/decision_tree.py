@@ -35,8 +35,10 @@ class DecisionTree:
 
             sub_tree = {question: []}
             # find answers (recursion)
-            left_answer = self.create_decision_tree(data_below, counter + 1, min_samples, max_depth)
-            right_answer = self.create_decision_tree(data_above, counter + 1, min_samples, max_depth)
+            left_answer = self.create_decision_tree(data_below, counter=counter + 1, min_support=min_support,
+                                                    min_samples=min_samples, max_depth=max_depth)
+            right_answer = self.create_decision_tree(data_above, counter=counter + 1, min_support=min_support,
+                                                     min_samples=min_samples, max_depth=max_depth)
 
             # If the answers are the same, then there is no point in asking the qestion.
             # This could happen when the data is classified even though it is not pure
@@ -67,6 +69,7 @@ class DecisionTree:
         act_val = xq_df.iloc[:, -1]
         pred_val = []
         print(self.print_tree)
+        xq_df.reset_index(inplace=True)
         print("xq_df", xq_df)
         for i in xq_df.index:
             pred_val.append(self.query_tree(xq_df.iloc[i, :]))
@@ -77,5 +80,7 @@ class DecisionTree:
         sum_col = conf_mat.sum(axis=0) - conf_mat.diagonal()
         # Calculate misses
         sum_row = conf_mat.sum(axis=1) - conf_mat.diagonal()
-        print(f"False +ves: {sum(sum_col)} \nMisses: {sum(sum_row)}")
+        print(f"False +ves: {sum_col} \nMisses: {sum_row}")
         print("*"*40)
+
+        return pred_val
