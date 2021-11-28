@@ -125,6 +125,29 @@ def top_k_match(xb, k, xq, method="euclidean"):
     return earth_movers(xb, k, xq)
 
 
+def hamming_fn(xb, xq):
+  """
+  Calculate the hamming distance and return distance matrix
+  :param xb: Data matrix to find similarity in
+  :param xq:  Query matrix to find similarity for
+  """
+  ham = np.array([(np.array(list(i))!=np.array(list(xq))) for i in xb]).sum(axis=1)
+  return ham
+
+
+def hamming(xb, k, xq):
+  """
+  Calculate the hamming distance and return distance matrix
+  :param xb: Data matrix to find similarity in
+  :param k: Number of top objects to return
+  :param xq:  Query matrix to find similarity for
+  """
+  ham = hamming_fn(xb, xq)
+  idx = np.where(ham<=k)
+  # idx = np.argpartition(ham, k)[:k]
+  return ham[idx], idx
+
+
 def get_image_file(features_dir, image_ids):
   """
   Get image-image id mapping file

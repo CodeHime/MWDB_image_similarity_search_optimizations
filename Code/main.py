@@ -224,6 +224,7 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
         if classifier == "svm":
             svm_task_1(base_dir)
         elif classifier == "dt":
+            # TODO: REMOVE HARD CODE SELECTION
             # Define labels
             labels_dict = get_type_from_ids(features_dir, range(len(images)), reverse_dict=True)
             indx_df = pd.DataFrame.from_dict(labels_dict, orient='index', columns=["label"])
