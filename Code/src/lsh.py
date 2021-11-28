@@ -7,7 +7,9 @@ from distance_calculator import *
 class LSH_node:
   def __init__(self, w, vectors, b, plane_norms=np.array([])):
     if plane_norms.size == 0:
-      self.plane_norms = np.random.normal(np.mean(vectors - 0.5), np.std(vectors - 0.5), size=(vectors.shape[1], vectors.shape[1]))
+      # self.plane_norms = np.random.normal(np.mean(vectors, axis=0),
+      #                                     np.std(vectors, axis=0), size=(vectors.shape[1], vectors.shape[1]))
+      self.plane_norms = np.random.rand(vectors.shape[1], vectors.shape[1]) - .5
     else:
       self.plane_norms = plane_norms
 
@@ -19,7 +21,7 @@ class LSH_node:
 
     for i in range(len(vectors)):
       # convert from array to string
-      hash_str = self.transform(vectors[i], shift=False)
+      hash_str = self.transform(vectors[i], shift=True)
       # create bucket if it doesn't exist
       if hash_str not in self.buckets.keys():
         self.buckets[hash_str] = []
@@ -35,13 +37,13 @@ class LSH_node:
       v_dot = np.dot(xq - 0.5, self.plane_norms)
     else:
       v_dot = np.dot(xq, self.plane_norms)
-    # a random b would eliminate errors/borderline cases
-    print("v_dot")
-    print((v_dot > 0).astype(int).sum())
-    # TODO: TODO:
-    # v_dot = v_dot * self.w * self.vectors.shape[0] + self.b
-    # print(v_dot)
-    # v_dot = v_dot / self.w * self.vectors.shape[0]
+    # if (v_dot > 0).astype(int).sum() > 0 and (v_dot < 0).astype(int).sum() > 0:
+    #   print((v_dot > 0).astype(int).sum(), (v_dot < 0).astype(int).sum()
+
+    # a random b would eliminate errors/borderline cases)
+    # TODO: set b
+    v_dot = v_dot * self.w * self.vectors.shape[0] + self.b
+    v_dot = v_dot / self.w * self.vectors.shape[0]
     # Convert dot product to binary
     v_dot = v_dot > 0
     # Convert boolean to int for bucketing
@@ -67,7 +69,9 @@ class LSH_family:
     self.K = K
     # self.plane_norms = np.random.rand(*vectors.shape)
     # Calculate random projection plane using gaussian distribution
-    self.plane_norms = np.random.normal(np.mean(vectors), np.std(vectors), size=(vectors.shape[1], vectors.shape[1]))
+    # self.plane_norms = np.random.normal(np.mean(vectors, axis=0),
+    #                                     np.std(vectors, axis=0), size=(vectors.shape[1], vectors.shape[1]))
+    self.plane_norms = np.random.rand(vectors.shape[1], vectors.shape[1]) - .5
 
     self.lsh_family = []
     for j in range(self.K):
@@ -116,7 +120,7 @@ class LSH:
   def __init__(self, L, K, vectors, num_obj=5):
     self.L = L
     self.K = K
-    self.vectors = vectors - 0.5
+    self.vectors = vectors
     self.num_obj = num_obj
 
     self.lsh_families = []
