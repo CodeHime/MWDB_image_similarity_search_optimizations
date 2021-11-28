@@ -108,8 +108,6 @@ def svm_task_1(training_features_dir, test_features_dir, training_set_features =
     jsonFile.write(jsonString)
     jsonFile.close()
 
-    print(remaining_images)
-
     actual_val = []
     predicted_val = []
     for key in results:
@@ -117,11 +115,10 @@ def svm_task_1(training_features_dir, test_features_dir, training_set_features =
         actual_val.append(type_img)
         predicted_val.append(results[key])
 
-    print(actual_val)
-    print("")
-    print(predicted_val)
+    print("Results")
+    print(results)
     conf_mat = confusion_matrix(actual_val, predicted_val, labels = ["cc", "con", "emboss", "jitter", "neg", "noise01", "noise02", "original", "poster", "rot", "smooth", "stipple"])
-    print("Confusion")
+    print("Confusion Matrix")
     print(conf_mat)
 
     FP = conf_mat.sum(axis=0) - np.diag(conf_mat)  
@@ -129,4 +126,7 @@ def svm_task_1(training_features_dir, test_features_dir, training_set_features =
     TP = np.diag(conf_mat)
     TN = conf_mat.sum() - (FP + FN + TP)
     FPR = FP/(FP+TN)
-    print(FPR)
+    print("False Positive rate: ", FPR)
+    FNR = FN/(TP+FN)
+    print("False Negative rate: ", FNR)
+

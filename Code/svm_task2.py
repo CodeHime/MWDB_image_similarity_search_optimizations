@@ -120,20 +120,18 @@ def svm_task_2(training_features_dir, test_features_dir, training_set_features =
         actual_val.append(type_img)
         predicted_val.append(results[key])
 
-    print(actual_val)
-    print("")
-    print(predicted_val)
+    print("Results")
+    print(results)
     labels =[]
     for i in range(1, 41):
         labels.append(str(i))
     conf_mat = confusion_matrix(actual_val, predicted_val, labels = labels)
-    print("Confusion")
-    print(conf_mat)
-    print(np.size(conf_mat))
 
     FP = conf_mat.sum(axis=0) - np.diag(conf_mat)  
     FN = conf_mat.sum(axis=1) - np.diag(conf_mat)
     TP = np.diag(conf_mat)
     TN = conf_mat.sum() - (FP + FN + TP)
     FPR = FP/(FP+TN)
-    print(FPR)
+    print("False Positive rate: ", FPR)
+    FNR = FN/(TP+FN)
+    print("Miss rate: ", FNR)

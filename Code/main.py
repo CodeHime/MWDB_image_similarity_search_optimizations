@@ -64,6 +64,7 @@ from src.ppr import *
 from svm_task1 import *
 from svm_task2 import *
 from svm_task3 import *
+from feedback import *
 from src.decision_tree import *
 # Phase 3 - Task 4
 from src.lsh import *
@@ -240,10 +241,10 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
             save_all_img_features(images, output_dim, test_features_dir, sub_features_dir, hog_dict,
                                   feature_visualization=False,
                                   img_ids=img_all_names)
-            feature_dict = get_feature_dict_file(test_features_dir)
+            feature_dict_test = get_feature_dict_file(test_features_dir)
 
             svm_task_1(features_dir, test_features_dir, training_set_features = feature_dict["cm8x8"],
-                       test_set_features = feature_dict["cm8x8"])
+                       test_set_features = feature_dict_test["cm8x8"])
         elif classifier == "dt":
             # TODO: REMOVE HARD CODE SELECTION
             # Define labels
@@ -262,6 +263,29 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
             dt_obj.get_prediction_summary(vectors_df, labels=list(set(labels_dict.values())))
         elif classifier == "ppr":
             raise NotImplmentedError(f"No implementation found for selected task: {task_num} {classifier}")
+        elif classifier == "feed":
+            # TESTING DATA SETUP
+            test_set_path = input("Enter test path directory:")
+            test_features_dir = os.fspath(test_set_path.rstrip("/").rstrip("\\")
+                                          + "_" + config['Phase1']['image_feature_dir'])
+            # Create folders for images if they do not exist
+            if not os.path.isdir(test_features_dir):
+                os.makedirs(test_features_dir)
+            for dir in sub_features_dir:
+                if not os.path.isdir(os.path.join(test_features_dir, dir)):
+                    os.makedirs(os.path.join(test_features_dir, dir))
+
+            # GET TESTING DATA
+            images, img_all_names = read_all_images(test_set_path, pattern={"X": "", "Y": ""})
+            save_all_img_features(images, output_dim, test_features_dir, sub_features_dir, hog_dict,
+                                  feature_visualization=False,
+                                  img_ids=img_all_names)
+            feature_dict = get_feature_dict_file(test_features_dir)
+            index_list = [3, 5, 36, 45, 47, 55, 61, 62, 63, 78, 90]
+            feedback_list = [1, 1, -1, -1, -1, 1, 1, 1, 1, 1, -1]
+
+            svm_task_feedback(features_dir, test_features_dir, training_set_features = feature_dict["cm8x8"],
+                       test_set_features = feature_dict["cm8x8"], index_list = index_list, feedback_list = feedback_list)
         else:
             raise NotImplmentedError(f"No implementation found for selected task: {task_num} {classifier}")
     elif task_num == 2:
@@ -283,10 +307,10 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
             save_all_img_features(images, output_dim, test_features_dir, sub_features_dir, hog_dict,
                                   feature_visualization=False,
                                   img_ids=img_all_names)
-            feature_dict = get_feature_dict_file(test_features_dir)
+            feature_dict_test = get_feature_dict_file(test_features_dir)
 
             svm_task_2(features_dir, test_features_dir, training_set_features = feature_dict["cm8x8"],
-                       test_set_features = feature_dict["cm8x8"])
+                       test_set_features = feature_dict_test["cm8x8"])
         elif classifier == "dt":
             # Define labels
             labels_dict = get_subjects_from_ids(features_dir, range(len(images)), reverse_dict=True)
@@ -325,10 +349,10 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
             save_all_img_features(images, output_dim, test_features_dir, sub_features_dir, hog_dict,
                                   feature_visualization=False,
                                   img_ids=img_all_names)
-            feature_dict = get_feature_dict_file(test_features_dir)
+            feature_dict_test = get_feature_dict_file(test_features_dir)
 
             svm_task_3(features_dir, test_features_dir, training_set_features = feature_dict["cm8x8"],
-                       test_set_features = feature_dict["cm8x8"])
+                       test_set_features = feature_dict_test["cm8x8"])
         elif classifier == "dt":
             # Define labels
             labels_dict = get_sample_from_ids(features_dir, range(len(images)), reverse_dict=True)
