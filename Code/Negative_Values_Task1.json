@@ -1,5 +1,239 @@
 {
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-cc-1-8.png": [
+        {
+            "neg": 0.0
+        },
+        {
+            "noise02": 0.0
+        },
+        {
+            "noise01": 0.0
+        },
+        {
+            "con": -1.0014789076300246
+        },
+        {
+            "smooth": 0.0
+        },
+        {
+            "rot": 0.0
+        },
+        {
+            "stipple": 0.0
+        },
+        {
+            "original": 0.0
+        },
+        {
+            "emboss": -2.0490295107649863
+        },
+        {
+            "poster": 0.0
+        },
+        {
+            "jitter": -1.142353085691287
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-cc-13-4.png": [
+        {
+            "neg": 0.0
+        },
+        {
+            "noise02": 0.0
+        },
+        {
+            "noise01": 0.0
+        },
+        {
+            "con": -1.1229085691975693
+        },
+        {
+            "smooth": 0.0
+        },
+        {
+            "rot": 0.0
+        },
+        {
+            "stipple": 0.0
+        },
+        {
+            "original": 0.0
+        },
+        {
+            "emboss": -1.8765381905876004
+        },
+        {
+            "poster": 0.0
+        },
+        {
+            "jitter": -0.9982968402964936
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-cc-21-3.png": [
+        {
+            "neg": 0.0
+        },
+        {
+            "noise02": 0.0
+        },
+        {
+            "noise01": 0.0
+        },
+        {
+            "con": -1.2836438372619496
+        },
+        {
+            "smooth": 0.0
+        },
+        {
+            "rot": 0.0
+        },
+        {
+            "stipple": 0.0
+        },
+        {
+            "original": 0.0
+        },
+        {
+            "emboss": -1.8044054312818338
+        },
+        {
+            "poster": 0.0
+        },
+        {
+            "jitter": -1.0363711135613904
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-cc-22-10.png": [
+        {
+            "neg": 0.0
+        },
+        {
+            "noise02": 0.0
+        },
+        {
+            "noise01": 0.0
+        },
+        {
+            "con": -0.9998862313486021
+        },
+        {
+            "smooth": 0.0
+        },
+        {
+            "rot": 0.0
+        },
+        {
+            "stipple": 0.0
+        },
+        {
+            "original": 0.0
+        },
+        {
+            "emboss": -2.1066031983907343
+        },
+        {
+            "poster": 0.0
+        },
+        {
+            "jitter": -1.1364486224599126
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-cc-35-1.png": [
+        {
+            "neg": 0.0
+        },
+        {
+            "noise02": 0.0
+        },
+        {
+            "noise01": 0.0
+        },
+        {
+            "con": -1.1797380889037812
+        },
+        {
+            "smooth": 0.0
+        },
+        {
+            "rot": 0.0
+        },
+        {
+            "stipple": 0.0
+        },
+        {
+            "original": 0.0
+        },
+        {
+            "emboss": -1.7739921337131412
+        },
+        {
+            "poster": 0.0
+        },
+        {
+            "jitter": -0.998296858812072
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-cc-4-2.png": [
+        {
+            "neg": 0.0
+        },
+        {
+            "noise02": 0.0
+        },
+        {
+            "noise01": 0.0
+        },
+        {
+            "con": -0.999886231146291
+        },
+        {
+            "smooth": 0.0
+        },
+        {
+            "rot": 0.0
+        },
+        {
+            "stipple": 0.0
+        },
+        {
+            "original": 0.0
+        },
+        {
+            "emboss": -2.4434898287225812
+        },
+        {
+            "poster": 0.0
+        },
+        {
+            "jitter": -0.9982969231396233
+        }
+    ],
     "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-con-11-5.png": [
+        {
+            "neg": 0.0
+        },
+        {
+            "noise02": 0.0
+        },
+        {
+            "noise01": 0.0
+        },
+        {
+            "smooth": 0.0
+        },
+        {
+            "rot": 0.0
+        },
+        {
+            "stipple": 0.0
+        },
+        {
+            "original": 0.0
+        },
+        {
+            "emboss": -4.549133376483785
+        },
         {
             "cc": -1.4882167464167655
         },
@@ -7,20 +241,10 @@
             "poster": 0.0
         },
         {
-            "stipple": 0.0
-        },
-        {
             "jitter": -0.9982979160353729
-        },
-        {
-            "rot": 0.0
-        },
-        {
-            "noise01": 0.0
-        },
-        {
-            "emboss": -4.549133376483785
-        },
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-con-17-9.png": [
         {
             "neg": 0.0
         },
@@ -28,13 +252,23 @@
             "noise02": 0.0
         },
         {
-            "original": 0.0
+            "noise01": 0.0
         },
         {
             "smooth": 0.0
-        }
-    ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-con-17-9.png": [
+        },
+        {
+            "rot": 0.0
+        },
+        {
+            "stipple": 0.0
+        },
+        {
+            "original": 0.0
+        },
+        {
+            "emboss": -2.3676608691550647
+        },
         {
             "cc": -1.520935500283954
         },
@@ -42,20 +276,10 @@
             "poster": 0.0
         },
         {
-            "stipple": 0.0
-        },
-        {
             "jitter": -0.9982977540537838
-        },
-        {
-            "rot": 0.0
-        },
-        {
-            "noise01": 0.0
-        },
-        {
-            "emboss": -2.3676608691550647
-        },
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-con-19-8.png": [
         {
             "neg": 0.0
         },
@@ -63,13 +287,23 @@
             "noise02": 0.0
         },
         {
-            "original": 0.0
+            "noise01": 0.0
         },
         {
             "smooth": 0.0
-        }
-    ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-con-19-8.png": [
+        },
+        {
+            "rot": 0.0
+        },
+        {
+            "stipple": 0.0
+        },
+        {
+            "original": 0.0
+        },
+        {
+            "emboss": -3.7934575503165866
+        },
         {
             "cc": -0.998692917667754
         },
@@ -77,20 +311,10 @@
             "poster": 0.0
         },
         {
-            "stipple": 0.0
-        },
-        {
             "jitter": -0.9982976141424622
-        },
-        {
-            "rot": 0.0
-        },
-        {
-            "noise01": 0.0
-        },
-        {
-            "emboss": -3.7934575503165866
-        },
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-con-25-8.png": [
         {
             "neg": 0.0
         },
@@ -98,13 +322,23 @@
             "noise02": 0.0
         },
         {
-            "original": 0.0
+            "noise01": 0.0
         },
         {
             "smooth": 0.0
-        }
-    ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-con-25-8.png": [
+        },
+        {
+            "rot": 0.0
+        },
+        {
+            "stipple": 0.0
+        },
+        {
+            "original": 0.0
+        },
+        {
+            "emboss": -2.0399193174148684
+        },
         {
             "cc": -0.998692917747357
         },
@@ -112,20 +346,10 @@
             "poster": 0.0
         },
         {
-            "stipple": 0.0
-        },
-        {
             "jitter": -1.0272467035529793
-        },
-        {
-            "rot": 0.0
-        },
-        {
-            "noise01": 0.0
-        },
-        {
-            "emboss": -2.0399193174148684
-        },
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-con-27-5.png": [
         {
             "neg": 0.0
         },
@@ -133,13 +357,23 @@
             "noise02": 0.0
         },
         {
-            "original": 0.0
+            "noise01": 0.0
         },
         {
             "smooth": 0.0
-        }
-    ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-con-27-5.png": [
+        },
+        {
+            "rot": 0.0
+        },
+        {
+            "stipple": 0.0
+        },
+        {
+            "original": 0.0
+        },
+        {
+            "emboss": -4.220626692458308
+        },
         {
             "cc": -0.9986929107518033
         },
@@ -147,20 +381,10 @@
             "poster": 0.0
         },
         {
-            "stipple": 0.0
-        },
-        {
             "jitter": -0.9982976605171139
-        },
-        {
-            "rot": 0.0
-        },
-        {
-            "noise01": 0.0
-        },
-        {
-            "emboss": -4.220626692458308
-        },
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-con-33-6.png": [
         {
             "neg": 0.0
         },
@@ -168,13 +392,23 @@
             "noise02": 0.0
         },
         {
-            "original": 0.0
+            "noise01": 0.0
         },
         {
             "smooth": 0.0
-        }
-    ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-con-33-6.png": [
+        },
+        {
+            "rot": 0.0
+        },
+        {
+            "stipple": 0.0
+        },
+        {
+            "original": 0.0
+        },
+        {
+            "emboss": -0.9932952607731357
+        },
         {
             "cc": -1.9314030526194519
         },
@@ -182,20 +416,10 @@
             "poster": 0.0
         },
         {
-            "stipple": 0.0
-        },
-        {
             "jitter": -2.0886616697272764
-        },
-        {
-            "rot": 0.0
-        },
-        {
-            "noise01": 0.0
-        },
-        {
-            "emboss": -0.9932952607731357
-        },
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-con-39-2.png": [
         {
             "neg": 0.0
         },
@@ -203,13 +427,23 @@
             "noise02": 0.0
         },
         {
-            "original": 0.0
+            "noise01": 0.0
         },
         {
             "smooth": 0.0
-        }
-    ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-con-39-2.png": [
+        },
+        {
+            "rot": 0.0
+        },
+        {
+            "stipple": 0.0
+        },
+        {
+            "original": 0.0
+        },
+        {
+            "emboss": -3.953946127607592
+        },
         {
             "cc": -1.495831627162424
         },
@@ -217,20 +451,10 @@
             "poster": 0.0
         },
         {
-            "stipple": 0.0
-        },
-        {
             "jitter": -0.9982979510270589
-        },
-        {
-            "rot": 0.0
-        },
-        {
-            "noise01": 0.0
-        },
-        {
-            "emboss": -3.953946127607592
-        },
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-emboss-1-8.png": [
         {
             "neg": 0.0
         },
@@ -238,13 +462,23 @@
             "noise02": 0.0
         },
         {
-            "original": 0.0
+            "noise01": 0.0
+        },
+        {
+            "con": -1.8096530590550857
         },
         {
             "smooth": 0.0
-        }
-    ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-emboss-1-8.png": [
+        },
+        {
+            "rot": 0.0
+        },
+        {
+            "stipple": 0.0
+        },
+        {
+            "original": 0.0
+        },
         {
             "cc": -1.5721043086613242
         },
@@ -252,20 +486,10 @@
             "poster": 0.0
         },
         {
-            "stipple": 0.0
-        },
-        {
             "jitter": -1.3967071671818339
-        },
-        {
-            "rot": 0.0
-        },
-        {
-            "con": -1.8096530590550857
-        },
-        {
-            "noise01": 0.0
-        },
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-emboss-10-10.png": [
         {
             "neg": 0.0
         },
@@ -273,13 +497,23 @@
             "noise02": 0.0
         },
         {
-            "original": 0.0
+            "noise01": 0.0
+        },
+        {
+            "con": -1.8413669472205272
         },
         {
             "smooth": 0.0
-        }
-    ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-emboss-10-10.png": [
+        },
+        {
+            "rot": 0.0
+        },
+        {
+            "stipple": 0.0
+        },
+        {
+            "original": 0.0
+        },
         {
             "cc": -1.5442612796037474
         },
@@ -287,20 +521,10 @@
             "poster": 0.0
         },
         {
-            "stipple": 0.0
-        },
-        {
             "jitter": -1.2010184531753545
-        },
-        {
-            "rot": 0.0
-        },
-        {
-            "con": -1.8413669472205272
-        },
-        {
-            "noise01": 0.0
-        },
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-emboss-11-9.png": [
         {
             "neg": 0.0
         },
@@ -308,13 +532,23 @@
             "noise02": 0.0
         },
         {
-            "original": 0.0
+            "noise01": 0.0
+        },
+        {
+            "con": -1.849172944199363
         },
         {
             "smooth": 0.0
-        }
-    ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-emboss-11-9.png": [
+        },
+        {
+            "rot": 0.0
+        },
+        {
+            "stipple": 0.0
+        },
+        {
+            "original": 0.0
+        },
         {
             "cc": -1.5351098772000065
         },
@@ -322,20 +556,10 @@
             "poster": 0.0
         },
         {
-            "stipple": 0.0
-        },
-        {
             "jitter": -0.9982965885701027
-        },
-        {
-            "rot": 0.0
-        },
-        {
-            "con": -1.849172944199363
-        },
-        {
-            "noise01": 0.0
-        },
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-emboss-13-10.png": [
         {
             "neg": 0.0
         },
@@ -343,13 +567,23 @@
             "noise02": 0.0
         },
         {
-            "original": 0.0
+            "noise01": 0.0
+        },
+        {
+            "con": -1.8190984125060319
         },
         {
             "smooth": 0.0
-        }
-    ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-emboss-13-10.png": [
+        },
+        {
+            "rot": 0.0
+        },
+        {
+            "stipple": 0.0
+        },
+        {
+            "original": 0.0
+        },
         {
             "cc": -1.5709807578761605
         },
@@ -357,20 +591,10 @@
             "poster": 0.0
         },
         {
-            "stipple": 0.0
-        },
-        {
             "jitter": -1.025532510007185
-        },
-        {
-            "rot": 0.0
-        },
-        {
-            "con": -1.8190984125060319
-        },
-        {
-            "noise01": 0.0
-        },
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-emboss-21-7.png": [
         {
             "neg": 0.0
         },
@@ -378,13 +602,23 @@
             "noise02": 0.0
         },
         {
-            "original": 0.0
+            "noise01": 0.0
+        },
+        {
+            "con": -1.7997076995137955
         },
         {
             "smooth": 0.0
-        }
-    ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-emboss-21-7.png": [
+        },
+        {
+            "rot": 0.0
+        },
+        {
+            "stipple": 0.0
+        },
+        {
+            "original": 0.0
+        },
         {
             "cc": -1.5988060320321908
         },
@@ -392,20 +626,10 @@
             "poster": 0.0
         },
         {
-            "stipple": 0.0
-        },
-        {
             "jitter": -1.1061796252725493
-        },
-        {
-            "rot": 0.0
-        },
-        {
-            "con": -1.7997076995137955
-        },
-        {
-            "noise01": 0.0
-        },
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-emboss-23-5.png": [
         {
             "neg": 0.0
         },
@@ -413,13 +637,23 @@
             "noise02": 0.0
         },
         {
-            "original": 0.0
+            "noise01": 0.0
+        },
+        {
+            "con": -1.962953769939634
         },
         {
             "smooth": 0.0
-        }
-    ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-emboss-23-5.png": [
+        },
+        {
+            "rot": 0.0
+        },
+        {
+            "stipple": 0.0
+        },
+        {
+            "original": 0.0
+        },
         {
             "cc": -1.499300491745142
         },
@@ -427,20 +661,10 @@
             "poster": 0.0
         },
         {
-            "stipple": 0.0
-        },
-        {
             "jitter": -0.9982965729013138
-        },
-        {
-            "rot": 0.0
-        },
-        {
-            "con": -1.962953769939634
-        },
-        {
-            "noise01": 0.0
-        },
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-emboss-31-3.png": [
         {
             "neg": 0.0
         },
@@ -448,13 +672,23 @@
             "noise02": 0.0
         },
         {
-            "original": 0.0
+            "noise01": 0.0
+        },
+        {
+            "con": -1.8556475883680226
         },
         {
             "smooth": 0.0
-        }
-    ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-emboss-31-3.png": [
+        },
+        {
+            "rot": 0.0
+        },
+        {
+            "stipple": 0.0
+        },
+        {
+            "original": 0.0
+        },
         {
             "cc": -1.5435905978341262
         },
@@ -462,20 +696,10 @@
             "poster": 0.0
         },
         {
-            "stipple": 0.0
-        },
-        {
             "jitter": -0.9982965910960395
-        },
-        {
-            "rot": 0.0
-        },
-        {
-            "con": -1.8556475883680226
-        },
-        {
-            "noise01": 0.0
-        },
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-emboss-38-4.png": [
         {
             "neg": 0.0
         },
@@ -483,13 +707,23 @@
             "noise02": 0.0
         },
         {
-            "original": 0.0
+            "noise01": 0.0
+        },
+        {
+            "con": -1.7930508096312203
         },
         {
             "smooth": 0.0
-        }
-    ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-emboss-38-4.png": [
+        },
+        {
+            "rot": 0.0
+        },
+        {
+            "stipple": 0.0
+        },
+        {
+            "original": 0.0
+        },
         {
             "cc": -1.5278571282160824
         },
@@ -497,20 +731,10 @@
             "poster": 0.0
         },
         {
-            "stipple": 0.0
-        },
-        {
             "jitter": -1.2484970388250254
-        },
-        {
-            "rot": 0.0
-        },
-        {
-            "con": -1.7930508096312203
-        },
-        {
-            "noise01": 0.0
-        },
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-jitter-10-1.png": [
         {
             "neg": 0.0
         },
@@ -518,535 +742,311 @@
             "noise02": 0.0
         },
         {
-            "original": 0.0
-        },
-        {
-            "smooth": 0.0
-        }
-    ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-jitter-10-1.png": [
-        {
-            "cc": -1.6605527994838982
-        },
-        {
-            "poster": 0.0
-        },
-        {
-            "stipple": 0.0
-        },
-        {
-            "rot": 0.0
+            "noise01": 0.0
         },
         {
             "con": -0.999886220993853
         },
         {
-            "noise01": 0.0
+            "smooth": 0.0
+        },
+        {
+            "rot": 0.0
+        },
+        {
+            "stipple": 0.0
+        },
+        {
+            "original": 0.0
         },
         {
             "emboss": -1.864377785205766
         },
         {
+            "cc": -1.6605527994838982
+        },
+        {
+            "poster": 0.0
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-jitter-11-2.png": [
+        {
             "neg": 0.0
         },
         {
             "noise02": 0.0
         },
         {
-            "original": 0.0
-        },
-        {
-            "smooth": 0.0
-        }
-    ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-jitter-11-2.png": [
-        {
-            "cc": -1.6920406173104716
-        },
-        {
-            "poster": 0.0
-        },
-        {
-            "stipple": 0.0
-        },
-        {
-            "rot": 0.0
+            "noise01": 0.0
         },
         {
             "con": -0.9998862215112356
         },
         {
-            "noise01": 0.0
+            "smooth": 0.0
+        },
+        {
+            "rot": 0.0
+        },
+        {
+            "stipple": 0.0
+        },
+        {
+            "original": 0.0
         },
         {
             "emboss": -2.2702209954424126
         },
         {
+            "cc": -1.6920406173104716
+        },
+        {
+            "poster": 0.0
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-jitter-15-6.png": [
+        {
             "neg": 0.0
         },
         {
             "noise02": 0.0
         },
         {
-            "original": 0.0
-        },
-        {
-            "smooth": 0.0
-        }
-    ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-jitter-15-6.png": [
-        {
-            "cc": -0.9986928437053624
-        },
-        {
-            "poster": 0.0
-        },
-        {
-            "stipple": 0.0
-        },
-        {
-            "rot": 0.0
+            "noise01": 0.0
         },
         {
             "con": -1.2032335439921051
         },
         {
-            "noise01": 0.0
+            "smooth": 0.0
+        },
+        {
+            "rot": 0.0
+        },
+        {
+            "stipple": 0.0
+        },
+        {
+            "original": 0.0
         },
         {
             "emboss": -2.0224897455508617
         },
         {
+            "cc": -0.9986928437053624
+        },
+        {
+            "poster": 0.0
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-jitter-16-4.png": [
+        {
             "neg": 0.0
         },
         {
             "noise02": 0.0
         },
         {
-            "original": 0.0
-        },
-        {
-            "smooth": 0.0
-        }
-    ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-jitter-16-4.png": [
-        {
-            "cc": -1.3394734527230598
-        },
-        {
-            "poster": 0.0
-        },
-        {
-            "stipple": 0.0
-        },
-        {
-            "rot": 0.0
+            "noise01": 0.0
         },
         {
             "con": -0.9998862178562473
         },
         {
-            "noise01": 0.0
+            "smooth": 0.0
+        },
+        {
+            "rot": 0.0
+        },
+        {
+            "stipple": 0.0
+        },
+        {
+            "original": 0.0
         },
         {
             "emboss": -1.9042585759282438
         },
         {
+            "cc": -1.3394734527230598
+        },
+        {
+            "poster": 0.0
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-jitter-19-1.png": [
+        {
             "neg": 0.0
         },
         {
             "noise02": 0.0
         },
         {
-            "original": 0.0
-        },
-        {
-            "smooth": 0.0
-        }
-    ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-jitter-19-1.png": [
-        {
-            "cc": -2.051955537051938
-        },
-        {
-            "poster": 0.0
-        },
-        {
-            "stipple": 0.0
-        },
-        {
-            "rot": 0.0
+            "noise01": 0.0
         },
         {
             "con": -0.9998862300187601
         },
         {
-            "noise01": 0.0
+            "smooth": 0.0
+        },
+        {
+            "rot": 0.0
+        },
+        {
+            "stipple": 0.0
+        },
+        {
+            "original": 0.0
         },
         {
             "emboss": -1.2760936387335255
         },
         {
+            "cc": -2.051955537051938
+        },
+        {
+            "poster": 0.0
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-jitter-21-6.png": [
+        {
             "neg": 0.0
         },
         {
             "noise02": 0.0
         },
         {
-            "original": 0.0
-        },
-        {
-            "smooth": 0.0
-        }
-    ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-jitter-21-6.png": [
-        {
-            "cc": -0.9986928310214689
-        },
-        {
-            "poster": 0.0
-        },
-        {
-            "stipple": 0.0
-        },
-        {
-            "rot": 0.0
+            "noise01": 0.0
         },
         {
             "con": -1.2716832943103165
         },
         {
-            "noise01": 0.0
+            "smooth": 0.0
+        },
+        {
+            "rot": 0.0
+        },
+        {
+            "stipple": 0.0
+        },
+        {
+            "original": 0.0
         },
         {
             "emboss": -1.0335254977969135
         },
         {
+            "cc": -0.9986928310214689
+        },
+        {
+            "poster": 0.0
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-jitter-23-2.png": [
+        {
             "neg": 0.0
         },
         {
             "noise02": 0.0
         },
         {
-            "original": 0.0
-        },
-        {
-            "smooth": 0.0
-        }
-    ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-jitter-23-2.png": [
-        {
-            "cc": -1.0130806070998948
-        },
-        {
-            "poster": 0.0
-        },
-        {
-            "stipple": 0.0
-        },
-        {
-            "rot": 0.0
+            "noise01": 0.0
         },
         {
             "con": -1.0728230126546987
         },
         {
-            "noise01": 0.0
+            "smooth": 0.0
+        },
+        {
+            "rot": 0.0
+        },
+        {
+            "stipple": 0.0
+        },
+        {
+            "original": 0.0
         },
         {
             "emboss": -2.1357338699248607
         },
         {
+            "cc": -1.0130806070998948
+        },
+        {
+            "poster": 0.0
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-jitter-29-1.png": [
+        {
             "neg": 0.0
         },
         {
             "noise02": 0.0
         },
         {
-            "original": 0.0
-        },
-        {
-            "smooth": 0.0
-        }
-    ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-jitter-29-1.png": [
-        {
-            "cc": -1.8500522313438936
-        },
-        {
-            "poster": 0.0
-        },
-        {
-            "stipple": 0.0
-        },
-        {
-            "rot": 0.0
+            "noise01": 0.0
         },
         {
             "con": -1.1219281744396423
         },
         {
-            "noise01": 0.0
+            "smooth": 0.0
+        },
+        {
+            "rot": 0.0
+        },
+        {
+            "stipple": 0.0
+        },
+        {
+            "original": 0.0
         },
         {
             "emboss": -0.9932947748530315
         },
         {
+            "cc": -1.8500522313438936
+        },
+        {
+            "poster": 0.0
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-jitter-31-5.png": [
+        {
             "neg": 0.0
         },
         {
             "noise02": 0.0
         },
         {
-            "original": 0.0
-        },
-        {
-            "smooth": 0.0
-        }
-    ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-jitter-31-5.png": [
-        {
-            "cc": -1.4621615172637914
-        },
-        {
-            "poster": 0.0
-        },
-        {
-            "stipple": 0.0
-        },
-        {
-            "rot": 0.0
+            "noise01": 0.0
         },
         {
             "con": -1.6603088996360662
         },
         {
-            "noise01": 0.0
+            "smooth": 0.0
+        },
+        {
+            "rot": 0.0
+        },
+        {
+            "stipple": 0.0
+        },
+        {
+            "original": 0.0
         },
         {
             "emboss": -0.9932947391801269
         },
         {
-            "neg": 0.0
+            "cc": -1.4621615172637914
         },
-        {
-            "noise02": 0.0
-        },
-        {
-            "original": 0.0
-        },
-        {
-            "smooth": 0.0
-        }
-    ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-cc-1-8.png": [
         {
             "poster": 0.0
-        },
-        {
-            "stipple": 0.0
-        },
-        {
-            "jitter": -1.142353085691287
-        },
-        {
-            "rot": 0.0
-        },
-        {
-            "con": -1.0014789076300246
-        },
-        {
-            "noise01": 0.0
-        },
-        {
-            "emboss": -2.0490295107649863
-        },
-        {
-            "neg": 0.0
-        },
-        {
-            "noise02": 0.0
-        },
-        {
-            "original": 0.0
-        },
-        {
-            "smooth": 0.0
-        }
-    ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-cc-13-4.png": [
-        {
-            "poster": 0.0
-        },
-        {
-            "stipple": 0.0
-        },
-        {
-            "jitter": -0.9982968402964936
-        },
-        {
-            "rot": 0.0
-        },
-        {
-            "con": -1.1229085691975693
-        },
-        {
-            "noise01": 0.0
-        },
-        {
-            "emboss": -1.8765381905876004
-        },
-        {
-            "neg": 0.0
-        },
-        {
-            "noise02": 0.0
-        },
-        {
-            "original": 0.0
-        },
-        {
-            "smooth": 0.0
-        }
-    ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-cc-21-3.png": [
-        {
-            "poster": 0.0
-        },
-        {
-            "stipple": 0.0
-        },
-        {
-            "jitter": -1.0363711135613904
-        },
-        {
-            "rot": 0.0
-        },
-        {
-            "con": -1.2836438372619496
-        },
-        {
-            "noise01": 0.0
-        },
-        {
-            "emboss": -1.8044054312818338
-        },
-        {
-            "neg": 0.0
-        },
-        {
-            "noise02": 0.0
-        },
-        {
-            "original": 0.0
-        },
-        {
-            "smooth": 0.0
-        }
-    ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-cc-22-10.png": [
-        {
-            "poster": 0.0
-        },
-        {
-            "stipple": 0.0
-        },
-        {
-            "jitter": -1.1364486224599126
-        },
-        {
-            "rot": 0.0
-        },
-        {
-            "con": -0.9998862313486021
-        },
-        {
-            "noise01": 0.0
-        },
-        {
-            "emboss": -2.1066031983907343
-        },
-        {
-            "neg": 0.0
-        },
-        {
-            "noise02": 0.0
-        },
-        {
-            "original": 0.0
-        },
-        {
-            "smooth": 0.0
-        }
-    ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-cc-35-1.png": [
-        {
-            "poster": 0.0
-        },
-        {
-            "stipple": 0.0
-        },
-        {
-            "jitter": -0.998296858812072
-        },
-        {
-            "rot": 0.0
-        },
-        {
-            "con": -1.1797380889037812
-        },
-        {
-            "noise01": 0.0
-        },
-        {
-            "emboss": -1.7739921337131412
-        },
-        {
-            "neg": 0.0
-        },
-        {
-            "noise02": 0.0
-        },
-        {
-            "original": 0.0
-        },
-        {
-            "smooth": 0.0
-        }
-    ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-cc-4-2.png": [
-        {
-            "poster": 0.0
-        },
-        {
-            "stipple": 0.0
-        },
-        {
-            "jitter": -0.9982969231396233
-        },
-        {
-            "rot": 0.0
-        },
-        {
-            "con": -0.999886231146291
-        },
-        {
-            "noise01": 0.0
-        },
-        {
-            "emboss": -2.4434898287225812
-        },
-        {
-            "neg": 0.0
-        },
-        {
-            "noise02": 0.0
-        },
-        {
-            "original": 0.0
-        },
-        {
-            "smooth": 0.0
         }
     ]
 }
