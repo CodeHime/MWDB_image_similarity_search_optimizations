@@ -431,7 +431,7 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
         # for
     elif task_num == 7:
         # TESTING DATA SETUP
-        test_set_path = input("Enter test path directory:")
+        # test_set_path = input("Enter test path directory:")
         relevant = input("Enter relevant image indexes (comma separated): ")
         irrelevant = input("Enter irrelevant image indexes (comma separated): ")
 
@@ -440,24 +440,9 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
         index_list += [int(i) for i in irrelevant.split(",")]
         feedback_list += [-1]*len(irrelevant.split(","))
 
-        test_features_dir = os.fspath(test_set_path.rstrip("/").rstrip("\\")
-                                      + "_" + config['Phase1']['image_feature_dir'])
-        # Create folders for images if they do not exist
-        if not os.path.isdir(test_features_dir):
-            os.makedirs(test_features_dir)
-        for dir in sub_features_dir:
-            if not os.path.isdir(os.path.join(test_features_dir, dir)):
-                os.makedirs(os.path.join(test_features_dir, dir))
-
-        # GET TESTING DATA
-        images, img_all_names = read_all_images(test_set_path, pattern={"X": "", "Y": ""})
-        save_all_img_features(images, output_dim, test_features_dir, sub_features_dir, hog_dict,
-                              feature_visualization=False,
-                              img_ids=img_all_names)
-        feature_dict_test = get_feature_dict_file(test_features_dir)
-        # TODO:
+        test_features_dir, test_data = get_test_data(technique, k_latent=k_latent)
         svm_task_feedback(features_dir, test_features_dir, training_set_features=training_data,
-                          test_set_features=training_data, index_list=index_list, feedback_list=feedback_list)
+                          test_set_features=test_data, index_list=index_list, feedback_list=feedback_list)
     else:
         raise NotImplmentedError(f"No implementation found for selected task: {task_num}")
 
