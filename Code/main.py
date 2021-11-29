@@ -196,7 +196,7 @@ def Phase2_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
     else:
         raise ValueError("No such task exists. Enter a valid value from 1 to 9.")
 
-def get_test_data(technique, k_latent=None):
+def get_test_data(technique, k_latent=None, norm_max_latent=None, norm_min_latent=None):
     # TESTING DATA SETUP
     test_set_path = input("Enter test path directory:")
     test_features_dir = os.fspath(test_set_path.rstrip("/").rstrip("\\")
@@ -265,7 +265,7 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
     if task_num == 1:
         classifier = input("Enter input classifier (svm - SVM/ dt - decision tree/ ppr - personalized pagerank) :")
         if classifier == "svm":
-            test_features_dir, test_data = get_test_data(technique, k_latent=k_latent)
+            test_features_dir, test_data = get_test_data(technique, k_latent=k_latent, norm_max_latent=norm_max_latent, norm_min_latent=norm_min_latent)
             svm_task_1(features_dir, test_features_dir, training_set_features=training_data,
                        test_set_features=test_data)
         elif classifier == "dt":
@@ -319,7 +319,7 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
     elif task_num == 2:
         classifier = input("Enter input classifier (svm - SVM/ dt - decision tree/ ppr - personalized pagerank) :")
         if classifier == "svm":
-            test_features_dir, test_data = get_test_data(technique, k_latent=k_latent)
+            test_features_dir, test_data = get_test_data(technique, k_latent=k_latent, norm_max_latent=norm_max_latent, norm_min_latent=norm_min_latent)
             svm_task_2(features_dir, test_features_dir, training_set_features=training_data,
                        test_set_features=test_data)
         elif classifier == "dt":
@@ -371,7 +371,7 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
     elif task_num == 3:
         classifier = input("Enter input classifier (svm - SVM/ dt - decision tree/ ppr - personalized pagerank) :")
         if classifier == "svm":
-            test_features_dir, test_data = get_test_data(technique, k_latent=k_latent)
+            test_features_dir, test_data = get_test_data(technique, k_latent=k_latent, norm_max_latent=norm_max_latent, norm_min_latent=norm_min_latent)
             svm_task_3(features_dir, test_features_dir, training_set_features=training_data,
                        test_set_features=test_data)
         elif classifier == "dt":
@@ -530,7 +530,7 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
         index_list += [int(i) for i in irrelevant.split(",")]
         feedback_list += [-1]*len(irrelevant.split(","))
 
-        test_features_dir, test_data = get_test_data(technique, k_latent=k_latent)
+        test_features_dir, test_data = get_test_data(technique, k_latent=k_latent, norm_max_latent=norm_max_latent, norm_min_latent=norm_min_latent)
         svm_task_feedback(features_dir, test_features_dir, training_set_features=training_data,
                           test_set_features=test_data, index_list=index_list, feedback_list=feedback_list)
     else:
