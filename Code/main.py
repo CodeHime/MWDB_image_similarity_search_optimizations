@@ -252,9 +252,13 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
         norm_max_latent = np.max(training_data)
         norm_min_latent = np.min(training_data)
         training_data = (training_data - norm_min_latent) / (norm_max_latent - norm_min_latent)
+
+        input_data = obj.transform([in_feature_dict[feature]])
+        input_data = (input_data - norm_min_latent) / (norm_max_latent - norm_min_latent)
     else:
         k_latent = None
         training_data = feature_dict[feature]
+        input_data = in_feature_dict[feature]
 
     task_num = int(input("Enter task number(1-8):"))
 
@@ -282,13 +286,11 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
             dt_obj.get_prediction_summary(vectors_df, labels=list(set(labels_dict.values())))
         elif classifier == "ppr":
             # TODO
-            # n = input("Enter n(number of top values to find in database): ")
-            n = 10
+            n = 5
             sub_sub_sim = get_similarity_matrix(training_data, k, base_dir, features_dir, technique="",
                                                 sim_type="subject")
             adjacency_matrix = create_adjacency_matrix(sub_sub_sim, int(n))
             print(predict(adjacency_matrix, [training_data[0]]))
-            raise NotImplmentedError(f"No implementation found for selected task: {task_num} {classifier}")
         else:
             raise NotImplmentedError(f"No implementation found for selected task: {task_num} {classifier}")
     elif task_num == 2:
@@ -359,7 +361,7 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
         lsh = LSH(int(num_layers), int(num_func_per_layer), training_data, num_obj=20)
         # lsh = LSH(int(num_layers), int(num_func_per_layer), feature_dict["cm8x8"], num_obj=len(list(subjects)))
         set_list, indx, total_buckets_searched, \
-        total_non_unique_candidate_images = lsh.get_all_candidates(in_feature_dict["cm8x8"], k=int(k_radius))
+        total_non_unique_candidate_images = lsh.get_all_candidates(input_data, k=int(k_radius))
         lsh.save(os.path.join(base_dir, "classifiers/lsh"))
 
         all_candidate_subs = get_subjects_from_ids(features_dir, indx)
@@ -391,7 +393,7 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
     elif task_num == 5:
         # HOG with 100 folder works nicely.
         inpMat = training_data
-        xq = in_feature_dict["hog"]
+        xq = input_data
 
         num_bits = int(input("Enter number of bits:"))
         nn_num = int(input("Enter number of nearest neighbours:"))
