@@ -7,18 +7,12 @@ import os
 def linear_kernel(x1, x2):
     return np.dot(x1, x2)
 
-
-def polynomial_kernel(x, y, p=3):
-    return (1 + np.dot(x, y)) ** p
-
-
 def gaussian_kernel(x, y, sigma=5.0):
     return np.exp(-linalg.norm(x - y) ** 2 / (2 * (sigma ** 2)))
 
 
 class SupportVectorMachine(object):
 
-    # initializing values
     def __init__(self, kernel=linear_kernel, C=None):
         self.kernel = kernel
         self.C = C
@@ -28,21 +22,13 @@ class SupportVectorMachine(object):
     def fit(self, X, y):
         number_samples, number_features = X.shape
 
-        # Gram matrix
-        # initializing matrix of zeros and size of training data
         K = np.zeros((number_samples, number_samples))
 
-        # getting polynomial kernel for each sample and storing in K
         for i in range(number_samples):
             for j in range(number_samples):
                 K[i, j] = self.kernel(X[i], X[j])
 
-        # G and A are sparse matrices
-        # P is a square dense or sparse real matrix, which represents a positive semidefinite symmetric matrix
-        # q is a real single-column dense matrix
-        # h and b are real-single column dense matrices
-        # G and A are real dense or sparse matrices
-
+        # Params initialization
         P = optimizer.matrix(np.outer(y, y) * K)
         q = optimizer.matrix(np.ones(number_samples) * -1)
         A = optimizer.matrix(y, (1, number_samples), 'd')
@@ -59,33 +45,28 @@ class SupportVectorMachine(object):
             tmp2 = np.ones(number_samples) * self.C
             h = optimizer.matrix(np.hstack((tmp1, tmp2)))
 
-        # solves quadratic programming problem
+        # solving the problem of maximization
         solution = solver.qp(P, q, G, h, A, b)
 
-        # calculates Lagrange multipliers
         a = np.ravel(solution['x'])
 
-        # support vectors have non zero lagrange multipliers
-        support_vectors = a > 1e-5
-        ind = np.arange(len(a))[support_vectors]
-        self.a = a[support_vectors]
-        self.support_vectors = X[support_vectors]
-        self.support_vectors_y = y[support_vectors]
-        # print("---------------------------")
-        # print("Support Vectors: " + str(len(self.a)))
+        # support vectors
+        s_vec = a > 1e-5
+        ind = np.arange(len(a))[s_vec]
+        self.a = a[s_vec]
+        self.s_vec = X[s_vec]
+        self.s_vec_y = y[s_vec]
 
-        # calculates b intercept
         self.b = 0
         for n in range(len(self.a)):
-            self.b += self.support_vectors_y[n]
-            self.b -= np.sum(self.a * self.support_vectors_y * K[ind[n], support_vectors])
+            self.b += self.s_vec_y[n]
+            self.b -= np.sum(self.a * self.s_vec_y * K[ind[n], s_vec])
         if len(self.a) > 0:
             self.b /= len(self.a)
-        # calculates the weights vector
         if self.kernel == linear_kernel:
             self.w = np.zeros(number_features)
             for n in range(len(self.a)):
-                self.w += self.a[n] * self.support_vectors_y[n] * self.support_vectors[n]
+                self.w += self.a[n] * self.s_vec_y[n] * self.s_vec[n]
         else:
             self.w = None
 
@@ -96,14 +77,14 @@ class SupportVectorMachine(object):
             y_predict = np.zeros(len(X))
             for i in range(len(X)):
                 s = 0
-                for a, support_vectors_y, support_vectors in zip(self.a, self.support_vectors_y, self.support_vectors):
-                    s += a * support_vectors_y * self.kernel(X[i], support_vectors)
+                for a, s_vec_y, s_vec in zip(self.a, self.s_vec_y, self.s_vec):
+                    s += a * s_vec_y * self.kernel(X[i], s_vec)
                 y_predict[i] = s
             return y_predict + self.b
-
-    def predict(self, X):
-        return np.sign(self.project(X))
 
     def predict_result(self, X):
         prediction_values = self.project(X)
         return prediction_values, np.sign(prediction_values)
+
+    def predict(self, X):
+        return np.sign(self.project(X))
