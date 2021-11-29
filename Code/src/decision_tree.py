@@ -10,10 +10,9 @@ class DecisionTree:
         count_df = \
         vectors_df.groupby(vectors_df.iloc[:, -1]).count().sort_values(by=vectors_df.columns[0], ascending=False)[
             vectors_df.columns[0]]
-        support = count_df.iloc[0] / count_df.sum()
         # if all values have the same label or min samples or max depth is reached then exit creation
         if (len(vectors_df.iloc[:, -1].unique()) == 1) or (len(vectors_df) < min_samples) or (counter == max_depth) or (
-                support > min_support):
+                (count_df.iloc[0] / count_df.sum()) > min_support):
             label_column = vectors_df.iloc[:, -1]
             unique_classes, counts_unique_classes = np.unique(label_column, return_counts=True)
 
