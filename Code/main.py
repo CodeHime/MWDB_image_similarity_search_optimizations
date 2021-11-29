@@ -296,7 +296,7 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
             # print(adjacency_matrix)
             test_data = [training_data[i,:adjacency_matrix.shape[1]] for i in range(training_data.shape[0])]
             act_vals = get_type_from_ids(features_dir, range(len(training_data)), reverse_dict=True)
-            pred_vals = predict(adjacency_matrix, test_data)
+            pred_vals = ppr_predict(adjacency_matrix, test_data)
             pred_vals = get_type_from_ids(features_dir, pred_vals, reverse_dict=True)
 
             act_val = []
@@ -348,7 +348,7 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
             # print(adjacency_matrix)
             test_data = [training_data[i,:adjacency_matrix.shape[1]] for i in range(training_data.shape[0])]
             act_vals = get_subjects_from_ids(features_dir, range(len(training_data)), reverse_dict=True)
-            pred_vals = predict(adjacency_matrix, test_data)
+            pred_vals = ppr_predict(adjacency_matrix, test_data)
             pred_vals = get_subjects_from_ids(features_dir, pred_vals, reverse_dict=True)
 
             act_val = []
@@ -401,7 +401,7 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
             # print(adjacency_matrix)
             test_data = [training_data[i,:adjacency_matrix.shape[1]] for i in range(training_data.shape[0])]
             act_vals = get_sample_from_ids(features_dir, range(len(training_data)), reverse_dict=True)
-            pred_vals = predict(adjacency_matrix, test_data)
+            pred_vals = ppr_predict(adjacency_matrix, test_data)
             pred_vals = get_sample_from_ids(features_dir, pred_vals, reverse_dict=True)
 
             act_val = []

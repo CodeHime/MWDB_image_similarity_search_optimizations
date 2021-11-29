@@ -47,7 +47,7 @@ def normalize(a):
     new_matrix = a / row_sums[:, np.newaxis]
     return new_matrix
 
-def predict(similarity_m, test_array):
+def ppr_predict(similarity_m, test_array):
     # norm_max_latent = np.max(similarity_m)
     # norm_min_latent = np.min(similarity_m)
     # similarity_m = (similarity_m - norm_min_latent) / (norm_max_latent - norm_min_latent)
