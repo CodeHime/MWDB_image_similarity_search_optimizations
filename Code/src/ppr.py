@@ -48,9 +48,12 @@ def normalize(a):
     return new_matrix
 
 def predict(similarity_m, test_array):
-    norm_max_latent = np.max(similarity_m)
-    norm_min_latent = np.min(similarity_m)
-    similarity_m = (similarity_m - norm_min_latent) / (norm_max_latent - norm_min_latent)
+    # norm_max_latent = np.max(similarity_m)
+    # norm_min_latent = np.min(similarity_m)
+    # similarity_m = (similarity_m - norm_min_latent) / (norm_max_latent - norm_min_latent)
+
+    minmax = MinMaxScaler()
+    minmax.fit(np.insert(similarity_m, similarity_m.shape[1], 1, axis=1))
 
     num_subjects = len(similarity_m) + 1
 
@@ -64,7 +67,8 @@ def predict(similarity_m, test_array):
         q = q.T
         similarity_q_m = np.vstack([similarity_m, q])
         t_matrix = similarity_q_m @ similarity_q_m.T
-        similarity_m_1 = (t_matrix - norm_min_latent) / (norm_max_latent - norm_min_latent)
+        similarity_m_1 = minmax.transform(t_matrix)
+        # similarity_m_1 = (t_matrix - norm_min_latent) / (norm_max_latent - norm_min_latent)
         pagerank = np.linalg.inv(np.identity(num_subjects) - (1-c) * similarity_m_1) @ np.atleast_2d(c * s_vector).T
         pagerank = pagerank[:-1]
         # pagerank = np.argsort(pagerank)[::-1]

@@ -284,13 +284,36 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
             dt_obj = DecisionTree(vectors_df)
             # TRAINING DATA SUMMARY
             dt_obj.get_prediction_summary(vectors_df, labels=list(set(labels_dict.values())))
+
         elif classifier == "ppr":
-            # TODO
+            #TODO: optimize
             n = 5
-            sub_sub_sim = get_similarity_matrix(training_data, k, base_dir, features_dir, technique="",
-                                                sim_type="subject")
-            adjacency_matrix = create_adjacency_matrix(sub_sub_sim, int(n))
-            print(predict(adjacency_matrix, [training_data[0]]))
+            # TRAIN DATA
+            sim_mat = get_similarity_matrix(training_data, k, base_dir, features_dir, technique="",
+                                                sim_type="type")
+            adjacency_matrix = create_adjacency_matrix(sim_mat, int(n))
+            # print(sim_mat)
+            # print(adjacency_matrix)
+            test_data = [training_data[i,:adjacency_matrix.shape[1]] for i in range(training_data.shape[0])]
+            act_vals = get_type_from_ids(features_dir, range(len(training_data)), reverse_dict=True)
+            pred_vals = predict(adjacency_matrix, test_data)
+            pred_vals = get_type_from_ids(features_dir, pred_vals, reverse_dict=True)
+
+            act_val = []
+            pred_val = []
+            for key in sorted(act_vals.keys()):
+                act_val.append(act_vals[key])
+                pred_val.append(pred_vals[key])
+
+            conf_mat = confusion_matrix(act_val, pred_val, labels=list(set(act_val)))
+            print("*" * 10 + "  CONFUSION MATRIX " + "*" * 10)
+            print(conf_mat)
+            # Calculate false +ves
+            sum_col = conf_mat.sum(axis=0) - conf_mat.diagonal()
+            # Calculate misses
+            sum_row = conf_mat.sum(axis=1) - conf_mat.diagonal()
+            print(f"False +ves: {sum_col} \nMisses: {sum_row}")
+            print("*" * 40)
         else:
             raise NotImplmentedError(f"No implementation found for selected task: {task_num} {classifier}")
     elif task_num == 2:
@@ -315,7 +338,34 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
             # TRAINING DATA SUMMARY
             dt_obj.get_prediction_summary(vectors_df, labels=list(set(labels_dict.values())))
         elif classifier == "ppr":
-            raise NotImplmentedError(f"No implementation found for selected task: {task_num} {classifier}")
+            #TODO: optimize
+            n = 5
+            # TRAIN DATA
+            sim_mat = get_similarity_matrix(training_data, k, base_dir, features_dir, technique="",
+                                                sim_type="subject")
+            adjacency_matrix = create_adjacency_matrix(sim_mat, int(n))
+            # print(sim_mat)
+            # print(adjacency_matrix)
+            test_data = [training_data[i,:adjacency_matrix.shape[1]] for i in range(training_data.shape[0])]
+            act_vals = get_subjects_from_ids(features_dir, range(len(training_data)), reverse_dict=True)
+            pred_vals = predict(adjacency_matrix, test_data)
+            pred_vals = get_subjects_from_ids(features_dir, pred_vals, reverse_dict=True)
+
+            act_val = []
+            pred_val = []
+            for key in sorted(act_vals.keys()):
+                act_val.append(act_vals[key])
+                pred_val.append(pred_vals[key])
+
+            conf_mat = confusion_matrix(act_val, pred_val, labels=list(set(act_val)))
+            print("*" * 10 + "  CONFUSION MATRIX " + "*" * 10)
+            print(conf_mat)
+            # Calculate false +ves
+            sum_col = conf_mat.sum(axis=0) - conf_mat.diagonal()
+            # Calculate misses
+            sum_row = conf_mat.sum(axis=1) - conf_mat.diagonal()
+            print(f"False +ves: {sum_col} \nMisses: {sum_row}")
+            print("*" * 40)
         else:
             raise NotImplmentedError(f"No implementation found for selected task: {task_num} {classifier}")
     elif task_num == 3:
@@ -341,7 +391,34 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
             # TRAINING DATA SUMMARY
             dt_obj.get_prediction_summary(vectors_df, labels=list(set(labels_dict.values())))
         elif classifier == "ppr":
-            raise NotImplmentedError(f"No implementation found for selected task: {task_num} {classifier}")
+            #TODO: optimize
+            # TRAIN DATA
+            n = 5
+            sim_mat = get_similarity_matrix(training_data, k, base_dir, features_dir, technique="",
+                                                sim_type="sample")
+            adjacency_matrix = create_adjacency_matrix(sim_mat, int(n))
+            # print(sim_mat)
+            # print(adjacency_matrix)
+            test_data = [training_data[i,:adjacency_matrix.shape[1]] for i in range(training_data.shape[0])]
+            act_vals = get_sample_from_ids(features_dir, range(len(training_data)), reverse_dict=True)
+            pred_vals = predict(adjacency_matrix, test_data)
+            pred_vals = get_sample_from_ids(features_dir, pred_vals, reverse_dict=True)
+
+            act_val = []
+            pred_val = []
+            for key in sorted(act_vals.keys()):
+                act_val.append(act_vals[key])
+                pred_val.append(pred_vals[key])
+
+            conf_mat = confusion_matrix(act_val, pred_val, labels=list(set(act_val)))
+            print("*" * 10 + "  CONFUSION MATRIX " + "*" * 10)
+            print(conf_mat)
+            # Calculate false +ves
+            sum_col = conf_mat.sum(axis=0) - conf_mat.diagonal()
+            # Calculate misses
+            sum_row = conf_mat.sum(axis=1) - conf_mat.diagonal()
+            print(f"False +ves: {sum_col} \nMisses: {sum_row}")
+            print("*" * 40)
         else:
             raise NotImplmentedError(f"No implementation found for selected task: {task_num} {classifier}")
     elif task_num == 4:

@@ -25,10 +25,15 @@ def get_similarity_matrix(xb, k, base_dir, features_dir, technique="pca", sim_ty
     """
     similarity_matrix = []
     # DESIGN_DECISION: Type is noise type as we are interested in the similarities between images of the same type
-    if sim_type != "subject":
+    if sim_type == "subject":
+        xy_id_dict = get_subjects_from_ids(features_dir, range(xb.shape[0]))
         # xb = xb.transpose()
+    elif sim_type == "type":
         xy_id_dict = get_type_from_ids(features_dir, range(xb.shape[0]))
+    elif sim_type == "sample":
+        xy_id_dict = get_sample_from_ids(features_dir, range(xb.shape[0]))
     else:
+        # default
         xy_id_dict = get_subjects_from_ids(features_dir, range(xb.shape[0]))
 
     # DESIGN_DECISION: Average over type/similarity
