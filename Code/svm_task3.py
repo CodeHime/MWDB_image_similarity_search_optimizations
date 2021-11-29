@@ -6,6 +6,8 @@ from src.config import *
 from src.features_extractor import *
 from src.latent_features_extractor import *
 from sklearn.metrics import confusion_matrix
+import pprint
+pp = pprint.PrettyPrinter(indent=4)
 
 
 def svm_task_3(training_features_dir, test_features_dir, training_set_features=None, test_set_features=None):
@@ -120,11 +122,13 @@ def svm_task_3(training_features_dir, test_features_dir, training_set_features=N
         predicted_val.append(results[key])
 
     print("Results")
-    print(results)
+    pp.pprint(results)
     labels =[]
     for i in range(1, 11):
         labels.append(str(i))
     conf_mat = confusion_matrix(actual_val, predicted_val, labels = labels)
+    print("Confusion Matrix")
+    print(conf_mat)
 
     FP = conf_mat.sum(axis=0) - np.diag(conf_mat)  
     FN = conf_mat.sum(axis=1) - np.diag(conf_mat)

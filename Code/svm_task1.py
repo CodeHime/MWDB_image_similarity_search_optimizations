@@ -6,7 +6,8 @@ from src.config import *
 from src.features_extractor import *
 from src.latent_features_extractor import *
 from sklearn.metrics import confusion_matrix
-
+import pprint
+pp = pprint.PrettyPrinter(indent=4)
 
 def svm_task_1(training_features_dir, test_features_dir, training_set_features = None, test_set_features = None):
 
@@ -116,7 +117,7 @@ def svm_task_1(training_features_dir, test_features_dir, training_set_features =
         predicted_val.append(results[key])
 
     print("Results")
-    print(results)
+    pp.pprint(results)
     conf_mat = confusion_matrix(actual_val, predicted_val, labels = ["cc", "con", "emboss", "jitter", "neg", "noise01", "noise02", "original", "poster", "rot", "smooth", "stipple"])
     print("Confusion Matrix")
     print(conf_mat)
