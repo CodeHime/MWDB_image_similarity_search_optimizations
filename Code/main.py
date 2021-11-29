@@ -467,7 +467,7 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
         #     print(image_files[indx[i]].split("/")[-1].split("\\")[-1]) #, d[i])
         #     plt.imshow(images[indx[i]], cmap='gray')
         #     plt.show()
-    elif task_num == 5:
+    elif task_num >= 5:
         # HOG with 100 folder works nicely.
         inpMat = training_data
         xq = input_data
@@ -480,59 +480,61 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
 
         nn = va_ssa(xq, inpMat, nn_num, num_bits)
 
-        print("=" * 20 + "\n")
-        print("PHASE 3 VAFILES OUTPUT:")
-        print("Number of near neighbours:", len(nn), " from ", len(images),
-              " with data size: ", training_data.shape)
-        image_files = get_image_file(features_dir, nn)
-        for i in range(len(nn)):
-            result = Image.fromarray((images[nn[i]]).astype(np.uint8))
-            print(image_files[nn[i]].split("/")[-1].split("\\")[-1]) #, d[i])
-            plt.imshow(images[i], cmap='gray')
-            plt.show()
+        if task_num == 5:
+            print("=" * 20 + "\n")
+            print("PHASE 3 VAFILES OUTPUT:")
+            print("Number of near neighbours:", len(nn), " from ", len(images),
+                  " with data size: ", training_data.shape)
+            image_files = get_image_file(features_dir, nn)
+            for i in range(len(nn)):
+                result = Image.fromarray((images[nn[i]]).astype(np.uint8))
+                print(image_files[nn[i]].split("/")[-1].split("\\")[-1]) #, d[i])
+                plt.imshow(images[i], cmap='gray')
+                plt.show()
+        if task_num == 6:
+            print("Nearest neighbours found: ", nn)
+            relevant = input("Enter relevant image indexes (comma separated): ")
+            irrelevant = input("Enter irrelevant image indexes (comma separated): ")
 
-    elif task_num == 6:
-        relevant = input("Enter relevant image indexes (comma separated): ")
-        irrelevant = input("Enter irrelevant image indexes (comma separated): ")
+            index_list = [int(i) for i in relevant.split(",")]
+            feedback_list = [1]*len(relevant.split(","))
+            index_list += [int(i) for i in irrelevant.split(",")]
+            feedback_list += [-1]*len(irrelevant.split(","))
 
-        index_list = [int(i) for i in relevant.split(",")]
-        feedback_list = [1]*len(relevant.split(","))
-        index_list += [int(i) for i in irrelevant.split(",")]
-        feedback_list += [-1]*len(irrelevant.split(","))
+            # Define labels
+            labels_dict = {index_list[i]: feedback_list[i] for i in range(len(index_list))}
+            indx_df = pd.DataFrame.from_dict(labels_dict, orient='index', columns=["label"])
 
-        # Define labels
-        labels_dict = {index_list[i]: feedback_list[i] for i in range(len(index_list))}
-        indx_df = pd.DataFrame.from_dict(labels_dict, orient='index', columns=["label"])
+            # Define vectors
+            # vectors_df = pd.DataFrame(obj.get_vector_space())
+            vectors_df = pd.DataFrame(training_data)
 
-        # Define vectors
-        # vectors_df = pd.DataFrame(obj.get_vector_space())
-        vectors_df = pd.DataFrame(training_data)
+            # Join vectors to their labels corresponding to indexes
+            vectors_df = vectors_df.join(indx_df)
+            vectors_df.dropna(inplace=True)
 
-        # Join vectors to their labels corresponding to indexes
-        vectors_df = vectors_df.join(indx_df)
-        vectors_df.dropna(inplace=True)
+            # Create decision tree
+            dt_obj = DecisionTree(vectors_df, max_depth=3, min_support=1.0, min_samples=1)
+            print(dt_obj.print_tree)
+            # TRAINING DATA SUMMARY
+            df_index = vectors_df.index
+            pred_rel_vals = dt_obj.get_prediction_summary(vectors_df, labels=list(set(labels_dict.values())))
+            # for
+        elif task_num == 7:
+            print("Nearest neighbours found: ", nn)
+            # TESTING DATA SETUP
+            # test_set_path = input("Enter test path directory:")
+            relevant = input("Enter relevant image indexes (comma separated): ")
+            irrelevant = input("Enter irrelevant image indexes (comma separated): ")
 
-        # Create decision tree
-        dt_obj = DecisionTree(vectors_df, max_depth=3, min_support=1.0, min_samples=1)
-        print(dt_obj.print_tree)
-        # TRAINING DATA SUMMARY
-        df_index = vectors_df.index
-        pred_rel_vals = dt_obj.get_prediction_summary(vectors_df, labels=list(set(labels_dict.values())))
-        # for
-    elif task_num == 7:
-        # TESTING DATA SETUP
-        # test_set_path = input("Enter test path directory:")
-        relevant = input("Enter relevant image indexes (comma separated): ")
-        irrelevant = input("Enter irrelevant image indexes (comma separated): ")
+            index_list = [int(i) for i in relevant.split(",")]
+            feedback_list = [1]*len(relevant.split(","))
+            index_list += [int(i) for i in irrelevant.split(",")]
+            feedback_list += [-1]*len(irrelevant.split(","))
 
-        index_list = [int(i) for i in relevant.split(",")]
-        feedback_list = [1]*len(relevant.split(","))
-        index_list += [int(i) for i in irrelevant.split(",")]
-        feedback_list += [-1]*len(irrelevant.split(","))
-
-        test_features_dir, test_data = get_test_data(technique, k_latent=k_latent, norm_max_latent=norm_max_latent, norm_min_latent=norm_min_latent)
-        svm_task_feedback(features_dir, test_features_dir, training_set_features=training_data,
-                          test_set_features=test_data, index_list=index_list, feedback_list=feedback_list)
+            test_features_dir, test_data = get_test_data(technique, k_latent=k_latent, norm_max_latent=norm_max_latent, norm_min_latent=norm_min_latent)
+            svm_task_feedback(features_dir, test_features_dir, training_set_features=training_data,
+                              test_set_features=test_data, index_list=index_list, feedback_list=feedback_list)
     else:
         raise NotImplmentedError(f"No implementation found for selected task: {task_num}")
 
