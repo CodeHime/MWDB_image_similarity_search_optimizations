@@ -224,6 +224,7 @@ def get_test_data(technique, k_latent=None):
         perform_dimensionality_reductions(feature_dict[feature], k_latent, technique, base_dir)
         obj = get_saved_latent_object(technique, base_dir)
         data = obj.get_vector_space()
+        data = (data - norm_min_latent) / (norm_max_latent - norm_min_latent)
     else:
         data = feature_dict[feature]
     return test_features_dir, data
@@ -248,6 +249,9 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
         perform_dimensionality_reductions(feature_dict[feature], k_latent, technique, base_dir)
         obj = get_saved_latent_object(technique, base_dir)
         training_data = obj.get_vector_space()
+        norm_max_latent = np.max(training_data)
+        norm_min_latent = np.min(training_data)
+        training_data = (training_data - norm_min_latent) / (norm_max_latent - norm_min_latent)
     else:
         k_latent = None
         training_data = feature_dict[feature]
@@ -277,6 +281,13 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
             # TRAINING DATA SUMMARY
             dt_obj.get_prediction_summary(vectors_df, labels=list(set(labels_dict.values())))
         elif classifier == "ppr":
+            # TODO
+            # n = input("Enter n(number of top values to find in database): ")
+            n = 10
+            sub_sub_sim = get_similarity_matrix(training_data, k, base_dir, features_dir, technique="",
+                                                sim_type="subject")
+            adjacency_matrix = create_adjacency_matrix(sub_sub_sim, int(n))
+            print(predict(adjacency_matrix, [training_data[0]]))
             raise NotImplmentedError(f"No implementation found for selected task: {task_num} {classifier}")
         else:
             raise NotImplmentedError(f"No implementation found for selected task: {task_num} {classifier}")
@@ -452,6 +463,8 @@ os.umask(0)
 input_dir, input_k, selected_feature, base_dir, image_path, feature, features_dir, \
 sub_features_dir, X, Y, technique = initialize_variables()
 
+norm_max_latent = None
+norm_min_latent = None
 print(f"INPUT IMAGE IS {image_path}")
 
 # Phase1_main(input_dir, input_k, selected_feature, base_dir, image_path, feature, features_dir, sub_features_dir)

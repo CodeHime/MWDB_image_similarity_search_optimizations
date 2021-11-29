@@ -1,1052 +1,3802 @@
 {
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-cc-1-8.png": [
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-cc-1-8.png": [
         {
-            "neg": 0.0
+            "cc": -0.868735810638104
         },
         {
-            "noise02": 0.0
+            "poster": -0.798820121848135
         },
         {
-            "noise01": 0.0
+            "con": -0.8576000297911354
         },
         {
-            "con": -1.0014789076300246
+            "emboss": -0.8422987894470024
         },
         {
-            "smooth": 0.0
+            "noise02": -0.8599996607286852
         },
         {
-            "rot": 0.0
+            "noise01": -0.7199935715386648
         },
         {
-            "stipple": 0.0
+            "stipple": -0.7990042516042979
         },
         {
-            "original": 0.0
+            "original": -0.8485447381875124
         },
         {
-            "emboss": -2.0490295107649863
+            "rot": -0.8820578641710688
         },
         {
-            "poster": 0.0
+            "smooth": -0.840026089126914
         },
         {
-            "jitter": -1.142353085691287
+            "jitter": -0.8200006358293979
+        },
+        {
+            "neg": -0.8584553570309111
         }
     ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-cc-13-4.png": [
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-cc-13-4.png": [
         {
-            "neg": 0.0
+            "cc": -0.8664666692918555
         },
         {
-            "noise02": 0.0
+            "poster": -0.7988201200062803
         },
         {
-            "noise01": 0.0
+            "con": -0.8576000624282846
         },
         {
-            "con": -1.1229085691975693
+            "emboss": -0.8382805459852235
         },
         {
-            "smooth": 0.0
+            "noise02": -0.8599999234543024
         },
         {
-            "rot": 0.0
+            "noise01": -0.719993691882819
         },
         {
-            "stipple": 0.0
+            "stipple": -0.7990046490156248
         },
         {
-            "original": 0.0
+            "original": -0.8563111057247151
         },
         {
-            "emboss": -1.8765381905876004
+            "rot": -0.8802000157113901
         },
         {
-            "poster": 0.0
+            "smooth": -0.8399848142040311
         },
         {
-            "jitter": -0.9982968402964936
+            "jitter": -0.8199992680778965
+        },
+        {
+            "neg": -0.857494756829197
         }
     ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-cc-21-3.png": [
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-cc-21-3.png": [
         {
-            "neg": 0.0
+            "cc": -0.877479697691981
         },
         {
-            "noise02": 0.0
+            "poster": -0.7988201141012155
         },
         {
-            "noise01": 0.0
+            "con": -0.8591327638329694
         },
         {
-            "con": -1.2836438372619496
+            "emboss": -0.8382804701540496
         },
         {
-            "smooth": 0.0
+            "noise02": -0.859999601704671
         },
         {
-            "rot": 0.0
+            "noise01": -0.7199937297402518
         },
         {
-            "stipple": 0.0
+            "stipple": -0.8007786459816191
         },
         {
-            "original": 0.0
+            "original": -0.8424785281925747
         },
         {
-            "emboss": -1.8044054312818338
+            "rot": -0.8825156002736583
         },
         {
-            "poster": 0.0
+            "smooth": -0.8399834195790076
         },
         {
-            "jitter": -1.0363711135613904
+            "jitter": -0.8199988296332239
+        },
+        {
+            "neg": -0.8579663571439216
         }
     ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-cc-22-10.png": [
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-cc-22-10.png": [
         {
-            "neg": 0.0
+            "cc": -0.8729311986913304
         },
         {
-            "noise02": 0.0
+            "poster": -0.7988201169532345
         },
         {
-            "noise01": 0.0
+            "con": -0.8576000322149516
         },
         {
-            "con": -0.9998862313486021
+            "emboss": -0.8382804943979552
         },
         {
-            "smooth": 0.0
+            "noise02": -0.86000246878364
         },
         {
-            "rot": 0.0
+            "noise01": -0.7199935574437991
         },
         {
-            "stipple": 0.0
+            "stipple": -0.7992509861449082
         },
         {
-            "original": 0.0
+            "original": -0.8406624730888793
         },
         {
-            "emboss": -2.1066031983907343
+            "rot": -0.8913809389773155
         },
         {
-            "poster": 0.0
+            "smooth": -0.8399834612280286
         },
         {
-            "jitter": -1.1364486224599126
+            "jitter": -0.8199992949388704
+        },
+        {
+            "neg": -0.8574945699906301
         }
     ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-cc-35-1.png": [
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-cc-35-1.png": [
         {
-            "neg": 0.0
+            "cc": -0.863162454555312
         },
         {
-            "noise02": 0.0
+            "poster": -0.7988201691335604
         },
         {
-            "noise01": 0.0
+            "con": -0.8576114363911231
         },
         {
-            "con": -1.1797380889037812
+            "emboss": -0.8425063372112354
         },
         {
-            "smooth": 0.0
+            "noise02": -0.85999959509052
         },
         {
-            "rot": 0.0
+            "noise01": -0.719993814926794
         },
         {
-            "stipple": 0.0
+            "stipple": -0.7990042383097591
         },
         {
-            "original": 0.0
+            "original": -0.846232752061661
         },
         {
-            "emboss": -1.7739921337131412
+            "rot": -0.8802966075371137
         },
         {
-            "poster": 0.0
+            "smooth": -0.8399832968779595
         },
         {
-            "jitter": -0.998296858812072
+            "jitter": -0.8200002677368903
+        },
+        {
+            "neg": -0.8656949299128617
         }
     ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-cc-4-2.png": [
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-cc-4-2.png": [
         {
-            "neg": 0.0
+            "cc": -0.8864807666672213
         },
         {
-            "noise02": 0.0
+            "poster": -0.7988201175778726
         },
         {
-            "noise01": 0.0
+            "con": -0.857599978082807
         },
         {
-            "con": -0.999886231146291
+            "emboss": -0.8382803097313937
         },
         {
-            "smooth": 0.0
+            "noise02": -0.8599998889042045
         },
         {
-            "rot": 0.0
+            "noise01": -0.7199934393260737
         },
         {
-            "stipple": 0.0
+            "stipple": -0.8072798098857095
         },
         {
-            "original": 0.0
+            "original": -0.843450434471321
         },
         {
-            "emboss": -2.4434898287225812
+            "rot": -0.8785325698349686
         },
         {
-            "poster": 0.0
+            "smooth": -0.840041245533663
         },
         {
-            "jitter": -0.9982969231396233
+            "jitter": -0.8199994421627284
+        },
+        {
+            "neg": -0.8662992892781958
         }
     ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-con-11-5.png": [
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-con-11-5.png": [
         {
-            "neg": 0.0
+            "cc": -0.8783821512056147
         },
         {
-            "noise02": 0.0
+            "poster": -0.8159918804393527
         },
         {
-            "noise01": 0.0
+            "con": -0.8331116752231732
         },
         {
-            "smooth": 0.0
+            "emboss": -0.8382806512560134
         },
         {
-            "rot": 0.0
+            "noise02": -0.8599994126394702
         },
         {
-            "stipple": 0.0
+            "noise01": -0.7199943242119663
         },
         {
-            "original": 0.0
+            "stipple": -0.8012823081590557
         },
         {
-            "emboss": -4.549133376483785
+            "original": -0.846661041743534
         },
         {
-            "cc": -1.4882167464167655
+            "rot": -0.8785325926786902
         },
         {
-            "poster": 0.0
+            "smooth": -0.8399832854674701
         },
         {
-            "jitter": -0.9982979160353729
+            "jitter": -0.8199995942151861
+        },
+        {
+            "neg": -0.8703167639495989
         }
     ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-con-17-9.png": [
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-con-17-9.png": [
         {
-            "neg": 0.0
+            "cc": -0.8838713540703176
         },
         {
-            "noise02": 0.0
+            "poster": -0.8005066872604345
         },
         {
-            "noise01": 0.0
+            "con": -0.8361991842484221
         },
         {
-            "smooth": 0.0
+            "emboss": -0.8558727723559607
         },
         {
-            "rot": 0.0
+            "noise02": -0.8599997508369651
         },
         {
-            "stipple": 0.0
+            "noise01": -0.7199942635466944
         },
         {
-            "original": 0.0
+            "stipple": -0.8029747626857318
         },
         {
-            "emboss": -2.3676608691550647
+            "original": -0.8383121087264522
         },
         {
-            "cc": -1.520935500283954
+            "rot": -0.878532586388028
         },
         {
-            "poster": 0.0
+            "smooth": -0.8399841746291457
         },
         {
-            "jitter": -0.9982977540537838
+            "jitter": -0.8199989471366353
+        },
+        {
+            "neg": -0.869232025662812
         }
     ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-con-19-8.png": [
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-con-19-8.png": [
         {
-            "neg": 0.0
+            "cc": -0.8783821519877224
         },
         {
-            "noise02": 0.0
+            "poster": -0.8155355578683696
         },
         {
-            "noise01": 0.0
+            "con": -0.8372239373726882
         },
         {
-            "smooth": 0.0
+            "emboss": -0.8403944957945082
         },
         {
-            "rot": 0.0
+            "noise02": -0.8599995999044293
         },
         {
-            "stipple": 0.0
+            "noise01": -0.7199953358926469
         },
         {
-            "original": 0.0
+            "stipple": -0.7990042297545972
         },
         {
-            "emboss": -3.7934575503165866
+            "original": -0.8420537426182635
         },
         {
-            "cc": -0.998692917667754
+            "rot": -0.8788830179895888
         },
         {
-            "poster": 0.0
+            "smooth": -0.8399833381822139
         },
         {
-            "jitter": -0.9982976141424622
+            "jitter": -0.8199995606135633
+        },
+        {
+            "neg": -0.8677282533753596
         }
     ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-con-25-8.png": [
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-con-25-8.png": [
         {
-            "neg": 0.0
+            "cc": -0.8783821513496253
         },
         {
-            "noise02": 0.0
+            "poster": -0.8078178955735182
         },
         {
-            "noise01": 0.0
+            "con": -0.8333213520865215
         },
         {
-            "smooth": 0.0
+            "emboss": -0.8562103625297998
         },
         {
-            "rot": 0.0
+            "noise02": -0.8600000455918807
         },
         {
-            "stipple": 0.0
+            "noise01": -0.7201253469678325
         },
         {
-            "original": 0.0
+            "stipple": -0.803402579553175
         },
         {
-            "emboss": -2.0399193174148684
+            "original": -0.8383121214259113
         },
         {
-            "cc": -0.998692917747357
+            "rot": -0.8785326267210769
         },
         {
-            "poster": 0.0
+            "smooth": -0.8399832748575147
         },
         {
-            "jitter": -1.0272467035529793
+            "jitter": -0.8199990068116878
+        },
+        {
+            "neg": -0.8639041727648342
         }
     ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-con-27-5.png": [
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-con-27-5.png": [
         {
-            "neg": 0.0
+            "cc": -0.8783821491214046
         },
         {
-            "noise02": 0.0
+            "poster": -0.8100199939414636
         },
         {
-            "noise01": 0.0
+            "con": -0.8422721972146021
         },
         {
-            "smooth": 0.0
+            "emboss": -0.8387224427002153
         },
         {
-            "rot": 0.0
+            "noise02": -0.8599994961061935
         },
         {
-            "stipple": 0.0
+            "noise01": -0.7200030525800106
         },
         {
-            "original": 0.0
+            "stipple": -0.8001069887083179
         },
         {
-            "emboss": -4.220626692458308
+            "original": -0.8470550740864623
         },
         {
-            "cc": -0.9986929107518033
+            "rot": -0.87853257396956
         },
         {
-            "poster": 0.0
+            "smooth": -0.8399835033874768
         },
         {
-            "jitter": -0.9982976605171139
+            "jitter": -0.8199989846460087
+        },
+        {
+            "neg": -0.8659646596403383
         }
     ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-con-33-6.png": [
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-con-33-6.png": [
         {
-            "neg": 0.0
+            "cc": -0.8836620858746618
         },
         {
-            "noise02": 0.0
+            "poster": -0.7988201169193558
         },
         {
-            "noise01": 0.0
+            "con": -0.8587763566778588
         },
         {
-            "smooth": 0.0
+            "emboss": -0.8382805362206643
         },
         {
-            "rot": 0.0
+            "noise02": -0.8600002117422026
         },
         {
-            "stipple": 0.0
+            "noise01": -0.7199947941862906
         },
         {
-            "original": 0.0
+            "stipple": -0.799004284588658
         },
         {
-            "emboss": -0.9932952607731357
+            "original": -0.8412563875006009
         },
         {
-            "cc": -1.9314030526194519
+            "rot": -0.8789032237258516
         },
         {
-            "poster": 0.0
+            "smooth": -0.840013212648739
         },
         {
-            "jitter": -2.0886616697272764
+            "jitter": -0.8199998717174242
+        },
+        {
+            "neg": -0.8644056932987182
         }
     ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-con-39-2.png": [
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-con-39-2.png": [
         {
-            "neg": 0.0
+            "cc": -0.8783822474112359
         },
         {
-            "noise02": 0.0
+            "poster": -0.817221268590967
         },
         {
-            "noise01": 0.0
+            "con": -0.8338665170029634
         },
         {
-            "smooth": 0.0
+            "emboss": -0.838280452104517
         },
         {
-            "rot": 0.0
+            "noise02": -0.8599996849835979
         },
         {
-            "stipple": 0.0
+            "noise01": -0.7199964528653017
         },
         {
-            "original": 0.0
+            "stipple": -0.8002423074421006
         },
         {
-            "emboss": -3.953946127607592
+            "original": -0.8503983623035194
         },
         {
-            "cc": -1.495831627162424
+            "rot": -0.8786536136073357
         },
         {
-            "poster": 0.0
+            "smooth": -0.8399832510074372
         },
         {
-            "jitter": -0.9982979510270589
+            "jitter": -0.8200019447489839
+        },
+        {
+            "neg": -0.8661282936956601
         }
     ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-emboss-1-8.png": [
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-emboss-1-8.png": [
         {
-            "neg": 0.0
+            "cc": -0.8783823833541771
         },
         {
-            "noise02": 0.0
+            "poster": -0.8041741250274981
         },
         {
-            "noise01": 0.0
+            "con": -0.8622915578229827
         },
         {
-            "con": -1.8096530590550857
+            "emboss": -0.8211485142139289
         },
         {
-            "smooth": 0.0
+            "noise02": -0.8599995877568699
         },
         {
-            "rot": 0.0
+            "noise01": -0.7199940346354329
         },
         {
-            "stipple": 0.0
+            "stipple": -0.79900419425844
         },
         {
-            "original": 0.0
+            "original": -0.8420247765934723
         },
         {
-            "cc": -1.5721043086613242
+            "rot": -0.8869615399705799
         },
         {
-            "poster": 0.0
+            "smooth": -0.8399833626097697
         },
         {
-            "jitter": -1.3967071671818339
+            "jitter": -0.8200001095221228
+        },
+        {
+            "neg": -0.8681047711059557
         }
     ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-emboss-10-10.png": [
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-emboss-10-10.png": [
         {
-            "neg": 0.0
+            "cc": -0.8790796694139075
         },
         {
-            "noise02": 0.0
+            "poster": -0.7989333718887763
         },
         {
-            "noise01": 0.0
+            "con": -0.8602721787665738
         },
         {
-            "con": -1.8413669472205272
+            "emboss": -0.8235930470141422
         },
         {
-            "smooth": 0.0
+            "noise02": -0.860001544429056
         },
         {
-            "rot": 0.0
+            "noise01": -0.7199943044750644
         },
         {
-            "stipple": 0.0
+            "stipple": -0.799004229931437
         },
         {
-            "original": 0.0
+            "original": -0.8383121609538265
         },
         {
-            "cc": -1.5442612796037474
+            "rot": -0.88590476288932
         },
         {
-            "poster": 0.0
+            "smooth": -0.8399834129349569
         },
         {
-            "jitter": -1.2010184531753545
+            "jitter": -0.8199995529748452
+        },
+        {
+            "neg": -0.8663209124234627
         }
     ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-emboss-11-9.png": [
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-emboss-11-9.png": [
         {
-            "neg": 0.0
+            "cc": -0.8818525278958875
         },
         {
-            "noise02": 0.0
+            "poster": -0.7988201331432065
         },
         {
-            "noise01": 0.0
+            "con": -0.8592906356695877
         },
         {
-            "con": -1.849172944199363
+            "emboss": -0.8192493997525296
         },
         {
-            "smooth": 0.0
+            "noise02": -0.8599997854650735
         },
         {
-            "rot": 0.0
+            "noise01": -0.7199951412941193
         },
         {
-            "stipple": 0.0
+            "stipple": -0.7990042779951625
         },
         {
-            "original": 0.0
+            "original": -0.8383121481147254
         },
         {
-            "cc": -1.5351098772000065
+            "rot": -0.8821194722463963
         },
         {
-            "poster": 0.0
+            "smooth": -0.8399838503412708
         },
         {
-            "jitter": -0.9982965885701027
+            "jitter": -0.8200261803029991
+        },
+        {
+            "neg": -0.8643898019753192
         }
     ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-emboss-13-10.png": [
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-emboss-13-10.png": [
         {
-            "neg": 0.0
+            "cc": -0.8791305943087685
         },
         {
-            "noise02": 0.0
+            "poster": -0.8001282442468465
         },
         {
-            "noise01": 0.0
+            "con": -0.8641506981229773
         },
         {
-            "con": -1.8190984125060319
+            "emboss": -0.8287415740060129
         },
         {
-            "smooth": 0.0
+            "noise02": -0.8600003863273632
         },
         {
-            "rot": 0.0
+            "noise01": -0.7199941832081994
         },
         {
-            "stipple": 0.0
+            "stipple": -0.7990042051387252
         },
         {
-            "original": 0.0
+            "original": -0.8383123030708237
         },
         {
-            "cc": -1.5709807578761605
+            "rot": -0.8852943435140992
         },
         {
-            "poster": 0.0
+            "smooth": -0.8399833535731313
         },
         {
-            "jitter": -1.025532510007185
+            "jitter": -0.819999149544127
+        },
+        {
+            "neg": -0.8688167381388497
         }
     ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-emboss-21-7.png": [
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-emboss-21-7.png": [
         {
-            "neg": 0.0
+            "cc": -0.882673443762257
         },
         {
-            "noise02": 0.0
+            "poster": -0.7994957449046438
         },
         {
-            "noise01": 0.0
+            "con": -0.8649048835804822
         },
         {
-            "con": -1.7997076995137955
+            "emboss": -0.8286796249029307
         },
         {
-            "smooth": 0.0
+            "noise02": -0.8600001650665366
         },
         {
-            "rot": 0.0
+            "noise01": -0.7199940112167117
         },
         {
-            "stipple": 0.0
+            "stipple": -0.7990041980657554
         },
         {
-            "original": 0.0
+            "original": -0.8383121462802944
         },
         {
-            "cc": -1.5988060320321908
+            "rot": -0.8843746507434764
         },
         {
-            "poster": 0.0
+            "smooth": -0.8399833225100864
         },
         {
-            "jitter": -1.1061796252725493
+            "jitter": -0.8199994211001456
+        },
+        {
+            "neg": -0.869193945757288
         }
     ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-emboss-23-5.png": [
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-emboss-23-5.png": [
         {
-            "neg": 0.0
+            "cc": -0.879132700647247
         },
         {
-            "noise02": 0.0
+            "poster": -0.798820124413379
         },
         {
-            "noise01": 0.0
+            "con": -0.8632967484384769
         },
         {
-            "con": -1.962953769939634
+            "emboss": -0.8244881373349828
         },
         {
-            "smooth": 0.0
+            "noise02": -0.8600047840202113
         },
         {
-            "rot": 0.0
+            "noise01": -0.7199954140145327
         },
         {
-            "stipple": 0.0
+            "stipple": -0.7990052983180465
         },
         {
-            "original": 0.0
+            "original": -0.8387872969758609
         },
         {
-            "cc": -1.499300491745142
+            "rot": -0.8827664601295828
         },
         {
-            "poster": 0.0
+            "smooth": -0.8406153215954393
         },
         {
-            "jitter": -0.9982965729013138
+            "jitter": -0.8199994213345465
+        },
+        {
+            "neg": -0.8621377740508656
         }
     ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-emboss-31-3.png": [
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-emboss-31-3.png": [
         {
-            "neg": 0.0
+            "cc": -0.8808825679329504
         },
         {
-            "noise02": 0.0
+            "poster": -0.7988201471152763
         },
         {
-            "noise01": 0.0
+            "con": -0.8657996318617217
         },
         {
-            "con": -1.8556475883680226
+            "emboss": -0.8256149450084675
         },
         {
-            "smooth": 0.0
+            "noise02": -0.8599996537447819
         },
         {
-            "rot": 0.0
+            "noise01": -0.7200235679218129
         },
         {
-            "stipple": 0.0
+            "stipple": -0.7990042350398983
         },
         {
-            "original": 0.0
+            "original": -0.8383121229183805
         },
         {
-            "cc": -1.5435905978341262
+            "rot": -0.8890375403702342
         },
         {
-            "poster": 0.0
+            "smooth": -0.8399835023766413
         },
         {
-            "jitter": -0.9982965910960395
+            "jitter": -0.81999882325665
+        },
+        {
+            "neg": -0.8636790444712019
         }
     ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-emboss-38-4.png": [
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-emboss-38-4.png": [
         {
-            "neg": 0.0
+            "cc": -0.8808759609942313
         },
         {
-            "noise02": 0.0
+            "poster": -0.8013747279035186
         },
         {
-            "noise01": 0.0
+            "con": -0.8625574083338852
         },
         {
-            "con": -1.7930508096312203
+            "emboss": -0.8258351482810206
         },
         {
-            "smooth": 0.0
+            "noise02": -0.8599995379660282
         },
         {
-            "rot": 0.0
+            "noise01": -0.7199942787501773
         },
         {
-            "stipple": 0.0
+            "stipple": -0.7990041926028755
         },
         {
-            "original": 0.0
+            "original": -0.8383121415521844
         },
         {
-            "cc": -1.5278571282160824
+            "rot": -0.8874578380790388
         },
         {
-            "poster": 0.0
+            "smooth": -0.8399858627512906
         },
         {
-            "jitter": -1.2484970388250254
+            "jitter": -0.8199993450905967
+        },
+        {
+            "neg": -0.8676425915314178
         }
     ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-jitter-10-1.png": [
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-jitter-10-1.png": [
         {
-            "neg": 0.0
+            "cc": -0.8782301545888042
         },
         {
-            "noise02": 0.0
+            "poster": -0.8017303667510987
         },
         {
-            "noise01": 0.0
+            "con": -0.8584746324288984
         },
         {
-            "con": -0.999886220993853
+            "emboss": -0.84021592122388
         },
         {
-            "smooth": 0.0
+            "noise02": -0.8599993570354617
         },
         {
-            "rot": 0.0
+            "noise01": -0.719999125580684
         },
         {
-            "stipple": 0.0
+            "stipple": -0.798999667145448
         },
         {
-            "original": 0.0
+            "original": -0.8401271596386484
         },
         {
-            "emboss": -1.864377785205766
+            "rot": -0.8816560989776667
         },
         {
-            "cc": -1.6605527994838982
+            "smooth": -0.8399981107213783
         },
         {
-            "poster": 0.0
+            "jitter": -0.8199982457771173
+        },
+        {
+            "neg": -0.8607806928769266
         }
     ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-jitter-11-2.png": [
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-jitter-11-2.png": [
         {
-            "neg": 0.0
+            "cc": -0.8791507357967094
         },
         {
-            "noise02": 0.0
+            "poster": -0.7984423044068734
         },
         {
-            "noise01": 0.0
+            "con": -0.859418305791655
         },
         {
-            "con": -0.9998862215112356
+            "emboss": -0.8408429623571012
         },
         {
-            "smooth": 0.0
+            "noise02": -0.8599996697971396
         },
         {
-            "rot": 0.0
+            "noise01": -0.7199980285329265
         },
         {
-            "stipple": 0.0
+            "stipple": -0.8008229815760148
         },
         {
-            "original": 0.0
+            "original": -0.8399058597036972
         },
         {
-            "emboss": -2.2702209954424126
+            "rot": -0.8800731806861768
         },
         {
-            "cc": -1.6920406173104716
+            "smooth": -0.840006449449303
         },
         {
-            "poster": 0.0
+            "jitter": -0.819997601276302
+        },
+        {
+            "neg": -0.8617971786485166
         }
     ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-jitter-15-6.png": [
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-jitter-15-6.png": [
         {
-            "neg": 0.0
+            "cc": -0.8796946873514151
         },
         {
-            "noise02": 0.0
+            "poster": -0.799837263246016
         },
         {
-            "noise01": 0.0
+            "con": -0.8631521078045278
         },
         {
-            "con": -1.2032335439921051
+            "emboss": -0.8403112831244143
         },
         {
-            "smooth": 0.0
+            "noise02": -0.8599994040567961
         },
         {
-            "rot": 0.0
+            "noise01": -0.7199943398976235
         },
         {
-            "stipple": 0.0
+            "stipple": -0.7992330906960876
         },
         {
-            "original": 0.0
+            "original": -0.8403939227410369
         },
         {
-            "emboss": -2.0224897455508617
+            "rot": -0.8816477689551994
         },
         {
-            "cc": -0.9986928437053624
+            "smooth": -0.840008562535373
         },
         {
-            "poster": 0.0
+            "jitter": -0.8199982342892755
+        },
+        {
+            "neg": -0.8574945356999202
         }
     ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-jitter-16-4.png": [
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-jitter-16-4.png": [
         {
-            "neg": 0.0
+            "cc": -0.8803183734631144
         },
         {
-            "noise02": 0.0
+            "poster": -0.8007951140584992
         },
         {
-            "noise01": 0.0
+            "con": -0.8606032538033195
         },
         {
-            "con": -0.9998862178562473
+            "emboss": -0.8403238787550791
         },
         {
-            "smooth": 0.0
+            "noise02": -0.8599997926372919
         },
         {
-            "rot": 0.0
+            "noise01": -0.7199934440885575
         },
         {
-            "stipple": 0.0
+            "stipple": -0.7997226824900383
         },
         {
-            "original": 0.0
+            "original": -0.8396669351515581
         },
         {
-            "emboss": -1.9042585759282438
+            "rot": -0.8798529688209362
         },
         {
-            "cc": -1.3394734527230598
+            "smooth": -0.8399916335222898
         },
         {
-            "poster": 0.0
+            "jitter": -0.8199987094774559
+        },
+        {
+            "neg": -0.8593058822139248
         }
     ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-jitter-19-1.png": [
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-jitter-19-1.png": [
         {
-            "neg": 0.0
+            "cc": -0.8802414345257709
         },
         {
-            "noise02": 0.0
+            "poster": -0.8007661821957412
         },
         {
-            "noise01": 0.0
+            "con": -0.8601993303755344
         },
         {
-            "con": -0.9998862300187601
+            "emboss": -0.8416288802925007
         },
         {
-            "smooth": 0.0
+            "noise02": -0.8599997523394468
         },
         {
-            "rot": 0.0
+            "noise01": -0.7199943020530374
         },
         {
-            "stipple": 0.0
+            "stipple": -0.7993793647925815
         },
         {
-            "original": 0.0
+            "original": -0.8408822432902506
         },
         {
-            "emboss": -1.2760936387335255
+            "rot": -0.8795857634322408
         },
         {
-            "cc": -2.051955537051938
+            "smooth": -0.8399883652598437
         },
         {
-            "poster": 0.0
+            "jitter": -0.819998740712204
+        },
+        {
+            "neg": -0.858565236353942
         }
     ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-jitter-21-6.png": [
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-jitter-21-6.png": [
         {
-            "neg": 0.0
+            "cc": -0.8796505930849712
         },
         {
-            "noise02": 0.0
+            "poster": -0.7997775173647284
         },
         {
-            "noise01": 0.0
+            "con": -0.8592004749794899
         },
         {
-            "con": -1.2716832943103165
+            "emboss": -0.8394735300541313
         },
         {
-            "smooth": 0.0
+            "noise02": -0.8599995704488269
         },
         {
-            "rot": 0.0
+            "noise01": -0.720004389673618
         },
         {
-            "stipple": 0.0
+            "stipple": -0.8003297750702347
         },
         {
-            "original": 0.0
+            "original": -0.8387603302466743
         },
         {
-            "emboss": -1.0335254977969135
+            "rot": -0.8803075492027495
         },
         {
-            "cc": -0.9986928310214689
+            "smooth": -0.8399936714299479
         },
         {
-            "poster": 0.0
+            "jitter": -0.8199987240406688
+        },
+        {
+            "neg": -0.8607467431988169
         }
     ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-jitter-23-2.png": [
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-jitter-23-2.png": [
         {
-            "neg": 0.0
+            "cc": -0.880159663146882
         },
         {
-            "noise02": 0.0
+            "poster": -0.7988201210709576
         },
         {
-            "noise01": 0.0
+            "con": -0.8611771028371173
         },
         {
-            "con": -1.0728230126546987
+            "emboss": -0.8409753869582925
         },
         {
-            "smooth": 0.0
+            "noise02": -0.8599996796572772
         },
         {
-            "rot": 0.0
+            "noise01": -0.7200001108042632
         },
         {
-            "stipple": 0.0
+            "stipple": -0.8004200984375518
         },
         {
-            "original": 0.0
+            "original": -0.84001096692676
         },
         {
-            "emboss": -2.1357338699248607
+            "rot": -0.8797572235257951
         },
         {
-            "cc": -1.0130806070998948
+            "smooth": -0.8399991041757948
         },
         {
-            "poster": 0.0
+            "jitter": -0.819998784836034
+        },
+        {
+            "neg": -0.8603530947211604
         }
     ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-jitter-29-1.png": [
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-jitter-29-1.png": [
         {
-            "neg": 0.0
+            "cc": -0.8791423046335528
         },
         {
-            "noise02": 0.0
+            "poster": -0.8018850213834667
         },
         {
-            "noise01": 0.0
+            "con": -0.8589463698066521
         },
         {
-            "con": -1.1219281744396423
+            "emboss": -0.8409060533868461
         },
         {
-            "smooth": 0.0
+            "noise02": -0.8599997043027255
         },
         {
-            "rot": 0.0
+            "noise01": -0.7199994100101169
         },
         {
-            "stipple": 0.0
+            "stipple": -0.7996437301487833
         },
         {
-            "original": 0.0
+            "original": -0.8410519969487845
         },
         {
-            "emboss": -0.9932947748530315
+            "rot": -0.880391227309824
         },
         {
-            "cc": -1.8500522313438936
+            "smooth": -0.8399991727616654
         },
         {
-            "poster": 0.0
+            "jitter": -0.8199984977662527
+        },
+        {
+            "neg": -0.8588890831555727
         }
     ],
-    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\30\\image-jitter-31-5.png": [
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-jitter-31-5.png": [
         {
-            "neg": 0.0
+            "cc": -0.8807062150590884
         },
         {
-            "noise02": 0.0
+            "poster": -0.7996825943700372
         },
         {
-            "noise01": 0.0
+            "con": -0.8588198834653152
         },
         {
-            "con": -1.6603088996360662
+            "emboss": -0.8405989367704734
         },
         {
-            "smooth": 0.0
+            "noise02": -0.859999402451911
         },
         {
-            "rot": 0.0
+            "noise01": -0.7199965363047757
         },
         {
-            "stipple": 0.0
+            "stipple": -0.7999269468699128
         },
         {
-            "original": 0.0
+            "original": -0.8412730226624365
         },
         {
-            "emboss": -0.9932947391801269
+            "rot": -0.8794418942766618
         },
         {
-            "cc": -1.4621615172637914
+            "smooth": -0.8400006270410983
         },
         {
-            "poster": 0.0
+            "jitter": -0.8199988692760232
+        },
+        {
+            "neg": -0.8595017155634087
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-neg-1-2.png": [
+        {
+            "cc": -0.8795504818075267
+        },
+        {
+            "poster": -0.8099897395694569
+        },
+        {
+            "con": -0.8576000183962611
+        },
+        {
+            "emboss": -0.8460249941070946
+        },
+        {
+            "noise02": -0.8599992987757074
+        },
+        {
+            "noise01": -0.719999701947187
+        },
+        {
+            "stipple": -0.7978446009235642
+        },
+        {
+            "original": -0.8383121110438365
+        },
+        {
+            "rot": -0.8785325927570204
+        },
+        {
+            "smooth": -0.8400077341883694
+        },
+        {
+            "jitter": -0.8199990563094874
+        },
+        {
+            "neg": -0.8697836116557676
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-neg-10-8.png": [
+        {
+            "cc": -0.8783822078237631
+        },
+        {
+            "poster": -0.8037870513758321
+        },
+        {
+            "con": -0.8661884697866694
+        },
+        {
+            "emboss": -0.8534873011309653
+        },
+        {
+            "noise02": -0.860003523457414
+        },
+        {
+            "noise01": -0.7199943731536668
+        },
+        {
+            "stipple": -0.7990041892841862
+        },
+        {
+            "original": -0.8406308398928306
+        },
+        {
+            "rot": -0.8785326305113108
+        },
+        {
+            "smooth": -0.8399832453025451
+        },
+        {
+            "jitter": -0.8199987023773576
+        },
+        {
+            "neg": -0.8458651755846652
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-neg-12-7.png": [
+        {
+            "cc": -0.8783970801818597
+        },
+        {
+            "poster": -0.8029554730169053
+        },
+        {
+            "con": -0.8719418124146943
+        },
+        {
+            "emboss": -0.8534146042363117
+        },
+        {
+            "noise02": -0.8599995659746068
+        },
+        {
+            "noise01": -0.7199941189623179
+        },
+        {
+            "stipple": -0.7990041735875013
+        },
+        {
+            "original": -0.8443115878695086
+        },
+        {
+            "rot": -0.8785326523686854
+        },
+        {
+            "smooth": -0.8399833604629197
+        },
+        {
+            "jitter": -0.8199992338065729
+        },
+        {
+            "neg": -0.839879303972641
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-neg-16-5.png": [
+        {
+            "cc": -0.8809010906211571
+        },
+        {
+            "poster": -0.8107788351254868
+        },
+        {
+            "con": -0.8667316265917028
+        },
+        {
+            "emboss": -0.8471115867691318
+        },
+        {
+            "noise02": -0.8600006792400298
+        },
+        {
+            "noise01": -0.719993913177773
+        },
+        {
+            "stipple": -0.7990041832260988
+        },
+        {
+            "original": -0.8496200653778087
+        },
+        {
+            "rot": -0.8785325816643115
+        },
+        {
+            "smooth": -0.8399833808945502
+        },
+        {
+            "jitter": -0.8200038829912972
+        },
+        {
+            "neg": -0.841376268577721
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-neg-29-4.png": [
+        {
+            "cc": -0.8829407214770044
+        },
+        {
+            "poster": -0.802109507085629
+        },
+        {
+            "con": -0.8691841011798235
+        },
+        {
+            "emboss": -0.8455285301220302
+        },
+        {
+            "noise02": -0.8600022314896084
+        },
+        {
+            "noise01": -0.7199945099816024
+        },
+        {
+            "stipple": -0.7990041983949925
+        },
+        {
+            "original": -0.8386316304948168
+        },
+        {
+            "rot": -0.879359693232326
+        },
+        {
+            "smooth": -0.8399833782991203
+        },
+        {
+            "jitter": -0.8199988677574725
+        },
+        {
+            "neg": -0.8348934668878096
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-neg-31-3.png": [
+        {
+            "cc": -0.8916175287736893
+        },
+        {
+            "poster": -0.798820140576251
+        },
+        {
+            "con": -0.8702023243232588
+        },
+        {
+            "emboss": -0.846691316318849
+        },
+        {
+            "noise02": -0.859999987675386
+        },
+        {
+            "noise01": -0.7199937929421613
+        },
+        {
+            "stipple": -0.7990041883373453
+        },
+        {
+            "original": -0.846334516322683
+        },
+        {
+            "rot": -0.8785325343045918
+        },
+        {
+            "smooth": -0.8399853091956397
+        },
+        {
+            "jitter": -0.8200008549836499
+        },
+        {
+            "neg": -0.8487941892023764
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-neg-5-6.png": [
+        {
+            "cc": -0.8787469363467754
+        },
+        {
+            "poster": -0.8034080220826609
+        },
+        {
+            "con": -0.8730891444648313
+        },
+        {
+            "emboss": -0.8461399648342401
+        },
+        {
+            "noise02": -0.8599998184699541
+        },
+        {
+            "noise01": -0.7199952002724065
+        },
+        {
+            "stipple": -0.7990042258555934
+        },
+        {
+            "original": -0.838912061444703
+        },
+        {
+            "rot": -0.8785326024981635
+        },
+        {
+            "smooth": -0.8399833027978012
+        },
+        {
+            "jitter": -0.8199989349081949
+        },
+        {
+            "neg": -0.8396828364226463
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-noise01-10-3.png": [
+        {
+            "cc": -0.8793551893508555
+        },
+        {
+            "poster": -0.7999879305404363
+        },
+        {
+            "con": -0.8601525838895184
+        },
+        {
+            "emboss": -0.8384269332477925
+        },
+        {
+            "noise02": -0.859999633550795
+        },
+        {
+            "noise01": -0.719992100848926
+        },
+        {
+            "stipple": -0.7993589336165416
+        },
+        {
+            "original": -0.8419398615486209
+        },
+        {
+            "rot": -0.8812903598855917
+        },
+        {
+            "smooth": -0.8400042486357192
+        },
+        {
+            "jitter": -0.819998697129765
+        },
+        {
+            "neg": -0.8598065353202085
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-noise01-10-7.png": [
+        {
+            "cc": -0.8806918705366356
+        },
+        {
+            "poster": -0.7994059707096965
+        },
+        {
+            "con": -0.8622498673455381
+        },
+        {
+            "emboss": -0.8418056388451093
+        },
+        {
+            "noise02": -0.8599993221728423
+        },
+        {
+            "noise01": -0.7199917922421112
+        },
+        {
+            "stipple": -0.8001370466510127
+        },
+        {
+            "original": -0.8413015317996333
+        },
+        {
+            "rot": -0.8796279842716308
+        },
+        {
+            "smooth": -0.8399899463681286
+        },
+        {
+            "jitter": -0.8199994365915475
+        },
+        {
+            "neg": -0.85743822184156
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-noise01-11-7.png": [
+        {
+            "cc": -0.8811379532253992
+        },
+        {
+            "poster": -0.8007914466764674
+        },
+        {
+            "con": -0.8622351832126139
+        },
+        {
+            "emboss": -0.8433539055719749
+        },
+        {
+            "noise02": -0.8599994179764882
+        },
+        {
+            "noise01": -0.7199985980634399
+        },
+        {
+            "stipple": -0.7994013811419438
+        },
+        {
+            "original": -0.8393583457975398
+        },
+        {
+            "rot": -0.87853256361033
+        },
+        {
+            "smooth": -0.8399858494464191
+        },
+        {
+            "jitter": -0.8199986004314499
+        },
+        {
+            "neg": -0.8582644000224763
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-noise01-13-5.png": [
+        {
+            "cc": -0.880877362715752
+        },
+        {
+            "poster": -0.8001887399101093
+        },
+        {
+            "con": -0.8616805125911559
+        },
+        {
+            "emboss": -0.8385253664551354
+        },
+        {
+            "noise02": -0.8599996327929834
+        },
+        {
+            "noise01": -0.719988791347247
+        },
+        {
+            "stipple": -0.7992735726731541
+        },
+        {
+            "original": -0.8399360489649569
+        },
+        {
+            "rot": -0.8808298996700137
+        },
+        {
+            "smooth": -0.840002754871994
+        },
+        {
+            "jitter": -0.8199995638335795
+        },
+        {
+            "neg": -0.8599678101614334
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-noise01-17-2.png": [
+        {
+            "cc": -0.8805851471127516
+        },
+        {
+            "poster": -0.802269835201497
+        },
+        {
+            "con": -0.8590724696803373
+        },
+        {
+            "emboss": -0.840713925575529
+        },
+        {
+            "noise02": -0.8599992259605916
+        },
+        {
+            "noise01": -0.71999843141863
+        },
+        {
+            "stipple": -0.7993713314598483
+        },
+        {
+            "original": -0.8402248042474904
+        },
+        {
+            "rot": -0.8809417066791048
+        },
+        {
+            "smooth": -0.8399916700712945
+        },
+        {
+            "jitter": -0.8199995441786601
+        },
+        {
+            "neg": -0.8596921638141766
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-noise01-18-6.png": [
+        {
+            "cc": -0.8806707141449376
+        },
+        {
+            "poster": -0.7996730461733932
+        },
+        {
+            "con": -0.8630956323152833
+        },
+        {
+            "emboss": -0.8402141032915579
+        },
+        {
+            "noise02": -0.8599996361991228
+        },
+        {
+            "noise01": -0.7199945804546094
+        },
+        {
+            "stipple": -0.7994579441203302
+        },
+        {
+            "original": -0.8409819802430469
+        },
+        {
+            "rot": -0.8805200320537472
+        },
+        {
+            "smooth": -0.8399908170349402
+        },
+        {
+            "jitter": -0.819999023682445
+        },
+        {
+            "neg": -0.8574587301591787
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-noise01-18-9.png": [
+        {
+            "cc": -0.8802002460459968
+        },
+        {
+            "poster": -0.7998215363146215
+        },
+        {
+            "con": -0.8589107347425073
+        },
+        {
+            "emboss": -0.8396929244864555
+        },
+        {
+            "noise02": -0.8599998650942514
+        },
+        {
+            "noise01": -0.7199951864021575
+        },
+        {
+            "stipple": -0.8000218681160152
+        },
+        {
+            "original": -0.8394286494492978
+        },
+        {
+            "rot": -0.8796871602271585
+        },
+        {
+            "smooth": -0.8399995303298622
+        },
+        {
+            "jitter": -0.8199989079383019
+        },
+        {
+            "neg": -0.8612187197345647
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-noise01-20-3.png": [
+        {
+            "cc": -0.8782886104447221
+        },
+        {
+            "poster": -0.801996726436937
+        },
+        {
+            "con": -0.8593511549283716
+        },
+        {
+            "emboss": -0.8379976906896435
+        },
+        {
+            "noise02": -0.8599993096334114
+        },
+        {
+            "noise01": -0.719997682642627
+        },
+        {
+            "stipple": -0.7990041837878823
+        },
+        {
+            "original": -0.8417761359053023
+        },
+        {
+            "rot": -0.882117679267177
+        },
+        {
+            "smooth": -0.8399946566566339
+        },
+        {
+            "jitter": -0.8199985081384358
+        },
+        {
+            "neg": -0.8614282462007534
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-noise01-28-5.png": [
+        {
+            "cc": -0.8765909195902715
+        },
+        {
+            "poster": -0.8014967615067945
+        },
+        {
+            "con": -0.8600559928099843
+        },
+        {
+            "emboss": -0.8398858508547501
+        },
+        {
+            "noise02": -0.8599996222121423
+        },
+        {
+            "noise01": -0.7199525472155689
+        },
+        {
+            "stipple": -0.8003101998384738
+        },
+        {
+            "original": -0.8461572488036456
+        },
+        {
+            "rot": -0.8816660401489662
+        },
+        {
+            "smooth": -0.8399944158439031
+        },
+        {
+            "jitter": -0.8199988205426965
+        },
+        {
+            "neg": -0.8584300077140691
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-noise01-28-8.png": [
+        {
+            "cc": -0.8782271658501342
+        },
+        {
+            "poster": -0.8038050085940369
+        },
+        {
+            "con": -0.8603535301404118
+        },
+        {
+            "emboss": -0.8412221356455644
+        },
+        {
+            "noise02": -0.8599992119534424
+        },
+        {
+            "noise01": -0.7199843871832873
+        },
+        {
+            "stipple": -0.7990748227422944
+        },
+        {
+            "original": -0.8434522672521689
+        },
+        {
+            "rot": -0.8799974631876444
+        },
+        {
+            "smooth": -0.8399956408058482
+        },
+        {
+            "jitter": -0.8199994409979641
+        },
+        {
+            "neg": -0.8560612981141437
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-noise01-29-9.png": [
+        {
+            "cc": -0.8805784141907937
+        },
+        {
+            "poster": -0.7998058309710501
+        },
+        {
+            "con": -0.8586236711925693
+        },
+        {
+            "emboss": -0.8416549432258044
+        },
+        {
+            "noise02": -0.8599997021233808
+        },
+        {
+            "noise01": -0.7199986811746858
+        },
+        {
+            "stipple": -0.8005612831579003
+        },
+        {
+            "original": -0.8392403163105554
+        },
+        {
+            "rot": -0.878532639482595
+        },
+        {
+            "smooth": -0.8399931155803779
+        },
+        {
+            "jitter": -0.8199994747361745
+        },
+        {
+            "neg": -0.8595030268548912
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-noise01-3-7.png": [
+        {
+            "cc": -0.8794720808991858
+        },
+        {
+            "poster": -0.79982090626373
+        },
+        {
+            "con": -0.8627118161556776
+        },
+        {
+            "emboss": -0.8397584895450859
+        },
+        {
+            "noise02": -0.8599992487577514
+        },
+        {
+            "noise01": -0.7199912855946867
+        },
+        {
+            "stipple": -0.7999443026116171
+        },
+        {
+            "original": -0.8425212017370173
+        },
+        {
+            "rot": -0.8796354781099842
+        },
+        {
+            "smooth": -0.8400134574839428
+        },
+        {
+            "jitter": -0.819999106643944
+        },
+        {
+            "neg": -0.8580285195228893
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-noise01-3-8.png": [
+        {
+            "cc": -0.8790705655250362
+        },
+        {
+            "poster": -0.8018325028409634
+        },
+        {
+            "con": -0.8591292085440694
+        },
+        {
+            "emboss": -0.8395436873692139
+        },
+        {
+            "noise02": -0.8599993699017315
+        },
+        {
+            "noise01": -0.7199968142514724
+        },
+        {
+            "stipple": -0.798902835416992
+        },
+        {
+            "original": -0.8408966535522986
+        },
+        {
+            "rot": -0.8790512962672017
+        },
+        {
+            "smooth": -0.8399948667439128
+        },
+        {
+            "jitter": -0.8199994863983835
+        },
+        {
+            "neg": -0.8604204426107027
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-noise01-7-9.png": [
+        {
+            "cc": -0.8784050670603472
+        },
+        {
+            "poster": -0.8019829102971101
+        },
+        {
+            "con": -0.8575998602198271
+        },
+        {
+            "emboss": -0.838280431081789
+        },
+        {
+            "noise02": -0.8599992263120332
+        },
+        {
+            "noise01": -0.7199899672969384
+        },
+        {
+            "stipple": -0.7994546611745466
+        },
+        {
+            "original": -0.8413377879653934
+        },
+        {
+            "rot": -0.8813739467791584
+        },
+        {
+            "smooth": -0.8400066049239603
+        },
+        {
+            "jitter": -0.8199991543710996
+        },
+        {
+            "neg": -0.8623759099784799
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-noise02-13-4.png": [
+        {
+            "cc": -0.8788993440707127
+        },
+        {
+            "poster": -0.8026358790327321
+        },
+        {
+            "con": -0.8599689437692641
+        },
+        {
+            "emboss": -0.8384504718845023
+        },
+        {
+            "noise02": -0.8599990159368954
+        },
+        {
+            "noise01": -0.7199901524271713
+        },
+        {
+            "stipple": -0.799296719808591
+        },
+        {
+            "original": -0.8411456453444521
+        },
+        {
+            "rot": -0.8807947881134146
+        },
+        {
+            "smooth": -0.83999004343117
+        },
+        {
+            "jitter": -0.8199995473568111
+        },
+        {
+            "neg": -0.8592183668854788
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-noise02-17-3.png": [
+        {
+            "cc": -0.8787648072298364
+        },
+        {
+            "poster": -0.7992889222684425
+        },
+        {
+            "con": -0.8595432146807694
+        },
+        {
+            "emboss": -0.8405836353622409
+        },
+        {
+            "noise02": -0.8599992084227485
+        },
+        {
+            "noise01": -0.7199980326013095
+        },
+        {
+            "stipple": -0.7998936241267631
+        },
+        {
+            "original": -0.8404341551633825
+        },
+        {
+            "rot": -0.8801464556618248
+        },
+        {
+            "smooth": -0.8399953767768488
+        },
+        {
+            "jitter": -0.8199990867404838
+        },
+        {
+            "neg": -0.8601699905164899
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-noise02-18-1.png": [
+        {
+            "cc": -0.8802984566730037
+        },
+        {
+            "poster": -0.7991760012872333
+        },
+        {
+            "con": -0.8611258189450598
+        },
+        {
+            "emboss": -0.8393962127031068
+        },
+        {
+            "noise02": -0.859999597193119
+        },
+        {
+            "noise01": -0.7199967569811453
+        },
+        {
+            "stipple": -0.8004521895791856
+        },
+        {
+            "original": -0.8389680425767256
+        },
+        {
+            "rot": -0.8806412257040483
+        },
+        {
+            "smooth": -0.8399988311496445
+        },
+        {
+            "jitter": -0.8199996537489684
+        },
+        {
+            "neg": -0.8597937605769033
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-noise02-27-3.png": [
+        {
+            "cc": -0.8801440898492505
+        },
+        {
+            "poster": -0.7996943659103664
+        },
+        {
+            "con": -0.8610441579544489
+        },
+        {
+            "emboss": -0.8403166952291337
+        },
+        {
+            "noise02": -0.8599990248297179
+        },
+        {
+            "noise01": -0.7199966410132096
+        },
+        {
+            "stipple": -0.7998581365727762
+        },
+        {
+            "original": -0.8401863104250835
+        },
+        {
+            "rot": -0.880681042555276
+        },
+        {
+            "smooth": -0.839984120358037
+        },
+        {
+            "jitter": -0.8199991266783857
+        },
+        {
+            "neg": -0.8591773871762901
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-noise02-30-9.png": [
+        {
+            "cc": -0.8800925774439364
+        },
+        {
+            "poster": -0.801302721092594
+        },
+        {
+            "con": -0.8572492830829752
+        },
+        {
+            "emboss": -0.8399328224553223
+        },
+        {
+            "noise02": -0.8599990434159207
+        },
+        {
+            "noise01": -0.7199986809199704
+        },
+        {
+            "stipple": -0.8000271533433749
+        },
+        {
+            "original": -0.8401596181682193
+        },
+        {
+            "rot": -0.8803286238107069
+        },
+        {
+            "smooth": -0.8399865821129762
+        },
+        {
+            "jitter": -0.8199992485172163
+        },
+        {
+            "neg": -0.8625753810234186
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-noise02-31-8.png": [
+        {
+            "cc": -0.8798667093109277
+        },
+        {
+            "poster": -0.7984055225059563
+        },
+        {
+            "con": -0.8596330856616624
+        },
+        {
+            "emboss": -0.8396533108391596
+        },
+        {
+            "noise02": -0.8599990292921892
+        },
+        {
+            "noise01": -0.7200021356701986
+        },
+        {
+            "stipple": -0.8005625064320259
+        },
+        {
+            "original": -0.8406845859431098
+        },
+        {
+            "rot": -0.8798957701067798
+        },
+        {
+            "smooth": -0.8400039228786035
+        },
+        {
+            "jitter": -0.8199987080551767
+        },
+        {
+            "neg": -0.8610624019281327
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-noise02-35-6.png": [
+        {
+            "cc": -0.8808803475550913
+        },
+        {
+            "poster": -0.8010325693467706
+        },
+        {
+            "con": -0.8589996151946122
+        },
+        {
+            "emboss": -0.8413227390438057
+        },
+        {
+            "noise02": -0.8599995067130831
+        },
+        {
+            "noise01": -0.7199915307861166
+        },
+        {
+            "stipple": -0.7999625185531829
+        },
+        {
+            "original": -0.8401565933866572
+        },
+        {
+            "rot": -0.8785833719086702
+        },
+        {
+            "smooth": -0.83999444124828
+        },
+        {
+            "jitter": -0.8199995271806162
+        },
+        {
+            "neg": -0.8599721608286057
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-original-1-2.png": [
+        {
+            "cc": -0.8828375013062136
+        },
+        {
+            "poster": -0.8020285536216647
+        },
+        {
+            "con": -0.8786568578243719
+        },
+        {
+            "emboss": -0.8495512644485363
+        },
+        {
+            "noise02": -0.8600006451427217
+        },
+        {
+            "noise01": -0.719994025042637
+        },
+        {
+            "stipple": -0.8007139817481277
+        },
+        {
+            "original": -0.8354416606669754
+        },
+        {
+            "rot": -0.8824285938649814
+        },
+        {
+            "smooth": -0.8399837036610154
+        },
+        {
+            "jitter": -0.8199988639240376
+        },
+        {
+            "neg": -0.8574944697311039
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-original-14-5.png": [
+        {
+            "cc": -0.8822005886042822
+        },
+        {
+            "poster": -0.7988201676368873
+        },
+        {
+            "con": -0.85760032839648
+        },
+        {
+            "emboss": -0.838280385726461
+        },
+        {
+            "noise02": -0.8600096235707672
+        },
+        {
+            "noise01": -0.7200327747069356
+        },
+        {
+            "stipple": -0.7990041969752144
+        },
+        {
+            "original": -0.8244899550328612
+        },
+        {
+            "rot": -0.8785325900828787
+        },
+        {
+            "smooth": -0.8399892982720663
+        },
+        {
+            "jitter": -0.819998922480035
+        },
+        {
+            "neg": -0.8677153337075905
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-original-15-5.png": [
+        {
+            "cc": -0.8823509838779526
+        },
+        {
+            "poster": -0.7988201279477891
+        },
+        {
+            "con": -0.8587913409559549
+        },
+        {
+            "emboss": -0.8382810457057408
+        },
+        {
+            "noise02": -0.8599993999979735
+        },
+        {
+            "noise01": -0.7199947236041301
+        },
+        {
+            "stipple": -0.7990042093540626
+        },
+        {
+            "original": -0.8264884117180351
+        },
+        {
+            "rot": -0.8826625596263773
+        },
+        {
+            "smooth": -0.8399833419857885
+        },
+        {
+            "jitter": -0.820007666205274
+        },
+        {
+            "neg": -0.8689935634593857
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-original-27-10.png": [
+        {
+            "cc": -0.8834372638513872
+        },
+        {
+            "poster": -0.7988201160841129
+        },
+        {
+            "con": -0.8613163468117853
+        },
+        {
+            "emboss": -0.8410266537674406
+        },
+        {
+            "noise02": -0.8599996841716288
+        },
+        {
+            "noise01": -0.7199938813201346
+        },
+        {
+            "stipple": -0.7998638561272275
+        },
+        {
+            "original": -0.8427198488004248
+        },
+        {
+            "rot": -0.8785326575374859
+        },
+        {
+            "smooth": -0.8399839517991673
+        },
+        {
+            "jitter": -0.8200013608072712
+        },
+        {
+            "neg": -0.8576916866655463
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-original-27-8.png": [
+        {
+            "cc": -0.8811278687438266
+        },
+        {
+            "poster": -0.7988201138303281
+        },
+        {
+            "con": -0.8679472486046257
+        },
+        {
+            "emboss": -0.8382805715488285
+        },
+        {
+            "noise02": -0.8599993160131366
+        },
+        {
+            "noise01": -0.719994018683379
+        },
+        {
+            "stipple": -0.8000723692171152
+        },
+        {
+            "original": -0.8419020602695326
+        },
+        {
+            "rot": -0.8809341307302623
+        },
+        {
+            "smooth": -0.8400245185296821
+        },
+        {
+            "jitter": -0.8199997207980405
+        },
+        {
+            "neg": -0.8574957421651663
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-original-28-5.png": [
+        {
+            "cc": -0.8856841635975925
+        },
+        {
+            "poster": -0.7988201374579489
+        },
+        {
+            "con": -0.8606215043866107
+        },
+        {
+            "emboss": -0.8382803398096783
+        },
+        {
+            "noise02": -0.8599999328146194
+        },
+        {
+            "noise01": -0.7201370551754981
+        },
+        {
+            "stipple": -0.7990053645498949
+        },
+        {
+            "original": -0.8275404306018441
+        },
+        {
+            "rot": -0.878532579042153
+        },
+        {
+            "smooth": -0.8400133252825663
+        },
+        {
+            "jitter": -0.8200007078399909
+        },
+        {
+            "neg": -0.86382158332741
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-original-36-8.png": [
+        {
+            "cc": -0.8850510949623285
+        },
+        {
+            "poster": -0.7988201303120348
+        },
+        {
+            "con": -0.8599553586238731
+        },
+        {
+            "emboss": -0.8382831538508915
+        },
+        {
+            "noise02": -0.8599994749320591
+        },
+        {
+            "noise01": -0.7199943570237214
+        },
+        {
+            "stipple": -0.7990042719423047
+        },
+        {
+            "original": -0.8218597787645099
+        },
+        {
+            "rot": -0.8785326159120734
+        },
+        {
+            "smooth": -0.8399833153081773
+        },
+        {
+            "jitter": -0.8199992814082111
+        },
+        {
+            "neg": -0.8661398964588622
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-original-9-10.png": [
+        {
+            "cc": -0.887810902532311
+        },
+        {
+            "poster": -0.8047404294341305
+        },
+        {
+            "con": -0.8583899033165416
+        },
+        {
+            "emboss": -0.8382831532370528
+        },
+        {
+            "noise02": -0.8599994445923355
+        },
+        {
+            "noise01": -0.7199942096805206
+        },
+        {
+            "stipple": -0.7990041993352963
+        },
+        {
+            "original": -0.8255216428205078
+        },
+        {
+            "rot": -0.8825837496586451
+        },
+        {
+            "smooth": -0.8399831690965286
+        },
+        {
+            "jitter": -0.8200063498558481
+        },
+        {
+            "neg": -0.8627454467400462
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-poster-11-7.png": [
+        {
+            "cc": -0.8783821624456103
+        },
+        {
+            "poster": -0.7824665658348635
+        },
+        {
+            "con": -0.8599295356523147
+        },
+        {
+            "emboss": -0.8383465376790296
+        },
+        {
+            "noise02": -0.8599993710373316
+        },
+        {
+            "noise01": -0.7200013076872825
+        },
+        {
+            "stipple": -0.8069981184549522
+        },
+        {
+            "original": -0.842841815072314
+        },
+        {
+            "rot": -0.8785325913818076
+        },
+        {
+            "smooth": -0.8399833103715962
+        },
+        {
+            "jitter": -0.8199989757592934
+        },
+        {
+            "neg": -0.8660548757091732
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-poster-12-10.png": [
+        {
+            "cc": -0.8783821723219306
+        },
+        {
+            "poster": -0.7810718505677954
+        },
+        {
+            "con": -0.8672439377059346
+        },
+        {
+            "emboss": -0.8398397597330334
+        },
+        {
+            "noise02": -0.8599993675666074
+        },
+        {
+            "noise01": -0.7199952896442444
+        },
+        {
+            "stipple": -0.8053150319225995
+        },
+        {
+            "original": -0.8383121210479804
+        },
+        {
+            "rot": -0.8785326390711623
+        },
+        {
+            "smooth": -0.8399858625794894
+        },
+        {
+            "jitter": -0.8199990564847286
+        },
+        {
+            "neg": -0.8603988715710523
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-poster-15-2.png": [
+        {
+            "cc": -0.8811461418726868
+        },
+        {
+            "poster": -0.7865199134759535
+        },
+        {
+            "con": -0.864233905192457
+        },
+        {
+            "emboss": -0.8395806569006534
+        },
+        {
+            "noise02": -0.8599992383059164
+        },
+        {
+            "noise01": -0.720011403883375
+        },
+        {
+            "stipple": -0.8037054292142431
+        },
+        {
+            "original": -0.8382110829633668
+        },
+        {
+            "rot": -0.8787533991376313
+        },
+        {
+            "smooth": -0.8399831634472155
+        },
+        {
+            "jitter": -0.8199994646008508
+        },
+        {
+            "neg": -0.8619102738634933
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-poster-31-9.png": [
+        {
+            "cc": -0.878587168663453
+        },
+        {
+            "poster": -0.7841266098474164
+        },
+        {
+            "con": -0.861936372840263
+        },
+        {
+            "emboss": -0.842453688695898
+        },
+        {
+            "noise02": -0.8599996880063497
+        },
+        {
+            "noise01": -0.7200090226230448
+        },
+        {
+            "stipple": -0.8057556118759055
+        },
+        {
+            "original": -0.8389015306460369
+        },
+        {
+            "rot": -0.8785325854428072
+        },
+        {
+            "smooth": -0.8399831624678187
+        },
+        {
+            "jitter": -0.8199991811955303
+        },
+        {
+            "neg": -0.8608156702618801
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-poster-32-5.png": [
+        {
+            "cc": -0.8791830348623181
+        },
+        {
+            "poster": -0.7826437654314844
+        },
+        {
+            "con": -0.8693444304488871
+        },
+        {
+            "emboss": -0.8382804018940518
+        },
+        {
+            "noise02": -0.8600002052397774
+        },
+        {
+            "noise01": -0.719993986045039
+        },
+        {
+            "stipple": -0.8040938652164402
+        },
+        {
+            "original": -0.8407254281181248
+        },
+        {
+            "rot": -0.8810861939862582
+        },
+        {
+            "smooth": -0.8399831871526431
+        },
+        {
+            "jitter": -0.8200069549674498
+        },
+        {
+            "neg": -0.8601558861423688
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-poster-34-8.png": [
+        {
+            "cc": -0.8783824347238195
+        },
+        {
+            "poster": -0.7763662659771569
+        },
+        {
+            "con": -0.8659213051389967
+        },
+        {
+            "emboss": -0.8382867842952239
+        },
+        {
+            "noise02": -0.860000150395435
+        },
+        {
+            "noise01": -0.7199944376117448
+        },
+        {
+            "stipple": -0.8071313775850046
+        },
+        {
+            "original": -0.8383121314023125
+        },
+        {
+            "rot": -0.8785326287892679
+        },
+        {
+            "smooth": -0.8399836330224019
+        },
+        {
+            "jitter": -0.8199993024539753
+        },
+        {
+            "neg": -0.863211321222546
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-poster-35-7.png": [
+        {
+            "cc": -0.878461929723785
+        },
+        {
+            "poster": -0.7873415634306695
+        },
+        {
+            "con": -0.8644212098430212
+        },
+        {
+            "emboss": -0.8390215380042251
+        },
+        {
+            "noise02": -0.8599996470750167
+        },
+        {
+            "noise01": -0.7200197285173989
+        },
+        {
+            "stipple": -0.8034185169427803
+        },
+        {
+            "original": -0.8411322268139008
+        },
+        {
+            "rot": -0.8791700420189079
+        },
+        {
+            "smooth": -0.8400724330800741
+        },
+        {
+            "jitter": -0.8199991753765619
+        },
+        {
+            "neg": -0.8612448000116693
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-poster-37-3.png": [
+        {
+            "cc": -0.8783821426121003
+        },
+        {
+            "poster": -0.7832036139161687
+        },
+        {
+            "con": -0.8684515927531534
+        },
+        {
+            "emboss": -0.8382807919787613
+        },
+        {
+            "noise02": -0.8599996153493333
+        },
+        {
+            "noise01": -0.7199958565051209
+        },
+        {
+            "stipple": -0.8044924986758804
+        },
+        {
+            "original": -0.8384858174312626
+        },
+        {
+            "rot": -0.8790634327144267
+        },
+        {
+            "smooth": -0.8399831634138095
+        },
+        {
+            "jitter": -0.8199995522931149
+        },
+        {
+            "neg": -0.860338178349963
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-poster-4-10.png": [
+        {
+            "cc": -0.8783821077661979
+        },
+        {
+            "poster": -0.787382699728721
+        },
+        {
+            "con": -0.8636286705274925
+        },
+        {
+            "emboss": -0.8382803474076405
+        },
+        {
+            "noise02": -0.8599993677751588
+        },
+        {
+            "noise01": -0.7200002014643009
+        },
+        {
+            "stipple": -0.8031305327198299
+        },
+        {
+            "original": -0.8431558975784128
+        },
+        {
+            "rot": -0.8800342247411186
+        },
+        {
+            "smooth": -0.840022130465047
+        },
+        {
+            "jitter": -0.8199997246823645
+        },
+        {
+            "neg": -0.8626466539665615
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-poster-7-5.png": [
+        {
+            "cc": -0.8783821508123913
+        },
+        {
+            "poster": -0.7806853311532336
+        },
+        {
+            "con": -0.8675805347307478
+        },
+        {
+            "emboss": -0.8382807095003418
+        },
+        {
+            "noise02": -0.8599997132367808
+        },
+        {
+            "noise01": -0.719994937621009
+        },
+        {
+            "stipple": -0.803032720158352
+        },
+        {
+            "original": -0.8395679817630239
+        },
+        {
+            "rot": -0.879391763685428
+        },
+        {
+            "smooth": -0.8399832853624334
+        },
+        {
+            "jitter": -0.8199989773477472
+        },
+        {
+            "neg": -0.8611715229874102
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-rot-11-6.png": [
+        {
+            "cc": -0.8901291683085761
+        },
+        {
+            "poster": -0.7988201197304476
+        },
+        {
+            "con": -0.8576000165135594
+        },
+        {
+            "emboss": -0.8492278030441616
+        },
+        {
+            "noise02": -0.8600029004557673
+        },
+        {
+            "noise01": -0.7199940122239629
+        },
+        {
+            "stipple": -0.8068075994718913
+        },
+        {
+            "original": -0.838312135844056
+        },
+        {
+            "rot": -0.8621142124232313
+        },
+        {
+            "smooth": -0.8400665652198827
+        },
+        {
+            "jitter": -0.8199992093454713
+        },
+        {
+            "neg": -0.8574944773160564
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-rot-16-6.png": [
+        {
+            "cc": -0.884770088672917
+        },
+        {
+            "poster": -0.8000046959706679
+        },
+        {
+            "con": -0.8576000665343576
+        },
+        {
+            "emboss": -0.8434856759522334
+        },
+        {
+            "noise02": -0.8599993614163236
+        },
+        {
+            "noise01": -0.7199942620469945
+        },
+        {
+            "stipple": -0.7990042775378003
+        },
+        {
+            "original": -0.8383442489504718
+        },
+        {
+            "rot": -0.8705566207258448
+        },
+        {
+            "smooth": -0.8399833024767481
+        },
+        {
+            "jitter": -0.8199991417257553
+        },
+        {
+            "neg": -0.8574946747705975
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-rot-16-9.png": [
+        {
+            "cc": -0.8846858113955014
+        },
+        {
+            "poster": -0.8006974748676157
+        },
+        {
+            "con": -0.8575999636256493
+        },
+        {
+            "emboss": -0.8416214885327573
+        },
+        {
+            "noise02": -0.8599994914293728
+        },
+        {
+            "noise01": -0.7199941237263222
+        },
+        {
+            "stipple": -0.799004616527792
+        },
+        {
+            "original": -0.8469511500902729
+        },
+        {
+            "rot": -0.8934642505369459
+        },
+        {
+            "smooth": -0.8399849708497542
+        },
+        {
+            "jitter": -0.819998912462562
+        },
+        {
+            "neg": -0.8574944678299562
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-rot-2-9.png": [
+        {
+            "cc": -0.8783821710935574
+        },
+        {
+            "poster": -0.798820280547585
+        },
+        {
+            "con": -0.8575999898652141
+        },
+        {
+            "emboss": -0.8599096212055953
+        },
+        {
+            "noise02": -0.8600000473383379
+        },
+        {
+            "noise01": -0.7200882896055977
+        },
+        {
+            "stipple": -0.799471898057742
+        },
+        {
+            "original": -0.8383121211245271
+        },
+        {
+            "rot": -0.8694283711351807
+        },
+        {
+            "smooth": -0.8399835035901941
+        },
+        {
+            "jitter": -0.8199989018614491
+        },
+        {
+            "neg": -0.8574944796710916
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-rot-25-10.png": [
+        {
+            "cc": -0.881067030431139
+        },
+        {
+            "poster": -0.7988201486169089
+        },
+        {
+            "con": -0.8576000688654363
+        },
+        {
+            "emboss": -0.845403007856246
+        },
+        {
+            "noise02": -0.8600003134394737
+        },
+        {
+            "noise01": -0.7199944114948796
+        },
+        {
+            "stipple": -0.7990134854126825
+        },
+        {
+            "original": -0.8417499141396603
+        },
+        {
+            "rot": -0.8639678014247159
+        },
+        {
+            "smooth": -0.8399838224255758
+        },
+        {
+            "jitter": -0.8200024847093732
+        },
+        {
+            "neg": -0.8582800348769505
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-rot-38-10.png": [
+        {
+            "cc": -0.8831856820919418
+        },
+        {
+            "poster": -0.7988202910479429
+        },
+        {
+            "con": -0.8576000331536723
+        },
+        {
+            "emboss": -0.8481831541735351
+        },
+        {
+            "noise02": -0.8600001921860984
+        },
+        {
+            "noise01": -0.7199946531408291
+        },
+        {
+            "stipple": -0.7995749395819405
+        },
+        {
+            "original": -0.8383143983566436
+        },
+        {
+            "rot": -0.8651609845847281
+        },
+        {
+            "smooth": -0.8399835070893602
+        },
+        {
+            "jitter": -0.8200017216055673
+        },
+        {
+            "neg": -0.8574944808372554
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-smooth-11-10.png": [
+        {
+            "cc": -0.8798333636302703
+        },
+        {
+            "poster": -0.8031506293265493
+        },
+        {
+            "con": -0.8570296275845166
+        },
+        {
+            "emboss": -0.8389526273199955
+        },
+        {
+            "noise02": -0.8599994722454615
+        },
+        {
+            "noise01": -0.7200021515613589
+        },
+        {
+            "stipple": -0.7996488584406154
+        },
+        {
+            "original": -0.8394994595523688
+        },
+        {
+            "rot": -0.880322828639047
+        },
+        {
+            "smooth": -0.8399881237903591
+        },
+        {
+            "jitter": -0.8200005765679879
+        },
+        {
+            "neg": -0.8613166899945288
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-smooth-20-3.png": [
+        {
+            "cc": -0.879899614143112
+        },
+        {
+            "poster": -0.7994515296856661
+        },
+        {
+            "con": -0.860382685556871
+        },
+        {
+            "emboss": -0.8400994660226468
+        },
+        {
+            "noise02": -0.8599993641260743
+        },
+        {
+            "noise01": -0.7199959988835322
+        },
+        {
+            "stipple": -0.800603620596188
+        },
+        {
+            "original": -0.8389760126235918
+        },
+        {
+            "rot": -0.881165915800816
+        },
+        {
+            "smooth": -0.8399741593020054
+        },
+        {
+            "jitter": -0.8199998424684156
+        },
+        {
+            "neg": -0.8595542491343446
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-smooth-23-1.png": [
+        {
+            "cc": -0.879761121181442
+        },
+        {
+            "poster": -0.8004549041513769
+        },
+        {
+            "con": -0.8596347431247905
+        },
+        {
+            "emboss": -0.8401637129854777
+        },
+        {
+            "noise02": -0.8599994919896073
+        },
+        {
+            "noise01": -0.7199964809097271
+        },
+        {
+            "stipple": -0.800183726400586
+        },
+        {
+            "original": -0.8385820453620051
+        },
+        {
+            "rot": -0.8804292748553826
+        },
+        {
+            "smooth": -0.8399840634693165
+        },
+        {
+            "jitter": -0.8199996222007289
+        },
+        {
+            "neg": -0.8603488235854004
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-smooth-28-9.png": [
+        {
+            "cc": -0.8803966235504168
+        },
+        {
+            "poster": -0.7984505766623158
+        },
+        {
+            "con": -0.8608465016702479
+        },
+        {
+            "emboss": -0.8390697059255937
+        },
+        {
+            "noise02": -0.8599995060364155
+        },
+        {
+            "noise01": -0.7200041767921864
+        },
+        {
+            "stipple": -0.8004358724257474
+        },
+        {
+            "original": -0.8383115359031044
+        },
+        {
+            "rot": -0.8804755529873296
+        },
+        {
+            "smooth": -0.8400011581471687
+        },
+        {
+            "jitter": -0.81999990698522
+        },
+        {
+            "neg": -0.8614379246809992
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-smooth-31-5.png": [
+        {
+            "cc": -0.8803397079626297
+        },
+        {
+            "poster": -0.7988201182419032
+        },
+        {
+            "con": -0.8624287198728275
+        },
+        {
+            "emboss": -0.8383419149980953
+        },
+        {
+            "noise02": -0.8599995090790874
+        },
+        {
+            "noise01": -0.7200001767823626
+        },
+        {
+            "stipple": -0.7998772291465559
+        },
+        {
+            "original": -0.8388263942625084
+        },
+        {
+            "rot": -0.8809431816959068
+        },
+        {
+            "smooth": -0.8399859944388286
+        },
+        {
+            "jitter": -0.8199994993829338
+        },
+        {
+            "neg": -0.8600856007353957
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-smooth-33-5.png": [
+        {
+            "cc": -0.8807000860537868
+        },
+        {
+            "poster": -0.7993315028354686
+        },
+        {
+            "con": -0.859420077797268
+        },
+        {
+            "emboss": -0.8425699832673701
+        },
+        {
+            "noise02": -0.859999414297106
+        },
+        {
+            "noise01": -0.7199960932560135
+        },
+        {
+            "stipple": -0.8009801759221875
+        },
+        {
+            "original": -0.8392857014353147
+        },
+        {
+            "rot": -0.8786209252682602
+        },
+        {
+            "smooth": -0.8399694402822941
+        },
+        {
+            "jitter": -0.8199989822315916
+        },
+        {
+            "neg": -0.8581674403450572
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-smooth-35-10.png": [
+        {
+            "cc": -0.8789374575245167
+        },
+        {
+            "poster": -0.7980748105192645
+        },
+        {
+            "con": -0.8584623835737895
+        },
+        {
+            "emboss": -0.8422738587174885
+        },
+        {
+            "noise02": -0.8599992719251074
+        },
+        {
+            "noise01": -0.7199950448883062
+        },
+        {
+            "stipple": -0.8010215934177825
+        },
+        {
+            "original": -0.8399260245579407
+        },
+        {
+            "rot": -0.8792409438742175
+        },
+        {
+            "smooth": -0.8399673708923339
+        },
+        {
+            "jitter": -0.8199991407731804
+        },
+        {
+            "neg": -0.8590259463481783
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-smooth-5-5.png": [
+        {
+            "cc": -0.8788642510113982
+        },
+        {
+            "poster": -0.7977629785712395
+        },
+        {
+            "con": -0.8596750063033078
+        },
+        {
+            "emboss": -0.8422888735516622
+        },
+        {
+            "noise02": -0.8599992536336484
+        },
+        {
+            "noise01": -0.7199977059446628
+        },
+        {
+            "stipple": -0.8009104693866322
+        },
+        {
+            "original": -0.839250044141948
+        },
+        {
+            "rot": -0.8793348648286019
+        },
+        {
+            "smooth": -0.8399571211312697
+        },
+        {
+            "jitter": -0.8199991664252297
+        },
+        {
+            "neg": -0.8581432266560766
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-stipple-11-9.png": [
+        {
+            "cc": -0.8826818304949626
+        },
+        {
+            "poster": -0.8098616375341379
+        },
+        {
+            "con": -0.858206872335918
+        },
+        {
+            "emboss": -0.8382802903544945
+        },
+        {
+            "noise02": -0.8599996159814535
+        },
+        {
+            "noise01": -0.7199938155360702
+        },
+        {
+            "stipple": -0.791371612170177
+        },
+        {
+            "original": -0.8383121971841305
+        },
+        {
+            "rot": -0.8785325850611605
+        },
+        {
+            "smooth": -0.8399839054482791
+        },
+        {
+            "jitter": -0.8199990549282492
+        },
+        {
+            "neg": -0.8605138643191971
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-stipple-18-4.png": [
+        {
+            "cc": -0.8783821633412899
+        },
+        {
+            "poster": -0.8173739093481458
+        },
+        {
+            "con": -0.8611537773373635
+        },
+        {
+            "emboss": -0.8382804300558402
+        },
+        {
+            "noise02": -0.859999302119962
+        },
+        {
+            "noise01": -0.7199940230124174
+        },
+        {
+            "stipple": -0.7958927689068775
+        },
+        {
+            "original": -0.8383121201683282
+        },
+        {
+            "rot": -0.8785326091791694
+        },
+        {
+            "smooth": -0.839983402671099
+        },
+        {
+            "jitter": -0.8200005183069083
+        },
+        {
+            "neg": -0.8574951069516863
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-stipple-21-3.png": [
+        {
+            "cc": -0.8783821288888496
+        },
+        {
+            "poster": -0.8127643309304886
+        },
+        {
+            "con": -0.8576001403385166
+        },
+        {
+            "emboss": -0.8410250927268348
+        },
+        {
+            "noise02": -0.8600014229787253
+        },
+        {
+            "noise01": -0.7199976324226743
+        },
+        {
+            "stipple": -0.8020858138761571
+        },
+        {
+            "original": -0.8383121139763922
+        },
+        {
+            "rot": -0.8924008091021085
+        },
+        {
+            "smooth": -0.8399832983766253
+        },
+        {
+            "jitter": -0.8199989452676735
+        },
+        {
+            "neg": -0.8574944924060446
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-stipple-21-8.png": [
+        {
+            "cc": -0.8805590386439547
+        },
+        {
+            "poster": -0.8082504111063258
+        },
+        {
+            "con": -0.8599136605998647
+        },
+        {
+            "emboss": -0.8418416301239934
+        },
+        {
+            "noise02": -0.8600035625748131
+        },
+        {
+            "noise01": -0.7199938232148203
+        },
+        {
+            "stipple": -0.7974570964988845
+        },
+        {
+            "original": -0.8383121053454087
+        },
+        {
+            "rot": -0.8801943147354996
+        },
+        {
+            "smooth": -0.839983240750076
+        },
+        {
+            "jitter": -0.8200044540338101
+        },
+        {
+            "neg": -0.8574944857926222
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-stipple-22-3.png": [
+        {
+            "cc": -0.8811541363718551
+        },
+        {
+            "poster": -0.807223245934179
+        },
+        {
+            "con": -0.8575985534098821
+        },
+        {
+            "emboss": -0.8382804011239166
+        },
+        {
+            "noise02": -0.8599993833599652
+        },
+        {
+            "noise01": -0.7199943525902331
+        },
+        {
+            "stipple": -0.7994027937094859
+        },
+        {
+            "original": -0.8393800681406904
+        },
+        {
+            "rot": -0.881226900856783
+        },
+        {
+            "smooth": -0.8399832139890269
+        },
+        {
+            "jitter": -0.8199993060022837
+        },
+        {
+            "neg": -0.8572608981111157
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-stipple-32-10.png": [
+        {
+            "cc": -0.8783841871956178
+        },
+        {
+            "poster": -0.8066947509760751
+        },
+        {
+            "con": -0.8597743466688875
+        },
+        {
+            "emboss": -0.8382803453936747
+        },
+        {
+            "noise02": -0.8600002432839408
+        },
+        {
+            "noise01": -0.719994015936165
+        },
+        {
+            "stipple": -0.7887958664821428
+        },
+        {
+            "original": -0.840129990234847
+        },
+        {
+            "rot": -0.8785325763734113
+        },
+        {
+            "smooth": -0.8401133307235018
+        },
+        {
+            "jitter": -0.8199988690768012
+        },
+        {
+            "neg": -0.8594947740334355
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-stipple-33-3.png": [
+        {
+            "cc": -0.884095178830161
+        },
+        {
+            "poster": -0.7991985687357868
+        },
+        {
+            "con": -0.8765814114214279
+        },
+        {
+            "emboss": -0.8322212309090645
+        },
+        {
+            "noise02": -0.8600004363400896
+        },
+        {
+            "noise01": -0.7200101141331022
+        },
+        {
+            "stipple": -0.8032628866722678
+        },
+        {
+            "original": -0.8383120972607201
+        },
+        {
+            "rot": -0.8877721523091486
+        },
+        {
+            "smooth": -0.8399971970700404
+        },
+        {
+            "jitter": -0.8200049458548011
+        },
+        {
+            "neg": -0.8574944894371506
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-stipple-38-1.png": [
+        {
+            "cc": -0.8783830913605262
+        },
+        {
+            "poster": -0.8045433008943206
+        },
+        {
+            "con": -0.8603740296359346
+        },
+        {
+            "emboss": -0.841665091956584
+        },
+        {
+            "noise02": -0.8600005511898229
+        },
+        {
+            "noise01": -0.7199947504662693
+        },
+        {
+            "stipple": -0.795933998015879
+        },
+        {
+            "original": -0.8383121055028172
+        },
+        {
+            "rot": -0.8785326841493293
+        },
+        {
+            "smooth": -0.8399832578249008
+        },
+        {
+            "jitter": -0.8199993285491405
+        },
+        {
+            "neg": -0.8574946132724447
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-stipple-38-9.png": [
+        {
+            "cc": -0.8825944953425634
+        },
+        {
+            "poster": -0.8048905365141621
+        },
+        {
+            "con": -0.8690627006040973
+        },
+        {
+            "emboss": -0.8423186641948947
+        },
+        {
+            "noise02": -0.8600012154556528
+        },
+        {
+            "noise01": -0.7199938532591962
+        },
+        {
+            "stipple": -0.7915353558810341
+        },
+        {
+            "original": -0.8383121013134277
+        },
+        {
+            "rot": -0.8785331443521704
+        },
+        {
+            "smooth": -0.8399833043972726
+        },
+        {
+            "jitter": -0.8199990992543849
+        },
+        {
+            "neg": -0.8592005341163407
+        }
+    ],
+    "C:\\Users\\Krima\\Documents\\MWDB_image_similarity_search_optimizations\\Code\\data\\100\\image-stipple-8-9.png": [
+        {
+            "cc": -0.8786211748163211
+        },
+        {
+            "poster": -0.7988201251354752
+        },
+        {
+            "con": -0.8580896791855613
+        },
+        {
+            "emboss": -0.8395720511804016
+        },
+        {
+            "noise02": -0.8599997183956977
+        },
+        {
+            "noise01": -0.7199944367922758
+        },
+        {
+            "stipple": -0.7979271085473658
+        },
+        {
+            "original": -0.8405270920807606
+        },
+        {
+            "rot": -0.8785325881238839
+        },
+        {
+            "smooth": -0.8400601341413507
+        },
+        {
+            "jitter": -0.8199988756234151
+        },
+        {
+            "neg": -0.8610352506894993
         }
     ]
 }
