@@ -231,7 +231,7 @@ def get_test_data(technique, k_latent=None, norm_max_latent=None, norm_min_laten
 
 
 def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feature, features_dir,
-                sub_features_dir, X, Y, technique):
+                sub_features_dir, X, Y, technique, norm_max_latent=None, norm_min_latent=None):
     images, img_all_names = read_all_images(input_dir, pattern={"X": X, "Y": Y})
     k = min(images.shape[0], 10) if input_k == "" else min(images.shape[0], int(input_k))
     save_all_img_features(images, output_dim, features_dir, sub_features_dir, hog_dict, feature_visualization=False,
