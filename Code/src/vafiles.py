@@ -44,7 +44,7 @@ def write_va(modData,numBits, base_dir):
     text_file = open(os.path.join(base_dir, "va_file.txt"), "w")
     n = text_file.write(vaFile)
     text_file.close()
-    print("Size of Index Structure in bytes : {}".format(len(vaFile)))
+    print("Size of Index Structure in bytes : {}".format(len(vaFile)//8))
     return vaFile
 
 def modified_query(vq,p):

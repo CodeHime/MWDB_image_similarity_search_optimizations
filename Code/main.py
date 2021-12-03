@@ -515,10 +515,20 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
 
             # Create decision tree
             dt_obj = DecisionTree(vectors_df, max_depth=3, min_support=1.0, min_samples=1)
-            print(dt_obj.print_tree)
+            # print(dt_obj.print_tree)
             # TRAINING DATA SUMMARY
-            df_index = vectors_df.index
-            pred_rel_vals = dt_obj.get_prediction_summary(vectors_df, labels=list(set(labels_dict.values())))
+            df_index = pd.DataFrame(training_data).index
+            pred_rel_vals = dt_obj.get_prediction_summary(pd.DataFrame(training_data),
+                                                          labels=list(set(labels_dict.values())), show=False)
+
+            image_files = list(get_images_from_ids(features_dir, df_index))
+            for i in range(len(pred_rel_vals)):
+                result = Image.fromarray((images[df_index[i]]).astype(np.uint8))
+                print(image_files[i].split("/")[-1].split("\\")[-1]) #, d[i])
+                # print(image_files[i])
+                print("irrelevent" if pred_rel_vals[i] == -1 else "relevant")
+                plt.imshow(images[df_index[i]], cmap='gray')
+                plt.show()
             # for
         elif task_num == 7:
             print("Nearest neighbours found: ", nn)
