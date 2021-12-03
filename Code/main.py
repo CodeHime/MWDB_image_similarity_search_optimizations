@@ -506,7 +506,6 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
             indx_df = pd.DataFrame.from_dict(labels_dict, orient='index', columns=["label"])
 
             # Define vectors
-            # vectors_df = pd.DataFrame(obj.get_vector_space())
             vectors_df = pd.DataFrame(training_data)
 
             # Join vectors to their labels corresponding to indexes
@@ -542,9 +541,11 @@ def Phase3_main(input_dir, input_k, selected_feature, base_dir, image_path, feat
             index_list += [int(i) for i in irrelevant.split(",")]
             feedback_list += [-1]*len(irrelevant.split(","))
 
-            test_features_dir, test_data = get_test_data(technique, k_latent=k_latent, norm_max_latent=norm_max_latent, norm_min_latent=norm_min_latent)
-            svm_task_feedback(features_dir, test_features_dir, training_set_features=training_data,
-                              test_set_features=test_data, index_list=index_list, feedback_list=feedback_list)
+            training_data = training_data[nn]
+            # test_features_dir, test_data = get_test_data(technique, k_latent=k_latent, norm_max_latent=norm_max_latent, norm_min_latent=norm_min_latent)
+
+            svm_task_feedback(features_dir, features_dir, training_set_features=training_data,
+                              test_set_features=training_data, index_list=index_list, feedback_list=feedback_list)
     else:
         raise NotImplmentedError(f"No implementation found for selected task: {task_num}")
 
