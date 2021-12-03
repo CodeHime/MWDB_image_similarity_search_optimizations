@@ -135,6 +135,9 @@ def svm_task_2(training_features_dir, test_features_dir, training_set_features =
     TP = np.diag(conf_mat)
     TN = conf_mat.sum() - (FP + FN + TP)
     FPR = FP/(FP+TN)
+    FPR = np.nan_to_num(FPR)
     print("False Positive rate: ", FPR)
     FNR = FN/(TP+FN)
-    print("Miss rate: ", FNR)
+    FNR = np.nan_to_num(FNR)
+    print("False Negative rate: ", FNR)
+
